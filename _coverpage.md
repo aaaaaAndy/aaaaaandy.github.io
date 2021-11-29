@@ -2,4 +2,5 @@
 [tapable文档及源码](https://aaaaaandy.github.io/tapable/)
 [Webpack文档及源码](https://aaaaaandy.github.io/webpack/)
 [git学习文档](https://aaaaaandy.github.io/git-book/)
+[常见算法](https://aaaaaandy.github.io/algorithm/#/sort)
 [andy的博客](https://aaaaaandy.github.io/blog/)
