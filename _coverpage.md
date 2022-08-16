@@ -1,5 +1,6 @@
 [JavaScript](https://aaaaaandy.github.io/javascript/)
 [CSS](https://aaaaaandy.github.io/css/)
+[Nginx学习文档](https://aaaaaandy.github.io/nginx/)
 [react源码解读](https://aaaaaandy.github.io/react/)
 [tapable文档及源码](https://aaaaaandy.github.io/tapable/)
 [Webpack文档及源码](https://aaaaaandy.github.io/webpack/)
