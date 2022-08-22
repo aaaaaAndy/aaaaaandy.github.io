@@ -1,6 +1,7 @@
 <!-- docs/_sidebar.md -->
 
-- [《编写可维护的JavaScript》](maintain/_sidebar.md)
+- [《编写可维护的JavaScript》](编写可维护的JavaScript/_sidebar.md)
+- [《JavaScript高级程序设计》](JavaScript高级程序设计/_sidebar.md)
 - [JS数据类型及其区别](docs/JS数据类型及其区别.md)
 - [JS怎么进行类型转换](docs/JS怎么进行类型转换.md)
 - [几种判断数据类型的方法](docs/几种判断数据类型的方法.md)
