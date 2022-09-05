@@ -108,3 +108,10 @@ p > img,
 .markdown-section table {
   display: table;
 }
+
+@media screen and (max-width: 600px) {
+  .markdown-section {
+    max-width: 100%;
+    padding-top: 0;
+  }
+} 
