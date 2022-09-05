@@ -22,7 +22,7 @@ body {
 
 .sidebar-nav > ul > li > .app-sub-sidebar {
   padding-left: 20px;
-}
+} 
 
 .sidebar-nav > ul > li::before {
   content: counter(count_h1) ".";
