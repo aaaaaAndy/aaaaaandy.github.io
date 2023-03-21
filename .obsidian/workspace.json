@@ -146,11 +146,11 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "193b82e480a29df2",
+  "active": "a995cd1297353dec",
   "lastOpenFiles": [
     "algorithm/algorithm.md",
-    "algorithm/other.md",
     "algorithm/十大排序算法.md",
+    "algorithm/other.md",
     "algorithm/README.md",
     "_coverpage.md",
     "README.md",
