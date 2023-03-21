@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/数组去重.md",
+                "file": "algorithm/_sidebar.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/数组去重.md",
+                "file": "algorithm/_sidebar.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/数组去重.md",
+                "file": "algorithm/_sidebar.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/数组去重.md"
+                "file": "algorithm/_sidebar.md"
               }
             }
           }
@@ -154,11 +154,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "193b82e480a29df2",
+  "active": "ff0c9c7938613604",
   "lastOpenFiles": [
-    "git-book/git-br引入.md",
     "_coverpage.md",
     "README.md",
+    "docs/数组去重.md",
+    "git-book/git-br引入.md",
     "algorithm/other.md",
     "algorithm/README.md",
     "algorithm/_sidebar.md",
@@ -169,7 +170,6 @@
     "css/如何实现响应式.md",
     "charles/README.md",
     "charles/charles系统证书安装.md",
-    "docs/数组去重.md",
     "未命名.canvas",
     "未命名 1.canvas",
     "javascript/编写可维护的JavaScript/编写可维护的JavaScript-变量函数和运算符.md",
