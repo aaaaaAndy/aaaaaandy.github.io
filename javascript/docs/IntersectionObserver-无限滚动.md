@@ -216,4 +216,3 @@ entries = {
     observer.observe(video);
     ```
 
-<!-- more -->

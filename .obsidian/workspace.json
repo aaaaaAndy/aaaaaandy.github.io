@@ -1,0 +1,189 @@
+{
+  "main": {
+    "id": "67a741424d6afb94",
+    "type": "split",
+    "children": [
+      {
+        "id": "47ac60043a16ef89",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ff0c9c7938613604",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/数组去重.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a995cd1297353dec",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0d56066eaebfc979",
+    "type": "split",
+    "children": [
+      {
+        "id": "0d663d13d0e9980b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "193b82e480a29df2",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b454e64ade331df1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "64d22d453cba635d",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 205.5
+  },
+  "right": {
+    "id": "c1d54fd002ce3e2d",
+    "type": "split",
+    "children": [
+      {
+        "id": "6dc093e55e63a169",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "972aae04c3864e1f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "docs/数组去重.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "46903eb0ce9f32a0",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "docs/数组去重.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "30d414326fc9dbc4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "9f5a4a21f64afcef",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "docs/数组去重.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "193b82e480a29df2",
+  "lastOpenFiles": [
+    "git-book/git-br引入.md",
+    "_coverpage.md",
+    "README.md",
+    "algorithm/other.md",
+    "algorithm/README.md",
+    "algorithm/_sidebar.md",
+    "git-book/什么是git.md",
+    "charles/charles远程代理.md",
+    "git-book/git-add.md",
+    "2023-03-21.md",
+    "css/如何实现响应式.md",
+    "charles/README.md",
+    "charles/charles系统证书安装.md",
+    "docs/数组去重.md",
+    "未命名.canvas",
+    "未命名 1.canvas",
+    "javascript/编写可维护的JavaScript/编写可维护的JavaScript-变量函数和运算符.md",
+    "css/CSS选择器及其优先级.md",
+    "algorithm/sort.md",
+    "network/常见的HTTP请求方法.md",
+    "network/_sidebar.md",
+    "javascript/docs/JavaScript执行上下文.md",
+    "javascript/编写可维护的JavaScript/_sidebar.md",
+    "javascript/docs/动态引入（require-import）.md",
+    "git-book/git-merge.md",
+    "javascript/docs/IntersectionObserver-无限滚动.md",
+    "javascript/_sidebar.md",
+    "docs",
+    "css/前端垂直居中的几种简单实现.md"
+  ]
+}
