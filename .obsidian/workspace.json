@@ -11,7 +11,7 @@
             "id": "a995cd1297353dec",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {}
             }
           }
@@ -140,22 +140,23 @@
   },
   "active": "a995cd1297353dec",
   "lastOpenFiles": [
-    "未命名.canvas",
-    "algorithm/十大排序算法.md",
-    "algorithm/algorithm.md",
+    "charles/charles.md",
+    "charles/charles系统证书安装.md",
+    "charles/charles远程代理.md",
+    "charles/README.md",
     "algorithm/other.md",
+    "algorithm/algorithm.md",
+    "algorithm/十大排序算法.md",
+    "未命名.canvas",
     "algorithm/README.md",
     "_coverpage.md",
     "README.md",
     "docs/数组去重.md",
     "git-book/git-br引入.md",
     "git-book/什么是git.md",
-    "charles/charles远程代理.md",
     "git-book/git-add.md",
     "2023-03-21.md",
     "css/如何实现响应式.md",
-    "charles/README.md",
-    "charles/charles系统证书安装.md",
     "未命名 1.canvas",
     "javascript/编写可维护的JavaScript/编写可维护的JavaScript-变量函数和运算符.md",
     "css/CSS选择器及其优先级.md",
