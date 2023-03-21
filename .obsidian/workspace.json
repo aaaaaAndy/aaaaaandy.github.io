@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "javascript/JavaScript高级程序设计/事件.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "javascript/JavaScript高级程序设计/事件.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "javascript/JavaScript高级程序设计/事件.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "javascript/JavaScript高级程序设计/事件.md"
               }
             }
           }
@@ -146,7 +146,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "193b82e480a29df2",
+  "active": "a995cd1297353dec",
   "lastOpenFiles": [
     "README.md",
     "README.md",
