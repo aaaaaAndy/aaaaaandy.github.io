@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "algorithm/_sidebar.md",
+                "file": "algorithm/other.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "algorithm/_sidebar.md",
+                "file": "algorithm/other.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "algorithm/_sidebar.md",
+                "file": "algorithm/other.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "algorithm/_sidebar.md"
+                "file": "algorithm/other.md"
               }
             }
           }
@@ -156,13 +156,14 @@
   },
   "active": "ff0c9c7938613604",
   "lastOpenFiles": [
+    "algorithm/algorithm.md",
+    "algorithm/sort.md",
+    "algorithm/README.md",
+    "algorithm/other.md",
     "_coverpage.md",
     "README.md",
     "docs/数组去重.md",
     "git-book/git-br引入.md",
-    "algorithm/other.md",
-    "algorithm/README.md",
-    "algorithm/_sidebar.md",
     "git-book/什么是git.md",
     "charles/charles远程代理.md",
     "git-book/git-add.md",
@@ -174,7 +175,6 @@
     "未命名 1.canvas",
     "javascript/编写可维护的JavaScript/编写可维护的JavaScript-变量函数和运算符.md",
     "css/CSS选择器及其优先级.md",
-    "algorithm/sort.md",
     "network/常见的HTTP请求方法.md",
     "network/_sidebar.md",
     "javascript/docs/JavaScript执行上下文.md",
