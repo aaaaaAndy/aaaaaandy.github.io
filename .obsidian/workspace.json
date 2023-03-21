@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ff0c9c7938613604",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "algorithm/other.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "a995cd1297353dec",
             "type": "leaf",
             "state": {
@@ -93,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "algorithm/other.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "algorithm/other.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "algorithm/other.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -154,12 +138,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "ff0c9c7938613604",
+  "active": "a995cd1297353dec",
   "lastOpenFiles": [
+    "algorithm/other.md",
     "algorithm/algorithm.md",
     "algorithm/sort.md",
     "algorithm/README.md",
-    "algorithm/other.md",
     "_coverpage.md",
     "README.md",
     "docs/数组去重.md",
