@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "algorithm/Linked List.md",
+                "file": "algorithm/广度优先遍历.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 205.5
+    "width": 241.5
   },
   "right": {
     "id": "c1d54fd002ce3e2d",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "algorithm/Linked List.md",
+                "file": "algorithm/广度优先遍历.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "algorithm/Linked List.md",
+                "file": "algorithm/广度优先遍历.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "algorithm/Linked List.md"
+                "file": "algorithm/广度优先遍历.md"
               }
             }
           }
@@ -148,10 +148,14 @@
   },
   "active": "a995cd1297353dec",
   "lastOpenFiles": [
+    "algorithm/什么是算法.md",
+    "algorithm/广度优先遍历.md",
+    "algorithm/版本号比较大小.md",
+    "algorithm/算法.md",
+    "algorithm/Linked List.md",
     "algorithm/insertionSort.md",
     "algorithm/BinarySearch.md",
     "algorithm/mergeSort.md",
-    "algorithm/版本号比较大小.md",
     "_coverpage.md",
     "README.md",
     "README.md",
@@ -172,10 +176,6 @@
     "css/如何实现响应式.md",
     "未命名 1.canvas",
     "javascript/编写可维护的JavaScript/编写可维护的JavaScript-变量函数和运算符.md",
-    "css/CSS选择器及其优先级.md",
-    "network/常见的HTTP请求方法.md",
-    "network/_sidebar.md",
-    "javascript/docs/JavaScript执行上下文.md",
     "docs"
   ]
 }

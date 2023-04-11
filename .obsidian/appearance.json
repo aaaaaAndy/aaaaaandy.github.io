@@ -4,5 +4,6 @@
   "textFontFamily": "JetBrains Mono NL",
   "monospaceFontFamily": "JetBrains Mono",
   "translucency": true,
-  "cssTheme": ""
+  "cssTheme": "",
+  "theme": "moonstone"
 }
