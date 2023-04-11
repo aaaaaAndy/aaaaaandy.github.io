@@ -1,9 +1,5 @@
----
-title: Nginx基础
-tags: [nginx, 常用命令]
-categories: Nginx
-date: 2022/5/25 10:40 PM
----
+📆: 2022/5/25 10:40 PM
+🏷: #nginx 
 
 ## 一、安装
 
@@ -13,7 +9,7 @@ date: 2022/5/25 10:40 PM
 
 ### 2. MaxOS系统
 
-```bash
+```nginx
 brew install nginx
 ```
 
@@ -21,7 +17,7 @@ brew install nginx
 
 - 通过`rpm`镜像源安装
 
-```bash
+```nginx
 rpm -ivh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
 
 yum install -y nginx
@@ -29,7 +25,7 @@ yum install -y nginx
 
 - 手动解压安装
 
-```bash
+```nginx
 yum install pcre pcre-devel
 
 yum install zlib zlib-devel
@@ -57,13 +53,13 @@ ln -s /usr/local/nginx/sbin/nginx /usr/local/sbin/nginx
 
 - `yum`方式安装的 `nginx`
 
-```bash
+```nginx
 yum remove nginx
 ```
 
 - 手动卸载
 
-```bash
+```nginx
 rm -rf /etc/nginx/
 
 rm -rf /usr/sbin/nginx
@@ -77,7 +73,7 @@ apt-get remove nginx*
 
 ### 1. Nginx启动
 
-```bash
+```nginx
 # 需要配置环境变量Nginx，全局支持Nginx命令
 nginx
 
@@ -90,7 +86,7 @@ nginx -c /etc/nginx/nginx.conf
 
 ### 2. Nginx关机
 
-```bash
+```nginx
 # 快读关闭Nginx，不保存相关信息，立即结束web服务
 nginx -s stop
 
@@ -102,7 +98,7 @@ nginx -s quit
 
 Nginx的重启是平滑启动（即不关机重新加载配置文件）
 
-```bash
+```nginx
 # 全局任何一个位置都可以使用，需要全局支持Nginx命令才可以使用
 nginx -s reload
 
@@ -112,32 +108,32 @@ nginx -s reload
 
 ### 4. 校验配置文件是否正确
 
-```bash
+```nginx
 nginx -t /etc/nginx/nginx.conf
 ```
 
 ### 5. 查看Nginx版本信息
 
-```bash
+```nginx
 nginx -v            # 显示版本信息并退出
 nginx -V            # 显示版本信息和配置信息并退出
 ```
 
 ### 6. 查看帮助信息
 
-```bash
+```nginx
 nginx -h,-?
 ```
 
 ### 7. 查看进程号
 
-```bash
+```nginx
 ps -ef | grep nginx
 ```
 
 ### 8. 杀死进程
 
-```bash
+```nginx
 kill -QUIT xxxid
 ```
 

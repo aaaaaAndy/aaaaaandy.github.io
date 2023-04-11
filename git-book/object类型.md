@@ -2,7 +2,7 @@
 
 `git init`可以初始化一个本地`git`仓库，执行完命令后在当前目录会存在一个`.git`文件夹，`git`所有的内容、信息都保存在此处，可以用`tree`命令查看`.git`目录下的目录结构：
 
-```shell
+```bash
 ~/workspace/github/git-study(master ✗) tree .git
 .git
 ├── HEAD

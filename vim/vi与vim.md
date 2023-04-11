@@ -1,3 +1,4 @@
+🏷: #vim 
 ## 一、什么是vi
 
 **vi**是一种[计算机](https://zh.wikipedia.org/wiki/%E8%AE%A1%E7%AE%97%E6%9C%BA)[文本编辑器](https://zh.wikipedia.org/wiki/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8)，由美国计算机科学家[比尔·乔伊](https://zh.wikipedia.org/wiki/%E6%AF%94%E5%B0%94%C2%B7%E4%B9%94%E4%BC%8A)（Bill Joy）完成编写，并于1976年以[BSD协议](https://zh.wikipedia.org/wiki/BSD)授权发布。
