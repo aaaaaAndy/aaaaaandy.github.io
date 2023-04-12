@@ -16,7 +16,7 @@ body {
   --blockquote-border-color: var(--interactive-accent);
   --blockquote-font-style: normal;
   --blockquote-color: inherit;
-  --blockquote-background-color: transparent;
+  --blockquote-background-color: var(--color-base-20);
   /* Bold */
   --bold-weight: var(--font-semibold);
   --bold-color: inherit;
@@ -72,7 +72,7 @@ body {
   /* Code */
   --code-white-space: pre-wrap;
   --code-size: var(--font-smaller);
-  --code-background: var(--background-primary-alt);
+  --code-background: var(--color-base-22);
   --code-normal: var(--text-muted);
   --code-comment: var(--text-faint);
   --code-function: var(--color-yellow);
@@ -276,12 +276,13 @@ body {
   /* Lists */
   --list-indent: 2em;
   --list-spacing: 0.075em;
-  --list-marker-color: var(--text-faint);
+  /*--list-marker-color: var(--text-faint);*/
+  --list-marker-color: black;
   --list-marker-color-hover: var(--text-muted);
   --list-marker-color-collapsed: var(--text-accent);
   --list-bullet-border: none;
   --list-bullet-radius: 50%;
-  --list-bullet-size: 0.3em;
+  --list-bullet-size: 0.4em;
   --list-bullet-transform: none;
   --list-numbered-style: decimal;
   /* File navigator */
@@ -455,7 +456,7 @@ body {
   --tag-border-color-hover: hsla(var(--interactive-accent-hsl), 0.15);
   --tag-border-width: 0px;
   --tag-padding-x: 0.65em;
-  --tag-padding-y: 0.25em;
+  --tag-padding-y: 0.1em;
   --tag-radius: 2em;
   /* Window frame */
   --titlebar-background: var(--background-secondary);
@@ -547,6 +548,7 @@ body {
   --color-base-05: #fcfcfc;
   --color-base-10: #fafafa;
   --color-base-20: #f6f6f6;
+  --color-base-22: #f7f6f3;
   --color-base-25: #e3e3e3;
   --color-base-30: #e0e0e0;
   --color-base-35: #d4d4d4;
@@ -5886,8 +5888,7 @@ kbd {
   /*color: var(--code-normal);*/
   color: #eb5757;
   font-size: var(--code-size);
-  /*background-color: var(--code-background);*/
-  background-color: var(--color-base-20);
+  background-color: var(--code-background);
   vertical-align: baseline;
   padding: 2px 4px;
   border-radius: 2px;
@@ -5999,7 +6000,7 @@ kbd {
 .cm-s-obsidian div.HyperMD-codeblock-begin-bg,
 .cm-s-obsidian div.HyperMD-codeblock-end-bg {
   background-color: var(--code-background);
-}
+
 code[class*="language-"],
 pre[class*="language-"] {
   color: var(--code-normal);
@@ -6582,7 +6583,7 @@ h6 a,
   color: var(--text-faint);
 }
 .cm-s-obsidian .HyperMD-header {
-  padding-bottom: 0.25em;
+  padding-bottom: 0.25em !important;
 }
 .HyperMD-header-1,
 .inline-title[data-level='1'],
@@ -6612,7 +6613,6 @@ h6 a,
   font-weight: var(--h2-weight);
   font-style: var(--h2-style);
   font-family: var(--h2-font);
-  margin-top: 16px;
 }
 .HyperMD-header-2 a,
 .inline-title[data-level='2'] a,
@@ -6870,7 +6870,7 @@ ul > li.is-collapsed::marker {
   tab-size: var(--list-indent);
 }
 .markdown-source-view.mod-cm6 .cm-content > .cm-line.HyperMD-list-line {
-  margin-left: 0.5em;
+  margin-left: 1em !important;
 }
 /* Space between list items */
 .markdown-source-view ol > li,
