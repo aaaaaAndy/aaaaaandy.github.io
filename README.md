@@ -13,7 +13,13 @@
 
 
 ## JavaScript
+- [JavaScript闭包](JavaScript/JavaScript闭包.md)
 - [JavaScript事件冒泡与捕获](JavaScript/JavaScript事件冒泡与捕获.md)
+- [不同设备的click](JavaScript/不同设备的click.md)
+- [动态引入（require-import）](JavaScript/动态引入（require-import）.md)
+- [防抖和节流](JavaScript/防抖和节流.md)
+- [滚动加载、懒加载](JavaScript/滚动加载、懒加载.md)
+- [函数function](JavaScript/函数function.md)
 
 ## Nginx
 - [Nginx基础](nginx/Nginx基础.md)
