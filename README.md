@@ -13,13 +13,15 @@
 
 
 ## JavaScript
-- [JavaScript闭包](JavaScript/JavaScript闭包.md)
-- [JavaScript事件冒泡与捕获](JavaScript/JavaScript事件冒泡与捕获.md)
-- [不同设备的click](JavaScript/不同设备的click.md)
-- [动态引入（require-import）](JavaScript/动态引入（require-import）.md)
-- [防抖和节流](JavaScript/防抖和节流.md)
+
+  1. [JavaScript闭包](JavaScript/JavaScript闭包.md)
+  2. [JavaScript事件冒泡与捕获](JavaScript/JavaScript事件冒泡与捕获.md)
+ 3. [不同设备的click](JavaScript/不同设备的click.md)
+4. [动态引入（require-import）](JavaScript/动态引入（require-import）.md)
+5. [防抖和节流](JavaScript/防抖和节流.md)
 - [滚动加载、懒加载](JavaScript/滚动加载、懒加载.md)
 - [函数function](JavaScript/函数function.md)
+- [几种类型转换机制](JavaScript/几种类型转换机制.md)
 - [几种判断数据类型的方法](JavaScript/几种判断数据类型的方法.md)
 - [类数组及其转换方法](JavaScript/类数组及其转换方法.md)
 - [偏函数与函数柯里化](JavaScript/偏函数与函数柯里化.md)
@@ -36,9 +38,11 @@
 - [数组常用方法](JavaScript/数组常用方法.md)
 - [数组去重](JavaScript/数组去重.md)
 - [移动端click事件300ms延迟](JavaScript/移动端click事件300ms延迟.md)
+- [正则表达式](JavaScript/正则表达式.md)
+- [ajax原理及实现](JavaScript/ajax原理及实现.md)
 
 - [ ] [BOM与DOM](JavaScript/BOM与DOM.md)
-- [ ] 
+- [ ] [作用域链](JavaScript/作用域链.md)
 
 ## Nginx
 - [Nginx基础](nginx/Nginx基础.md)
