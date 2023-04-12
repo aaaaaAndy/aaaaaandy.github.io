@@ -10,3 +10,7 @@
 [git学习文档](https://aaaaaandy.github.io/git-book/)
 [算法](https://aaaaaandy.github.io/algorithm/#/sort)
 [andy的博客](https://aaaaaandy.github.io/blog/)
+
+
+## JavaScript
+[JavaScript事件冒泡与捕获](JavaScript/JavaScript事件冒泡与捕获.md)
