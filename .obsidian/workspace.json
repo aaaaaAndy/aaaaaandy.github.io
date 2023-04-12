@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "algorithm/广度优先遍历.md",
+                "file": "JavaScript/闭包.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 241.5
+    "width": 272.5
   },
   "right": {
     "id": "c1d54fd002ce3e2d",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "algorithm/广度优先遍历.md",
+                "file": "JavaScript/闭包.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "algorithm/广度优先遍历.md",
+                "file": "JavaScript/闭包.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "algorithm/广度优先遍历.md"
+                "file": "JavaScript/闭包.md"
               }
             }
           }
@@ -148,15 +148,20 @@
   },
   "active": "a995cd1297353dec",
   "lastOpenFiles": [
-    "algorithm/什么是算法.md",
+    "_coverpage.md",
+    "JavaScript/JavaScript执行上下文.md",
+    "JavaScript/什么是单点登录.md",
+    "linux/linux users.md",
+    "linux/linux.md",
+    "linux/file.md",
     "algorithm/广度优先遍历.md",
+    "algorithm/什么是算法.md",
     "algorithm/版本号比较大小.md",
     "algorithm/算法.md",
     "algorithm/Linked List.md",
     "algorithm/insertionSort.md",
     "algorithm/BinarySearch.md",
     "algorithm/mergeSort.md",
-    "_coverpage.md",
     "README.md",
     "README.md",
     "charles/charles.md",
@@ -170,12 +175,7 @@
     "algorithm/README.md",
     "docs/数组去重.md",
     "git-book/git-br引入.md",
-    "git-book/什么是git.md",
-    "git-book/git-add.md",
-    "2023-03-21.md",
-    "css/如何实现响应式.md",
     "未命名 1.canvas",
-    "javascript/编写可维护的JavaScript/编写可维护的JavaScript-变量函数和运算符.md",
     "docs"
   ]
 }

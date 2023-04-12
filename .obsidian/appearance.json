@@ -1,9 +1,12 @@
 {
   "accentColor": "#ed023d",
-  "interfaceFontFamily": "JetBrains Mono NL",
+  "interfaceFontFamily": "",
   "textFontFamily": "JetBrains Mono NL",
   "monospaceFontFamily": "JetBrains Mono",
   "translucency": true,
   "cssTheme": "",
-  "theme": "moonstone"
+  "theme": "moonstone",
+  "enabledCssSnippets": [
+    "theme"
+  ]
 }

@@ -3,5 +3,7 @@
   "newFileLocation": "current",
   "showLineNumber": false,
   "alwaysUpdateLinks": true,
-  "promptDelete": false
+  "promptDelete": false,
+  "newLinkFormat": "absolute",
+  "useMarkdownLinks": true
 }

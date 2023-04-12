@@ -3,4 +3,4 @@
 /public/
 /themes/
 db.json
-/.obsidian/
+/.obsidian/*.json

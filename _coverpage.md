@@ -10,3 +10,11 @@
 [git学习文档](https://aaaaaandy.github.io/git-book/)
 [算法](https://aaaaaandy.github.io/algorithm/#/sort)
 [andy的博客](https://aaaaaandy.github.io/blog/)
+
+## JavaScript
+- [闭包](JavaScript/闭包.md)
+- [不同设备的click](JavaScript/不同设备的click.md)
+- [大文件上传如何做断点续传](JavaScript/大文件上传如何做断点续传.md)
+- [动态引入（require-import）](JavaScript/动态引入（require-import）.md)
+- [防抖和节流](JavaScript/防抖和节流.md)
+- [作用域链](JavaScript/作用域链.md)
