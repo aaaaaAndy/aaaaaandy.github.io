@@ -1406,7 +1406,6 @@ span.CodeMirror-selectedtext {
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-line {
   max-width: var(--file-line-width);
   line-height: 1.5;
-  padding: 3px 2px;
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-table-row {
   max-width: 100%;
@@ -5884,10 +5883,14 @@ kbd {
   padding: 0.1em 0.25em;
 }
 .cm-s-obsidian span.cm-inline-code {
-  color: var(--code-normal);
+  /*color: var(--code-normal);*/
+  color: #eb5757;
   font-size: var(--code-size);
-  background-color: var(--code-background);
+  /*background-color: var(--code-background);*/
+  background-color: var(--color-base-20);
   vertical-align: baseline;
+  padding: 2px 4px;
+  border-radius: 2px;
 }
 .cm-s-obsidian span.cm-inline-code span.cm-inline-code.cm-hmd-indented-code {
   background-color: transparent;

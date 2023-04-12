@@ -29,11 +29,8 @@ func.apply(this, [arg1, arg2])
 - 三者第一个参数都是`this`要指向的对象，如果如果没有这个参数或参数为`undefined`或`null`，则默认指向全局`window`
 - 三者都可以传参，但是`apply`是数组，而`call`是参数列表，且`apply`和`call`是一次性传入参数，而`bind`可以分为多次传入
 - `bind `是返回绑定this之后的函数，`apply `、`call` 则是立即执行 
-
 ## 二、JS 原生实现
-
 ### 1. apply
-
 ```javascript
 Function.prototype.apply = function(context, arr) {
   var context = context || window;

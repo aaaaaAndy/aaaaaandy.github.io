@@ -25,7 +25,6 @@ openssl x509 -subject_hash_old -in xxx.pem
 ![adbhash](https://raw.githubusercontent.com/aaaaaAndy/picture/main/images/20210201102608.png)
 
 
-
 由执行结果可以得到一个 `ab3d948a` 的 hash 值，将刚才下载的 .pem 文件改为 `ab3d948a.0` 即可，并将该证书发送到安卓设备。
 
 后缀名的数字是为了防止文件名冲突的，比如如果两个证书算出的Hash值是一样的话，那么一个证书的后缀名数字可以设置成0，而另一个证书的后缀名数字可以设置成1

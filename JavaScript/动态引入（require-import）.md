@@ -2,10 +2,10 @@
 🏷: #require #import
 
 本篇基于图片加载的基础来简单介绍`require`、`require`、`context`和`import`的区别！
+
 现如今的前端项目用`webpack`打包已经成为了行业趋势，然而在此模式的前提下，图片的引入是我们不可避免的问题。正常的图片引入是用`img`标签或者元素背景图的方式，采用这种方式的图片，`webpack`都能正常打包并显示。但是如果直接在js文件中定义图片路径，并赋给图片元素的话不能正常显示的，这是因为`webpack`打包后，会将静态资源文件放在`dist/static/img`下，我们的网站实际上以`dist`目录作为根目录，并由此加载该目录下的`index.html`所需的css、js、img等。而当我们在js文件中动态引入图片时`url-loader`是无法探测到图片路径的。我们`build`后发现，图片根本不会打包输出到dist目录（`webpack`是按需打包的）。
 
 此处介绍了三种动态引入图片的方式：
-
 ## 一、require
 
 ```html
@@ -39,14 +39,10 @@ imgList = [
 ```javascript
 let imgUrlStr = '../images/a.png';let imgUrl = require(imgUrlStr);
 ```
-
 ### 2. 正确引用
-
 鉴于require在纯变量的情况下找不到模块，所以我们至少要在require参数中写明一个目录（如下边代码中的example 2和example 3），这样的话，虽然不知道具体的模块，但是webpack也会为我们做些分析工作：
-
 - 分析目录： ‘../images’
 - 提取正则表达式 : ’/^.*.png$/’
-
 但是此种情况下，webpack生成的上下文模块（context module）。它包含目录下的所有模块的引用，是通过一个 request 解析出来的正则表达式，去匹配目录下所有符合的模块，然后都 require 进来。此 context module 包含一个 map 对象，会把 request 中所有模块翻译成对应的模块 id。这意味着 webpack 能够支持动态地 require，但会导致所有可能用到的模块都包含在 bundle 中。
 
 ```javascript
