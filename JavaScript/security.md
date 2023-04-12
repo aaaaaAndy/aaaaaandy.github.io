@@ -1,7 +1,5 @@
 # 面试官：web常见的攻击方式有哪些？如何防御？
 
- ![](https://static.vue-js.com/d0892930-8d1d-11eb-ab90-d9ae814b240d.png)
-
 ## 一、是什么
 Web攻击（WebAttack）是针对用户上网行为或网站服务器等设备进行攻击的行为
 
