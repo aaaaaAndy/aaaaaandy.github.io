@@ -1,6 +1,4 @@
-# 面试官：谈谈 JavaScript 中的类型转换机制
 
- ![](https://static.vue-js.com/2abd00a0-6692-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、概述
 前面我们讲到，`JS `中有六种简单数据类型：`undefined`、`null`、`boolean`、`string`、`number`、`symbol`，以及引用类型：`object`

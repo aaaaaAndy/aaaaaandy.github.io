@@ -4,7 +4,7 @@
   "description": "> An awesome project.",
   "main": "index.js",
   "scripts": {
-    "dev": "docsify serve .",
+    "dev": "docsify serve . --open",
     "start": "serve .",
     "dp": "sh git.sh"
   },
