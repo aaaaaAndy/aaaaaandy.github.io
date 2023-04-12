@@ -1,5 +1,6 @@
 📆: 2020-03-25 17:28:34
-🏷: #IntersectionObserver 
+🏷: #JavaScript #IntersectionObserver #无限滚动 #懒惰加载
+***
 
 日常需求中, 经常会遇到列表需要上拉加载下一页数据, 也就是一个无限滚动的效果, 过去我们的实现方案无外乎监听`scroll`的变化, 通过`scrollTop`, `scrollHeight`和 `clientHeight`来判断滚动的高度, 从而决定是否加载下一页的数据，但这一方案额外增加了`JavaScript`的计算量，造成了性能问题，实不能称为一个完美的解决方案。但是今天我们有了一个完美的方案: `IntersectionObserver`：
 

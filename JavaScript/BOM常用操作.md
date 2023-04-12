@@ -1,4 +1,4 @@
-🏷: #JavaScript #BOM #DOM 
+🏷: #JavaScript #BOM #window #location #history #screen #navigator
 ***
 
 ## 一、是什么

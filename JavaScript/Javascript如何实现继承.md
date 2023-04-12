@@ -1,6 +1,5 @@
-# 面试官：Javascript如何实现继承？
-
-![](https://static.vue-js.com/5d9c4450-72a3-11eb-85f6-6fac77c0c9b3.png)
+🏷: #JavaScript #继承
+***
 
 ## 一、是什么
 
@@ -58,21 +57,16 @@ class Truck extends Car{
 
 从这个例子中就能详细说明汽车、轿车以及卡车之间的继承关系
 
-
-
 ## 二、实现方式
 
 下面给出`JavaScripy`常见的继承方式：
 
 - 原型链继承
-
 - 构造函数继承（借助 call）
 - 组合继承
 - 原型式继承
 - 寄生式继承
 - 寄生组合式继承
-
-
 
 ### 原型链继承
 

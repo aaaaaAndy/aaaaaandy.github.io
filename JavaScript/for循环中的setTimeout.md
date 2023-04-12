@@ -1,5 +1,6 @@
 📆: 2021-05-25 14:27:34
-🏷: #for #setTimeout 
+🏷: #for #setTimeout #Promise #sleep #bind #闭包
+***
 
 ## 一、错误示例
 
@@ -113,8 +114,8 @@ function print() {
 }
 ```
 
+> [!NOTE] setTimeout
 > setTimeout()的返回值是一个正整数，表示定时器的编号。这个值可以传递给clearTimeout()来取消该定时器。需要注意的是setTimeout()和setInterval()共用一个编号池，技术上，clearTimeout()和 clearInterval() 可以互换。但是，为了避免混淆，不要混用取消定时函数。
-
 
 ### 4. let方法保存不同阶段的值
 
@@ -194,9 +195,4 @@ function print() {
   }
 }
 ```
-
-
-<!-- more -->
-
-
 
