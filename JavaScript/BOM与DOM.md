@@ -1,4 +1,4 @@
-🏷: #JavaScript #BOM
+🏷: #JavaScript #BOM #DOM 
 ***
 
 ## 一、是什么

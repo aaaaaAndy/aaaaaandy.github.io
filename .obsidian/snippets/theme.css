@@ -530,6 +530,7 @@ body {
   --mono-rgb-100: 0, 0, 0;
   --color-red-rgb: 233, 49, 71;
   --color-red: #E93147;
+  --color-red-00: #EB5757;
   --color-green-rgb: 8, 185, 78;
   --color-green: #08B94E;
   --color-orange-rgb: 236, 117, 0;
@@ -5877,7 +5878,7 @@ kbd {
   margin: 0;
 }
 .markdown-rendered code {
-  color: var(--code-normal);
+  color: var(--color-red-00);
   font-family: var(--font-monospace);
   background-color: var(--code-background);
   border-radius: var(--radius-s);
@@ -5885,8 +5886,7 @@ kbd {
   padding: 0.1em 0.25em;
 }
 .cm-s-obsidian span.cm-inline-code {
-  /*color: var(--code-normal);*/
-  color: #eb5757;
+  color: var(--color-red-00);
   font-size: var(--code-size);
   background-color: var(--code-background);
   vertical-align: baseline;

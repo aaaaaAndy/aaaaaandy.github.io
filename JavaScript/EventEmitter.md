@@ -1,5 +1,6 @@
 📆: 2022-05-25 14:02:49
 🏷: #EventEmitter 
+***
 
 `EventEmitter` 是 `NodeJS` 的核心模块 `events` 中的类，用于对 `NodeJS` 中的事件进行统一管理，用 `events` 特定的 `API` 对事件进行添加、触发和移除等等，核心方法的模式类似于发布订阅
 
@@ -8,19 +9,23 @@
 `EventEmitter`本质上是一个观察者模式的实现。
 
 观察者模式：
+
 ***它定义了对象间的一种一对多的关系，让多个观察者对象同时监听某一个主题对象，当一个对象发生改变时，所有依赖于它的对象都将得到通知。***
 
 ```javascript
 // Node 中的 EventEmitter 简单用法
 let events = require('events');
+
 let eventEmitter = new events.EventEmitter();
+
 eventEmitter.on('show', function () {
   console.log('this is show callback');
 })
+
 eventEmitter.emit('show');
 ```
 
-eventEmitter是EventEmitter模块的一个实例，eventEmitter的emit方法，发出show事件，通过eventEmitter的on方法监听，从而执行相应的函数。
+`eventEmitter`是`EventEmitter`模块的一个实例，`eventEmitter`的`emit`方法，发出`show`事件，通过`eventEmitter`的`on`方法监听，从而执行相应的函数。
 ``
 
 ## 二、简单实现一个 EventEmitter
@@ -221,5 +226,3 @@ EventEmitter.prototype.off = EventEmitter.prototype.removeListener = function (t
     }
 };
 ```
-
-<!-- more -->

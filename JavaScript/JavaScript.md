@@ -14,7 +14,7 @@
 - [JavaScript闭包](JavaScript闭包.md)
 - [深拷贝和浅拷贝](深拷贝和浅拷贝.md)
 - [不同设备的click](不同设备的click.md)
-- [实现一个EventEmitter](实现一个EventEmitter.md)
+- [EventEmitter](JavaScript/EventEmitter.md)
 - [事件机制](事件机制.md)
 - [for循环中的setTimeout](for循环中的setTimeout.md)
 - [函数function](函数function.md)
