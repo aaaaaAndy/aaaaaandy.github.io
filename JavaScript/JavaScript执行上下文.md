@@ -1,5 +1,6 @@
 📆: 2021-08-20 17:32:44
 🏷: #JavaScript #context
+***
 
 对于每个执行上下文，都会有三个重要属性：变量对象、作用域链、this。
 
@@ -55,36 +56,161 @@ checkscope()();// 其入栈出栈顺序为push(<checkscope> functionContext);pop
 
 ## 四、怎么创建执行上下文
 
-创建执行上下文有两个阶段：***创建阶段*** 和 ***执行阶段*** 。
+执行上下文的生命周期包括三个阶段：创建阶段 → 执行阶段 → 回收阶段
 
 ### 1. 创建阶段
 
-创建阶段会发生三件事
+创建阶段即当函数被调用，但未执行任何其内部代码之前
 
-- this的绑定：this的值取决于该函数如何被调用
-- 创建词法环境组件
-- 创建变量环境组件
+创建阶段做了三件事：
 
-表示如下:
+- 确定 this 的值，也被称为 `This Binding`
+- LexicalEnvironment（词法环境） 组件被创建
+- VariableEnvironment（变量环境） 组件被创建
+
+伪代码如下：
 
 ```javascript
-ExecutionContext = {
-	ThisBinding: <this value>,
-	LexicalEnvironment: {...},
-	VariableEnvironment: {...}
+ExecutionContext = {  
+  ThisBinding = <this value>,     // 确定this 
+  LexicalEnvironment = { ... },   // 词法环境
+  VariableEnvironment = { ... },  // 变量环境
 }
 ```
+
+#### This Binding
+
+确定`this`的值我们前面讲到，`this`的值是在执行的时候才能确认，定义的时候不能确认
+
+#### 词法环境
+
+词法环境有两个组成部分：
+
+- 全局环境：是一个没有外部环境的词法环境，其外部环境引用为` null`，有一个全局对象，`this` 的值指向这个全局对象
+
+- 函数环境：用户在函数中定义的变量被存储在环境记录中，包含了`arguments` 对象，外部环境的引用可以是全局环境，也可以是包含内部函数的外部函数环境
+
+伪代码如下：
+
+```javascript
+GlobalExectionContext = {  // 全局执行上下文
+  LexicalEnvironment: {       // 词法环境
+    EnvironmentRecord: {     // 环境记录
+      Type: "Object",           // 全局环境
+      // 标识符绑定在这里 
+      outer: <null>           // 对外部环境的引用
+  }  
+}
+
+FunctionExectionContext = { // 函数执行上下文
+  LexicalEnvironment: {     // 词法环境
+    EnvironmentRecord: {    // 环境记录
+      Type: "Declarative",      // 函数环境
+      // 标识符绑定在这里      // 对外部环境的引用
+      outer: <Global or outer function environment reference>  
+  }  
+}
+```
+
+
+
+#### 变量环境
+
+变量环境也是一个词法环境，因此它具有上面定义的词法环境的所有属性
+
+在 ES6 中，词法环境和变量环境的区别在于前者用于存储函数声明和变量（ `let` 和 `const` ）绑定，而后者仅用于存储变量（ `var` ）绑定
+
+举个例子
+
+```javascript
+let a = 20;  
+const b = 30;  
+var c;
+
+function multiply(e, f) {  
+ var g = 20;  
+ return e * f * g;  
+}
+
+c = multiply(20, 30);
+```
+
+执行上下文如下：
+
+```javascript
+GlobalExectionContext = {
+
+  ThisBinding: <Global Object>,
+
+  LexicalEnvironment: {  // 词法环境
+    EnvironmentRecord: {  
+      Type: "Object",  
+      // 标识符绑定在这里  
+      a: < uninitialized >,  
+      b: < uninitialized >,  
+      multiply: < func >  
+    }  
+    outer: <null>  
+  },
+
+  VariableEnvironment: {  // 变量环境
+    EnvironmentRecord: {  
+      Type: "Object",  
+      // 标识符绑定在这里  
+      c: undefined,  
+    }  
+    outer: <null>  
+  }  
+}
+
+FunctionExectionContext = {  
+   
+  ThisBinding: <Global Object>,
+
+  LexicalEnvironment: {  
+    EnvironmentRecord: {  
+      Type: "Declarative",  
+      // 标识符绑定在这里  
+      Arguments: {0: 20, 1: 30, length: 2},  
+    },  
+    outer: <GlobalLexicalEnvironment>  
+  },
+
+  VariableEnvironment: {  
+    EnvironmentRecord: {  
+      Type: "Declarative",  
+      // 标识符绑定在这里  
+      g: undefined  
+    },  
+    outer: <GlobalLexicalEnvironment>  
+  }  
+}
+```
+
+留意上面的代码，`let`和`const`定义的变量`a`和`b`在创建阶段没有被赋值，但`var`声明的变量从在创建阶段被赋值为`undefined`
+
+这是因为，创建阶段，会在代码中扫描变量和函数声明，然后将函数声明存储在环境中
+
+但变量会被初始化为`undefined`(`var`声明的情况下)和保持`uninitialized`(未初始化状态)(使用`let`和`const`声明的情况下)
+
+这就是变量提升的实际原因
 
 ### 2. 执行阶段
 
 在此阶段，完成对所有这些变量的分配并执行
 
-### 3. 具体步骤
+如果 `Javascript` 引擎在源代码中声明的实际位置找不到变量的值，那么将为其分配 `undefined` 值
+
+### 3. 回收阶段
+
+执行上下文出栈等待虚拟机回收执行上下文
+
+### 具体步骤
 
 1. 找到当前上下文调用函数的代码；
 2. 执行代码之前，先创建执行上下文；
 3. 创建阶段；
-    1. 创建变量对象（VO）；
+	1. 创建变量对象（VO）；
         1. 创建arguments对象，检查当前上下文参数，建立该对象下的属性和属性值；
         2. 扫描上下文的函数声明；
             1. 每扫描到一个函数，就会在变量对象（VO）里面用函数名创建一个属性，为一个指针，指向该函数在内存中的地址；
@@ -96,7 +222,49 @@ ExecutionContext = {
     3. 确定this的指向。
 4. 执行阶段。
 
-## 五、变量对象
+## 五、执行栈
+
+执行栈，也叫调用栈，具有 LIFO（后进先出）结构，用于存储在代码执行期间创建的所有执行上下文
+
+ ![](https://static.vue-js.com/9eda0310-74c1-11eb-ab90-d9ae814b240d.png)
+
+当`Javascript`引擎开始执行你第一行脚本代码的时候，它就会创建一个全局执行上下文然后将它压到执行栈中
+
+每当引擎碰到一个函数的时候，它就会创建一个函数执行上下文，然后将这个执行上下文压到执行栈中
+
+引擎会执行位于执行栈栈顶的执行上下文(一般是函数执行上下文)，当该函数执行结束后，对应的执行上下文就会被弹出，然后控制流程到达执行栈的下一个执行上下文
+
+举个例子：
+
+```javascript
+let a = 'Hello World!';
+function first() {
+  console.log('Inside first function');
+  second();
+  console.log('Again inside first function');
+}
+function second() {
+  console.log('Inside second function');
+}
+first();
+console.log('Inside Global Execution Context');
+```
+
+转化成图的形式
+
+ ![](https://static.vue-js.com/ac11a600-74c1-11eb-ab90-d9ae814b240d.png)
+
+简单分析一下流程：
+
+- 创建全局上下文请压入执行栈
+- `first`函数被调用，创建函数执行上下文并压入栈
+- 执行`first`函数过程遇到`second`函数，再创建一个函数执行上下文并压入栈
+- `second`函数执行完毕，对应的函数执行上下文被推出执行栈，执行下一个执行上下文`first`函数
+- `first`函数执行完毕，对应的函数执行上下文也被推出栈中，然后执行全局上下文
+- 所有代码执行完毕，全局上下文也会被推出栈中，程序结束
+
+
+## 六、变量对象
 
 变量对象是执行上下文相关的数据作用域，存储了在上下文中定义的变量和函数声明。根据上下文的不同可以分为全局上下文的变量对象和函数上下文的变量对象。
 
@@ -204,7 +372,7 @@ function foo(){
 var foo = 1;// 执行结果会打印"foo"， 这是因为进入函数执行上下文时，已经有了函数声明foo，此时变量声明foo不会再去覆盖原来的生命
 ```
 
-## 六、作用域链
+## 七、作用域链
 
 `JavaScript`中没有块级作用域，取而代之的是函数作用域。变量在声明它们的函数体以及这个函数体嵌套的任意函数体内都是有定义的。
 
@@ -224,7 +392,7 @@ var foo = 1;// 执行结果会打印"foo"， 这是因为进入函数执行上�
 
 当查找变量的时候，会先从当前上下文的变量对象中查找，如果没有找到，就会从父级(词法层面上的父级)执行上下文的变量对象中查找，一直找到全局上下文的变量对象，也就是全局对象。这样由多个执行上下文的变量对象构成的链表就叫做作用域链。
 
-## 七、this
+## 八、this
 
 this并不是在编写时绑定的，而是在运行时绑定的。它的上下文取决于函数调用时的各种条件。this一旦被确定，就不可更改了。
 
