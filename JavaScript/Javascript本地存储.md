@@ -1,4 +1,5 @@
 🏷: #JavaScript #cookie #localStorage #sessionStorage #indexedDB
+***
 
 ## 一、方式
 
@@ -62,7 +63,7 @@ document.cookie =name=bb; domain=aa.net; path=/  # 客户端设置
 
 `HTML5`新方法，IE8及以上浏览器都兼容
 
-### 特点
+#### 特点
 
 - 生命周期：持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的
 - 存储的信息在同一域中是共享的
@@ -121,7 +122,7 @@ console.log(localStorage.getItem('key')); // '[object, Object]'
 
 
 
-### 扩展的前端存储方式
+### indexedDB
 
 `indexedDB `是一种低级API，用于客户端存储大量结构化数据(包括, 文件/ blobs)。该API使用索引来实现对该数据的高性能搜索
 

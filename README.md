@@ -35,10 +35,17 @@
 33. [DOM常用操作](JavaScript/DOM常用操作.md)
 34. [for循环中的setTimeout](JavaScript/for循环中的setTimeout.md)
 35. [IntersectionObserver-无限滚动](JavaScript/IntersectionObserver-无限滚动.md)
-36. [Javascript如何实现继承](JavaScript/Javascript如何实现继承.md)
+37. [JavaScript原型与原型链](JavaScript/JavaScript原型与原型链.md)
+38. [Javascript本地存储](JavaScript/Javascript本地存储.md)
+39. [JavaScript闭包](JavaScript/JavaScript闭包.md)
+40. [JavaScript各种宽高属性](JavaScript/JavaScript各种宽高属性.md)
+41. [JavaScript精度丢失](JavaScript/JavaScript精度丢失.md)
+42. [JavaScript内存泄漏](JavaScript/JavaScript内存泄漏.md)
+43. [JavaScript事件冒泡与捕获](JavaScript/JavaScript事件冒泡与捕获.md)
 
 
 - [ ] [作用域链](JavaScript/作用域链.md)
+- [ ] [Javascript如何实现继承](JavaScript/Javascript如何实现继承.md)
 
 ## Nginx
 - [Nginx基础](nginx/Nginx基础.md)

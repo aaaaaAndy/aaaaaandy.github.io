@@ -1,5 +1,6 @@
 📆: 2020-03-12 17:29:44
 🏷: #width #height #clientWidth #clientHeight #innerWidth #innerHeight
+***
 
 在`JavaScript`中存在各种宽高属性，如`height`, `clientHeight`, `innerHeight`,`outerHeight`等等，那么它们究竟有什么区别呢？
 
