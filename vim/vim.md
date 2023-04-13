@@ -1,5 +1,0 @@
-- [[vi与vim]]
-- [[VIM工作模式]]
-- [[简明Vim练级攻略]] 
-- [[`vim命令速查`]]
-- [把vim打造成IDE](https://blog.jez.io/vim-as-an-ide/)
