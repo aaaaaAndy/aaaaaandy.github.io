@@ -1,10 +1,9 @@
-# 面试官：JavaScript字符串的常用方法有哪些？
+🏷: #JavaScript #String 
+***
 
 ## 一、操作方法
 
 我们也可将字符串常用的操作方法归纳为增、删、改、查，需要知道字符串的特点是一旦创建了，就不可变
-
-
 
 ### 增
 
@@ -22,8 +21,6 @@ let result = stringValue.concat("world");
 console.log(result); // "hello world"
 console.log(stringValue); // "hello"
 ```
-
-
 
 ### 删
 
@@ -47,8 +44,6 @@ console.log(stringValue.substring(3,7)); // "lo w"
 console.log(stringValue.substr(3, 7)); // "lo worl"
 ```
 
-
-
 ### 改
 
 这里改的意思也不是改变原字符串，而是创建字符串的一个副本，再进行操作
@@ -56,7 +51,6 @@ console.log(stringValue.substr(3, 7)); // "lo worl"
 常见的有：
 
 - trim()、trimLeft()、trimRight()
-
 - repeat()
 - padStart()、padEnd()
 - toLowerCase()、 toUpperCase()

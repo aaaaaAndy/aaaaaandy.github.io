@@ -4,3 +4,4 @@
 /themes/
 db.json
 /.obsidian/*.json
+.DS_Store
