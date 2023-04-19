@@ -1,3 +1,5 @@
+🏷: #vue #directive
+***
 
 ## 一、什么是指令
 
@@ -30,9 +32,9 @@
 `v-xxx:arg.modifier="value"` 
 ```
 
-### 二、如何实现
+## 二、如何实现
 
-注册一个自定义指令有全局注册与局部注册
+注册一个自定义指令有***全局注册***与***局部注册***
 
 全局注册主要是通过`Vue.directive`方法进行注册
 
@@ -73,7 +75,6 @@ directives: {
 - `bind`：只调用一次，指令第一次绑定到元素时调用。在这里可以进行一次性的初始化设置
 - `inserted`：被绑定元素插入父节点时调用 (仅保证父节点存在，但不一定已被插入文档中)
 - `update`：所在组件的 `VNode` 更新时调用，但是可能发生在其子 `VNode` 更新之前。指令的值可能发生了改变，也可能没有。但是你可以通过比较更新前后的值来忽略不必要的模板更新
-
 - `componentUpdated`：指令所在组件的 `VNode` 及其子 `VNode` 全部更新后调用
 - `unbind`：只调用一次，指令与元素解绑时调用
 
@@ -104,8 +105,6 @@ directives: {
 </script>
 ```
 
-
-
 ## 三、应用场景
 
 使用自定义指令可以满足我们日常一些场景，这里给出几个自定义指令的案例：
@@ -114,7 +113,7 @@ directives: {
 - 图片懒加载
 - 一键 Copy的功能
 
-### 表单防止重复提交
+### 1. 表单防止重复提交
 
 表单防止重复提交这种情况设置一个`v-throttle`自定义指令来实现
 
@@ -144,9 +143,7 @@ Vue.directive('throttle', {
 <button @click="sayHello" v-throttle>提交</button>
 ```
 
-
-
-### 图片懒加载
+### 2. 图片懒加载
 
 设置一个`v-lazy`自定义指令完成图片懒加载
 
@@ -160,6 +157,7 @@ const LazyLoad = {
             bind(el,binding){
                 LazyLoad.init(el,binding.value,defaultSrc);
             },
+            
             inserted(el){
                 // 兼容处理
                 if('IntersectionObserver' in window){
@@ -171,6 +169,7 @@ const LazyLoad = {
             },
         })
     },
+    
     // 初始化
     init(el,val,def){
         // data-src 储存真实src
@@ -178,6 +177,7 @@ const LazyLoad = {
         // 设置src为loading图
         el.setAttribute('src',def);
     },
+    
     // 利用IntersectionObserver监听el
     observe(el){
         let io = new IntersectionObserver(entries => {
@@ -191,6 +191,7 @@ const LazyLoad = {
         });
         io.observe(el);
     },
+    
     // 监听scroll事件
     listenerScroll(el){
         let handler = LazyLoad.throttle(LazyLoad.load,300);
@@ -199,6 +200,7 @@ const LazyLoad = {
             handler(el);
         });
     },
+    
     // 加载真实图片
     load(el){
         let windowHeight = document.documentElement.clientHeight
@@ -212,6 +214,7 @@ const LazyLoad = {
             }
         }
     },
+    
     // 节流
     throttle(fn,delay){
         let timer; 
@@ -241,7 +244,7 @@ const LazyLoad = {
 export default LazyLoad;
 ```
 
-### 一键 Copy的功能
+### 3. 一键 Copy的功能
 
 ```javascript
 import { Message } from 'ant-design-vue';

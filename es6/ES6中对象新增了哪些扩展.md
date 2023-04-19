@@ -1,8 +1,3 @@
-#  面试官：对象新增了哪些扩展？
-
-![](https://static.vue-js.com/4da4dd40-5427-11eb-ab90-d9ae814b240d.png)
-
-
 
 ## 一、属性的简写
 

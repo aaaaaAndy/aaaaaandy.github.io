@@ -1,6 +1,4 @@
-# 面试官：说说webpack中常见的Loader？解决了什么问题？
 
- ![](https://static.vue-js.com/5660fc40-a6ff-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 `loader` 用于对模块的"源代码"进行转换，在 `import` 或"加载"模块时预处理文件

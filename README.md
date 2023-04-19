@@ -12,7 +12,7 @@
 10. [函数function](JavaScript/函数function.md)
 11. [几种类型转换机制](JavaScript/几种类型转换机制.md)
 12. [几种判断数据类型的方法](JavaScript/几种判断数据类型的方法.md)
-13. [几种数据类型](JavaScript/几种数据类型.md)
+13. [JavaScript中的数据类型](JavaScript/JavaScript中的数据类型.md)
 14. [类数组及其转换方法](JavaScript/类数组及其转换方法.md)
 15. [偏函数与函数柯里化](JavaScript/偏函数与函数柯里化.md)
 16. [如何实现上拉加载，下拉刷新](JavaScript/如何实现上拉加载，下拉刷新.md)
@@ -23,7 +23,7 @@
 21. [什么是单点登录](JavaScript/什么是单点登录.md)
 22. [EventEmitter](JavaScript/EventEmitter.md)
 23. [事件代理及其应用场景](JavaScript/事件代理及其应用场景.md)
-24. [事件模型](JavaScript/事件模型.md)
+24. [DOM事件模型](JavaScript/DOM事件模型.md)
 25. [事件循环](JavaScript/事件循环.md)
 26. [数组扁平化](JavaScript/数组扁平化.md)
 27. [数组常用方法](JavaScript/数组常用方法.md)
@@ -86,6 +86,48 @@
 30. [state 和 props 有什么区别](React/state%20和%20props%20有什么区别.md)
 31. [super() 和 super(props) 有什么区别](React/super()%20和%20super(props)%20有什么区别.md)
 
+## Vue
+1. [给vue的data添加一个新的属性](vue/给vue的data添加一个新的属性.md) 
+2. [什么是虚拟DOM，如何实现一个虚拟DOM](vue/什么是虚拟DOM，如何实现一个虚拟DOM.md)
+3. [双向数据绑定是什么](vue/双向数据绑定是什么.md)
+4. [为什么data属性是一个函数而不是一个对象](vue/为什么data属性是一个函数而不是一个对象.md)
+5. [怎么处理vue项目中的错误](vue/怎么处理vue项目中的错误.md)
+6. [Vue.directive 自定义指令](vue/Vue.directive%20自定义指令.md)
+7. [axios的源码分析](vue/axios的源码分析.md)
+8. [axios封装](vue/axios封装.md)
+9. [keepalive](vue/keepalive.md)
+10. [slot插槽](vue/slot插槽.md)
+11. [SPA单页面](vue/SPA单页面.md)
+12. [SPA首屏加载速度慢的怎么解决](vue/SPA首屏加载速度慢的怎么解决.md)
+13. [ssr](vue/ssr.md)
+14. [v-if和v-for优先级](vue/v-if和v-for优先级.md)
+15. [v-if和v-show区别](vue/v-if和v-show区别.md)
+16. [简单介绍下vue](vue/简单介绍下vue.md)
+17. [Vue.observable](vue/Vue.observable.md)
+18. [vue3跟vue2的区别](vue/vue3跟vue2的区别.md)
+19. [Vue常用的修饰符有哪些](vue/Vue常用的修饰符有哪些.md)
+20. [vue的diff算法](vue/vue的diff算法.md)
+21. [vue生命周期](vue/vue生命周期.md)
+22. [Vue实例挂载的过程](vue/Vue实例挂载的过程.md)
+23. [vue项目部署到服务器后报404的原因](vue/vue项目部署到服务器后报404的原因.md)
+24. [vue项目的目录结构](vue/vue项目的目录结构.md)
+25. [Vue项目中你是如何解决跨域](vue/Vue项目中你是如何解决跨域.md)
+26. [vue要做权限管理该怎么做](vue/vue要做权限管理该怎么做.md)
+27. [Vue中的$nextTick有什么作用](vue/Vue中的$nextTick有什么作用.md)
+28. [Vue中的过滤器filter](vue/Vue中的过滤器filter.md)
+29. [vue中的mixin](vue/vue中的mixin.md)
+30. [Vue中组件和插件](vue/Vue中组件和插件.md)
+31. [vue中key的原理](vue/vue中key的原理.md)
+32. [Vue组件之间的通信方式都有哪些](vue/Vue组件之间的通信方式都有哪些.md)
+
+## Vue3
+- [Vue 3.0中Treeshaking特性](vue3/Vue%203.0中Treeshaking特性.md)
+- [Vue3.0的设计目标是什么](vue3/Vue3.0的设计目标是什么.md)
+- [Vue3.0性能提升](vue3/Vue3.0性能提升.md)
+- [Vue3的CompositionApi](vue3/Vue3的CompositionApi.md)
+- [Vue3的proxy](vue3/Vue3的proxy.md)
+- [Vue3写过组件](vue3/Vue3写过组件.md)
+
 ## Nginx
 - [Nginx基础](nginx/Nginx基础.md)
 - [Nginx常用配置](nginx/Nginx常用配置.md)
@@ -100,3 +142,9 @@
 - [VIM工作模式](vim/VIM工作模式.md)
 - [vim命令速查](vim/vim命令速查.md)
 - [简明Vim练级攻略](vim/简明Vim练级攻略.md)
+
+## Web Components
+
+
+## Chrome Development tools
+- [ ] 怎么看开发者工具

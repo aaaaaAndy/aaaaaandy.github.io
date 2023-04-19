@@ -1,7 +1,3 @@
-# 面试官：说说webpack proxy工作原理？为什么能解决跨域?
-
- ![](https://static.vue-js.com/5b871600-ace5-11eb-85f6-6fac77c0c9b3.png)
-
 
 
 ## 一、是什么
@@ -50,10 +46,6 @@ module.exports = {
 - secure：默认情况下不接收转发到https的服务器上，如果希望支持，可以设置为false
 - changeOrigin：它表示是否更新代理后请求的 headers 中host地址
 
-
-
-
-
 ## 二、工作原理
 
  `proxy`工作原理实质上是利用`http-proxy-middleware` 这个`http`代理中间件，实现请求转发给其他服务器
@@ -73,8 +65,6 @@ app.listen(3000);
 
 // http://localhost:3000/api/foo/bar -> http://www.example.org/api/foo/bar
 ```
-
-
 
 ## 三、跨域
 

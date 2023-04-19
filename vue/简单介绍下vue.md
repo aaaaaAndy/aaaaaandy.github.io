@@ -1,6 +1,5 @@
-# 面试官：有使用过vue吗？说说你对vue的理解
-
-![](https://static.vue-js.com/02ac1620-3ac6-11eb-85f6-6fac77c0c9b3.png)
+🏷: #vue
+***
 
 ## 一、从历史说起
 
@@ -83,13 +82,12 @@ Vue.js（/vjuː/，或简称为Vue）是一个用于创建用户界面的开源J
 
 解释：指令 \(Directives\) 是带有 v- 前缀的特殊属性作用：当表达式的值改变时，将其产生的连带影响，响应式地作用于 DOM
 
-- 常用的指令
-
-  - 条件渲染指令 `v-if`
-  - 列表渲染指令`v-for`
-  - 属性绑定指令`v-bind`
-  - 事件绑定指令`v-on`
-  - 双向数据绑定指令`v-model`
+常用的指令
+ - 条件渲染指令 `v-if`
+ - 列表渲染指令`v-for`
+ - 属性绑定指令`v-bind`
+ - 事件绑定指令`v-on`
+ - 双向数据绑定指令`v-model`
 
 没有指令之前我们是怎么做的？是不是先要获取到DOM然后在....干点啥
 
@@ -138,5 +136,3 @@ Vue.js（/vjuː/，或简称为Vue）是一个用于创建用户界面的开源J
 - https://zh.wikipedia.org/zh-cn/Vue.js
 - https://zhuanlan.zhihu.com/p/20197803
 - https://zhuanlan.zhihu.com/p/38296857
-
- ![](https://static.vue-js.com/821b87b0-3ac6-11eb-ab90-d9ae814b240d.png)
