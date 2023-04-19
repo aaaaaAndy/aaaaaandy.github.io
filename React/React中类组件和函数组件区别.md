@@ -1,16 +1,13 @@
-# 面试官：说说对React中类组件和函数组件的理解？有什么区别？
+🏷: #react #类组件 #函数组件
+***
 
- ![](https://static.vue-js.com/6c196d80-de39-11eb-85f6-6fac77c0c9b3.png)
-
-## 一、类组件
-
-类组件，顾名思义，也就是通过使用`ES6`类的编写形式去编写组件，该类必须继承`React.Component`
+类的编写形式去编写组件，该类必须继承`React.Component`
 
 如果想要访问父组件传递过来的参数，可通过`this.props`的方式去访问
 
 在组件中必须实现`render`方法，在`return`中返回`React`对象，如下：
 
-```javascriptx
+```jsx
 class Welcome extends React.Component {
   constructor(props) {
     super(props)
@@ -21,23 +18,17 @@ class Welcome extends React.Component {
 }
 ```
 
-
-
-
-
 ## 二、函数组件
 
 函数组件，顾名思义，就是通过函数编写的形式去实现一个`React`组件，是`React`中定义组件最简单的方式
 
-```javascriptx
+```jsx
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
 ```
 
 函数第一个参数为`props`用于接收父组件传递过来的参数
-
-
 
 ## 三、区别
 
@@ -46,9 +37,7 @@ function Welcome(props) {
 - 编写形式
 - 状态管理
 - 生命周期
-
 - 调用方式
-
 - 获取渲染的值
 
 

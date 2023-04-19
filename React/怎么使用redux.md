@@ -1,6 +1,5 @@
-# 面试官：你在React项目中是如何使用Redux的? 项目结构是如何划分的？
-
- ![](https://static.vue-js.com/31a4aff0-e7dc-11eb-ab90-d9ae814b240d.png)
+🏷: #react #redux
+***
 
 ## 一、背景
 
@@ -16,7 +15,6 @@
 通过`redux`将整个应用状态存储到`store`中，组件可以派发`dispatch`行为`action`给`store`
 
 其他组件通过订阅`store`中的状态`state`来更新自身的视图
-
 
 ## 二、如何做
 
@@ -60,10 +58,7 @@ connect(mapStateToProps, mapDispatchToProps)(MyComponent)
 可以传递两个参数：
 
 - mapStateToProps
-
 - mapDispatchToProps
-
-
 
 ### mapStateToProps
 
@@ -71,7 +66,7 @@ connect(mapStateToProps, mapDispatchToProps)(MyComponent)
 
 如下：
 
-```javascriptx
+```jsx
 const mapStateToProps = (state) => {
     return {
         // prop : state.xxx  | 意思是将state中的某个数据映射到props中
@@ -82,7 +77,7 @@ const mapStateToProps = (state) => {
 
 组件内部就能够通过`props`获取到`store`中的数据
 
-```cons
+```jsx
 class Foo extends Component {
     constructor(props){
         super(props);
@@ -103,7 +98,7 @@ export default Foo
 
 将`redux`中的`dispatch`映射到组件内部的`props`中
 
-```javascriptx
+```jsx
 const mapDispatchToProps = (dispatch) => { // 默认传递参数就是dispatch
   return {
     onClick: () => {

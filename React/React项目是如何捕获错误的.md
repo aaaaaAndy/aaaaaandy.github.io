@@ -1,6 +1,5 @@
-# 面试官：说说你在React项目是如何捕获错误的？
-
- ![](https://static.vue-js.com/8db1b5c0-f288-11eb-85f6-6fac77c0c9b3.png)
+🏷: #react #componentDidCatch #getDerivedStateFromError
+***
 
 ## 一、是什么
 
@@ -9,7 +8,6 @@
 举个例子，在`react`项目中去编写组件内`JavaScript`代码错误会导致 `React` 的内部状态被破坏，导致整个应用崩溃，这是不应该出现的现象
 
 作为一个框架，`react`也有自身对于错误的处理的解决方案
-
 
 ## 二、如何做
 
@@ -21,12 +19,12 @@
 
 形成错误边界组件的两个条件：
 
-- 使用了  static getDerivedStateFromError()
-- 使用了 componentDidCatch()
+- 使用了  `static getDerivedStateFromError()`
+- 使用了 `componentDidCatch()`
 
 抛出错误后，请使用 `static getDerivedStateFromError()` 渲染备用 UI ，使用 `componentDidCatch()` 打印错误信息，如下：
 
-```javascriptx
+```jsx
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -56,7 +54,7 @@ class ErrorBoundary extends React.Component {
 
 然后就可以把自身组件的作为错误边界的子组件，如下：
 
-```javascriptx
+```jsx
 <ErrorBoundary>
   <MyWidget />
 </ErrorBoundary>
@@ -81,7 +79,7 @@ class ErrorBoundary extends React.Component {
 
 这种情况可以使用`js`的`try...catch...`语法，如下：
 
-```javascriptx
+```jsx
 class MyComponent extends React.Component {
   constructor(props) {
     super(props);

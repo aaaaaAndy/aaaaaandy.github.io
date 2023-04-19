@@ -1,4 +1,4 @@
-# 面试官：说说你对immutable的理解？如何应用在react项目中？
+# 面试官：说说你对immutable的理解？如何应用在react项目中
 
  ![](https://static.vue-js.com/797e9470-ea3f-11eb-ab90-d9ae814b240d.png)
 
@@ -22,7 +22,6 @@ Immutable，不可改变的，在计算机中，即指一旦创建，就不能�
 ![](https://pic4.zhimg.com/80/2b4c801a7b40eefcd4ee6767fb984fdf_720w.gif)
 
 
-
 ## 二、如何使用
 
 使用`Immutable`对象最主要的库是`immutable.js`
@@ -34,12 +33,8 @@ immutable.js 是一个完全独立的库，无论基于什么框架都可以用�
 内部提供了一套完整的 Persistent Data Structure，还有很多易用的数据类型，如`Collection`、`List`、`Map`、`Set`、`Record`、`Seq`，其中：
 
 - List: 有序索引集，类似 JavaScript 中的 Array
-
 - Map: 无序索引集，类似 JavaScript 中的 Object
-
 - Set: 没有重复值的集合
-
-
 
 主要的方法如下：
 
@@ -109,7 +104,7 @@ console.log(foo === bar);  //  打印 true
 
 在使用`redux`过程中也可以结合`Immutable`，不使用`Immutable`前修改一个数据需要做一个深拷贝
 
-```javascriptx
+```jsx
 import '_' from 'lodash';
 
 const Component = React.createClass({
@@ -128,7 +123,7 @@ const Component = React.createClass({
 
 使用 Immutable 后：
 
-```javascriptx
+```jsx
 getInitialState() {
   return {
     data: Map({ times: 0 })

@@ -1,6 +1,5 @@
-# 面试官：在react中组件间过渡动画如何实现？
- ![](https://static.vue-js.com/294f1e00-e4b0-11eb-ab90-d9ae814b240d.png)
-
+🏷: #react #过渡动画
+***
 
 ## 一、是什么
 
@@ -9,7 +8,6 @@
 当一个组件在显示与消失过程中存在过渡动画，可以很好的增加用户的体验
 
 在`react`中实现过渡动画效果会有很多种选择，如`react-transition-group`，`react-motion`，`Animated`，以及原生的`CSS`都能完成切换动画
-
 
 ## 二、如何实现
 
@@ -35,7 +33,7 @@
 
 如下例子：
 
-```javascriptx
+```jsx
 export default class App2 extends React.PureComponent {
 
   state = {show: true};
@@ -108,7 +106,7 @@ export default class App2 extends React.PureComponent {
 
 下面给出一个按钮入场和出场的示例，如下：
 
-```javascriptx
+```jsx
 import { SwitchTransition, CSSTransition } from "react-transition-group";
 
 export default class SwitchAnimation extends PureComponent {
@@ -188,7 +186,7 @@ export default class SwitchAnimation extends PureComponent {
 
 如下：
 
-```javascriptx
+```jsx
 import React, { PureComponent } from 'react'
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 

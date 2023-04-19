@@ -1,8 +1,5 @@
-# 面试官：React中组件之间如何通信？
-
- ![](https://static.vue-js.com/767a2800-dc9f-11eb-85f6-6fac77c0c9b3.png)
-
-
+🏷: #react #通信
+***
 
 ## 一、是什么
 
@@ -19,7 +16,6 @@
 
 组件间通信即指组件通过某种方式来传递信息以达到某个目的
 
-
 ## 二、如何通信
 
 组件传递的方式有很多种，根据传送者和接收者可以分为如下：
@@ -30,14 +26,13 @@
 - 父组件向后代组件传递
 - 非关系组件传递
 
-
 ### 父组件向子组件传递
 
 由于`React`的数据流动为单向的，父组件向子组件传递是最常见的方式
 
 父组件在调用子组件的时候，只需要在子组件标签内传递参数，子组件通过`props`属性就能接收父组件传递过来的参数
 
-```javascriptx
+```jsx
 function EmailInput(props) {
   return (
     <label>
@@ -56,7 +51,7 @@ const element = <EmailInput email="123124132@163.com" />;
 
 父组件对应代码如下：
 
-```javascriptx
+```jsx
 class Parents extends Component {
   constructor() {
     super();
@@ -85,7 +80,7 @@ class Parents extends Component {
 
 子组件对应代码如下：
 
-```javascriptx
+```jsx
 class Child extends Component {
   clickGoods(e) {
     // 在此函数中传入值
@@ -103,13 +98,11 @@ class Child extends Component {
 }
 ```
 
-
-
 ### 兄弟组件之间的通信
 
 如果是兄弟组件之间的传递，则父组件作为中间层来实现数据的互通，通过使用父组件传递
 
-```javascriptx
+```jsx
 class Parent extends React.Component {
   constructor(props) {
     super(props)
@@ -133,8 +126,6 @@ class Parent extends React.Component {
 }
 ```
 
-
-
 ### 父组件向后代组件传递
 
 父组件向后代组件传递数据是一件最普通的事情，就像全局数据一样
@@ -151,14 +142,14 @@ class Parent extends React.Component {
 
 `Provider`组件通过`value`属性用于给后代组件传递数据：
 
-```javascriptx
+```jsx
 <PriceContext.Provider value={100}>
 </PriceContext.Provider>
 ```
 
 如果想要获取`Provider`传递的数据，可以通过`Consumer`组件或者或者使用`contextType`属性接收，对应分别如下：
 
-```javascriptx
+```jsx
 class MyClass extends React.Component {
   static contextType = PriceContext;
   render() {
@@ -170,7 +161,7 @@ class MyClass extends React.Component {
 
 `Consumer`组件：
 
-````javascriptx
+````jsx
 <PriceContext.Consumer>
     { /*这里是一个函数*/ }
     {
@@ -179,12 +170,9 @@ class MyClass extends React.Component {
 </PriceContext.Consumer>
 ````
 
-
-
 ### 非关系组件传递
 
 如果组件之间关系类型比较复杂的情况，建议将数据进行一个全局资源管理，从而实现通信，例如`redux`。关于`redux`的使用后续再详细介绍
-
 
 ## 三、总结
 

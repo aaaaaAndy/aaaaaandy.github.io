@@ -1,7 +1,5 @@
-# 面试官：说说React diff的原理是什么？
-
- ![](https://static.vue-js.com/967e6150-ec91-11eb-85f6-6fac77c0c9b3.png)
-
+🏷: #react #diff
+***
 
 ## 一、是什么
 
@@ -19,11 +17,8 @@
 `react`中`diff`算法主要遵循三个层级的策略：
 
 - tree层级
-
 - conponent 层级
-
 - element 层级
-
 
 ### tree层级
 
@@ -39,7 +34,6 @@
 
 上述操作中，只有删除和创建操作
 
-
 ### conponent层级
 
 如果是同一个类的组件，则会继续往下`diff`运算，如果不是一个类的组件，那么直接删除这个组件下的所有子节点，创建新的
@@ -47,8 +41,6 @@
  ![](https://static.vue-js.com/c1fcdf00-ec91-11eb-ab90-d9ae814b240d.png)
 
 当`component D `换成了`component G` 后，即使两者的结构非常类似，也会将`D`删除再重新创建`G`
-
-
 
 ### element层级
 
@@ -86,8 +78,6 @@
 - 节点C：此时maxIndex=3，oldIndex=2；不满足maxIndex< oldIndex，因此C节点进行移动操作，当前已经比较完了
 
 当ABCD节点比较完成后，`diff`过程还没完，还会整体遍历老集合中节点，看有没有没用到的节点，有的话，就删除
-
-
 
 ## 三、注意事项
 
