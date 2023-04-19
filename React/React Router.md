@@ -1,6 +1,3 @@
-# 面试官：说说你对React Router的理解？常用的Router组件有哪些？
-
- ![](https://static.vue-js.com/c6635670-e8ac-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 
@@ -15,12 +12,7 @@
 - react-router: 实现了路由的核心功能
 - react-router-dom： 基于 react-router，加入了在浏览器运行环境下的一些功能
 - react-router-native：基于 react-router，加入了 react-native 运行环境下的一些功能
-
 - react-router-config: 用于配置静态路由的工具库
-
-
-
-
 
 ## 二、有哪些
 
@@ -42,7 +34,7 @@
 
 使用两者作为最顶层组件包裹其他组件
 
-```javascriptx
+```jsx
 import { BrowserRouter as Router } from "react-router-dom";
 
 export default function App() {
@@ -79,7 +71,7 @@ export default function App() {
 - render 属性：设置匹配到路径后，渲染的内容
 - exact 属性：开启精准匹配，只有精准匹配到完全一致的路径，才会渲染对应的组件
 
-```javascriptx
+```jsx
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 export default function App() {
@@ -107,9 +99,6 @@ export default function App() {
 ```
 
 
-
-
-
 ### Link、NavLink
 
 通常路径的跳转是使用`Link`组件，最终会被渲染成`a`元素，其中属性`to`代替`a`标题的`href`属性
@@ -131,7 +120,7 @@ export default function App() {
 
 通过`Route`作为顶层组件包裹其他组件后,页面组件就可以接收到一些路由相关的东西，比如`props.history`
 
-```javascriptx
+```jsx
 const Contact = ({ history }) => (
   <Fragment>
     <h1>Contact</h1>
@@ -166,17 +155,13 @@ const About = ({
 
 上述组件当接收到的路由参数`name` 不等于 `tom` 的时候，将会自动重定向到首页
 
-
-
-
-
 ### switch
 
 `swich`组件的作用适用于当匹配到第一个组件的时候，后面的组件就不应该继续匹配
 
 如下例子：
 
-```javascriptx
+```jsx
 <Switch>
   <Route exact path="/" component={Home} />
   <Route path="/about" component={About} />
@@ -197,8 +182,6 @@ const About = ({
 - useHistory
 - useParams
 - useLocation
-
-
 
 ### useHistory
 
@@ -222,9 +205,7 @@ const Contact = () => {
 
 ### useParams
 
-
-
-```javascriptx
+```jsx
 const About = () => {
   const { name } = useParams();
   return (
@@ -238,13 +219,11 @@ const About = () => {
 };
 ```
 
-
-
 ### useLocation
 
 `useLocation` 会返回当前 `URL `的 `location `对象
 
-```javascriptx
+```jsx
 import { useLocation } from "react-router-dom";
 
 const Contact = () => {
@@ -279,7 +258,7 @@ const Contact = () => {
 
 例如将`path`在`Route`匹配时写成`/detail/:id`，那么 `/detail/abc`、`/detail/123`都可以匹配到该`Route`
 
-```javascriptx
+```jsx
 <NavLink to="/detail/abc123">详情</NavLink>
 
 <Switch>
@@ -291,7 +270,7 @@ const Contact = () => {
 
 获取参数方式如下：
 
-```javascriptx
+```jsx
 console.log(props.match.params.xxx)
 ```
 
@@ -301,7 +280,7 @@ console.log(props.match.params.xxx)
 
 在跳转的路径中添加了一些query参数；
 
-```javascriptx
+```jsx
 <NavLink to="/detail2?name=why&age=18">详情2</NavLink>
 
 <Switch>
@@ -323,7 +302,7 @@ console.log(props.location.search)
 
 传递方式如下：
 
-```javascriptx
+```jsx
 <NavLink to={{
     pathname: "/detail2", 
     query: {name: "kobe", age: 30},

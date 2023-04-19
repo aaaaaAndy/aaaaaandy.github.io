@@ -1,8 +1,6 @@
-# 面试官：说说对React refs 的理解？应用场景？ 
-
- ![](https://static.vue-js.com/25162040-de02-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
+
 `Refs` 在计算机中称为弹性文件系统（英语：Resilient File System，简称ReFS）
 
 `React` 中的 `Refs`提供了一种方式，允许我们访问 `DOM `节点或在 `render `方法中创建的 `React `元素
@@ -25,7 +23,7 @@
 
 只需要在对应元素或组件中`ref`属性
 
-```javascriptx
+```jsx
 class MyComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -48,7 +46,7 @@ this.refs.myref.innerHTML = "hello";
 
 `refs`通过`React.createRef()`创建，然后将`ref`属性添加到`React`元素中，如下：
 
-```javascriptx
+```jsx
 class MyComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -71,7 +69,7 @@ const node = this.myRef.current;
 
 当`ref`传入为一个函数的时候，在渲染过程中，回调函数参数会传入一个元素对象，然后通过实例将对象进行保存
 
-```javascriptx
+```jsx
 class MyComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -94,7 +92,7 @@ const node = this.myref
 
 通过`useRef`创建一个`ref`，整体使用方式与`React.createRef`一致
 
-```javascriptx
+```jsx
 function App(props) {
   const myref = useRef()
   return (

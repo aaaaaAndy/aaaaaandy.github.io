@@ -1,7 +1,3 @@
-# 面试官：说说对 React 的理解？有哪些特性？
-
-![](https://static.vue-js.com/671f5a90-d265-11eb-85f6-6fac77c0c9b3.png)
-
 ## 一、是什么
 
 React，用于构建用户界面的 JavaScript 库，只提供了 UI 层面的解决方案
@@ -14,7 +10,7 @@ React，用于构建用户界面的 JavaScript 库，只提供了 UI 层面的�
 
 `react` 类组件使用一个名为 `render()` 的方法或者函数组件`return`，接收输入的数据并返回需要展示的内容
 
-```javascriptx
+```jsx
 class HelloMessage extends React.Component {
   render() {
     return <div>Hello {this.props.name}</div>;
@@ -72,7 +68,7 @@ marker.setMap(map);
 
 而用 `React` 实现上述功能则如下：
 
-```javascriptx
+```jsx
 <Map zoom={4} center={(lat, lng)}>
   <Marker position={(lat, lng)} title={"Hello Marker"} />
 </Map>
@@ -88,7 +84,7 @@ marker.setMap(map);
 
 函数式组件如下：
 
-```javascriptx
+```jsx
 const Header = () => {
   return (
     <Jumbotron style={{ backgroundColor: "orange" }}>
@@ -100,7 +96,7 @@ const Header = () => {
 
 类组件（有状态组件）如下：
 
-```javascriptx
+```jsx
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
