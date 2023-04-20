@@ -1,11 +1,11 @@
 🏷: #JavaScript #new
 ***
-
 ## 一、是什么
 
 在`JavaScript`中，`new`操作符用于创建一个给定构造函数的实例对象
 
 例子
+
 ```javascript
 function Person(name, age){
     this.name = name;

@@ -1,0 +1,60 @@
+body {
+	/*  左侧文件链接悬浮图标	*/
+	--cursor: pointer;
+  --cursor-link: pointer;
+
+  --tag-padding-y: 0.18em;
+
+  --list-bullet-size: 0.4em;
+
+
+}
+
+.markdown-source-view.mod-cm6 .hr {
+	margin: 12px 0 !important;
+}
+
+.theme-light {
+  --color-inline-code: #EB5757;
+  --bg-inline-code: rgba(135,131,120,0.15);
+  --radius-inline-code: 2px;
+  --padding-inline-code: 2px 4px;
+  --blockquote-background-color: #f1f1ef;
+}
+
+.theme-dark {
+  --color-inline-code: #EB5757;
+  --bg-inline-code: rgba(135,131,120,0.15);
+  --radius-inline-code: 2px;
+  --padding-inline-code: 2px 4px;
+  --blockquote-background-color: #252525;
+}
+
+
+/* 行内代码 */
+.cm-s-obsidian span.cm-inline-code {
+  color: var(--color-inline-code);
+  background-color: var(--bg-inline-code);
+  padding: var(--padding-inline-code);
+  border-radius: var(--radius-inline-code);
+}
+
+.markdown-rendered code {
+  color: var(--color-inline-code);
+  background-color: var(--bg-inline-code);
+  border-radius: var(--radius-inline-code);
+  padding: var(--padding-inline-code);
+}
+
+/* 引用 */
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+  padding: 4px 8px 4px 8px;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.markdown-rendered blockquote {
+  padding: 4px 8px 4px 8px;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
