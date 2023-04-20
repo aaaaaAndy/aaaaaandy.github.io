@@ -6,7 +6,7 @@
 4. [JavaScript事件冒泡与捕获](JavaScript/JavaScript事件冒泡与捕获.md)
 5. [不同设备的click](JavaScript/不同设备的click.md)
 6. [动态引入（require-import）](JavaScript/动态引入（require-import）.md)
-7. [防抖和节流](JavaScript/防抖和节流.md)
+7. [函数防抖和节流](函数防抖和节流.md)
 8. [JavaScript实现滚动加载的两种方式](JavaScript/JavaScript实现滚动加载的两种方式.md)
 9. [函数式编程](JavaScript/函数式编程.md)
 10. [函数function](JavaScript/函数function.md)
