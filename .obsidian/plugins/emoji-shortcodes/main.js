@@ -732,6 +732,7 @@ const emoji = JSON.parse(`{
   ":green_book:": "📗",
   ":green_circle:": "🟢",
   ":green_heart:": "💚",
+  ":simple:": "💚",
   ":green_salad:": "🥗",
   ":green_square:": "🟩",
   ":greenland:": "🇬‍🇱",
@@ -784,6 +785,7 @@ const emoji = JSON.parse(`{
   ":heart_on_fire:": "❤‍🔥",
   ":heartbeat:": "💓",
   ":heartpulse:": "💗",
+  ":hard:": "💗",
   ":hearts:": "♥",
   ":heavy_check_mark:": "✔",
   ":heavy_division_sign:": "➗",
@@ -1872,6 +1874,7 @@ const emoji = JSON.parse(`{
   ":yawning_face:": "🥱",
   ":yellow_circle:": "🟡",
   ":yellow_heart:": "💛",
+  ":normal:": "💛",
   ":yellow_square:": "🟨",
   ":yemen:": "🇾‍🇪",
   ":yen:": "💴",
@@ -1888,7 +1891,7 @@ const emoji = JSON.parse(`{
   ":zombie:": "🧟",
   ":zombie_man:": "🧟‍♂",
   ":zombie_woman:": "🧟‍♀",
-  ":zzz:": "💤",
+  ":zzz:": "💤"
 }`);
 
 class EmojiMarkdownPostProcessor {
