@@ -8,11 +8,7 @@ body {
   --list-bullet-size: 0.4em;
 
   /* 行宽 */
-  --file-line-width: 90%;
-}
-
-.markdown-source-view.mod-cm6 .hr {
-	margin: 12px 0 !important;
+  --file-line-width: 100%;
 }
 
 .theme-light {
@@ -31,6 +27,28 @@ body {
   --blockquote-background-color: #252525;
 }
 
+.markdown-source-view.mod-cm6 .hr {
+	margin: 12px 0 !important;
+}
+
+/* 设置弹窗 */
+.modal.mod-sidebar-layout {
+  border-radius: 5px;
+  /*font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";*/
+}
+
+/* 弹窗左侧 */
+.modal.mod-settings .vertical-tab-header {
+}
+
+.modal.mod-settings .vertical-tab-header::-webkit-scrollbar {
+  display: none;
+}
+
+/* 2号标题 */
+.HyperMD-header-2, .inline-title[data-level='2'], .HyperMD-list-line .cm-header-2 {
+  margin-top: 1.4rem
+}
 
 /* 行内代码 */
 .cm-s-obsidian span.cm-inline-code {
