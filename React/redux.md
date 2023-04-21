@@ -23,11 +23,8 @@
 整个流程就是借书的用户需要先存在，然后需要借书，需要一句话来描述借什么书，图书馆管理员听到后需要查一下记录本，了解图书的位置，最后图书馆管理员会把这本书给到这个借书人
 
 转换为代码是，`React Components` 需要获取一些数据, 然后它就告知 `Store` 需要获取数据，这就是就是 `Action Creactor` , `Store` 接收到之后去 `Reducer` 查一下， `Reducer` 会告诉 `Store` 应该给这个组件什么数据
-
 ## 三、如何使用
-
 创建一个`store`的公共数据区域
-
 ```javascript
 import { createStore } from 'redux' // 引入一个第三方的方法
 const store = createStore() // 创建数据的公共存储区域（管理员）
