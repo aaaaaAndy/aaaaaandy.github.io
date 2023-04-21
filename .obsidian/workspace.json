@@ -28,8 +28,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript/不同设备的click.md",
-                "mode": "source",
+                "file": "vue/Vue常用的修饰符有哪些.md",
+                "mode": "preview",
                 "source": false
               }
             },
@@ -49,7 +49,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/不同设备的click.md"
+                "file": "vue/Vue常用的修饰符有哪些.md"
               }
             },
             "group": "505c91ee5b6ec91d"
@@ -120,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/不同设备的click.md",
+                "file": "vue/Vue常用的修饰符有哪些.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/不同设备的click.md",
+                "file": "vue/Vue常用的修饰符有哪些.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/不同设备的click.md"
+                "file": "vue/Vue常用的修饰符有哪些.md"
               }
             }
           }
@@ -183,11 +183,13 @@
   },
   "active": "5950f47ee297b3ed",
   "lastOpenFiles": [
+    "JavaScript/JavaScript中的数据类型.md",
+    "README.md",
+    "JavaScript/不同设备的click.md",
     "面试题汇总分类 2.md",
     "JavaScript/函数防抖和节流.md",
     "typescript/class.md",
     "JavaScript/JavaScript闭包.md",
-    "README.md",
     "面试题汇总分类.md",
     "汇总.md",
     "JavaScript/DOM事件模型.md",
@@ -197,7 +199,6 @@
     "JavaScript/数组常用方法.md",
     "JavaScript/JavaScript各种宽高属性.md",
     "JavaScript/几种类型转换机制.md",
-    "JavaScript/JavaScript中的数据类型.md",
     "JavaScript/几种判断数据类型的方法.md",
     "JavaScript/JavaScript实现滚动加载的两种方式.md",
     "React/React中类组件和函数组件区别.md",
@@ -208,7 +209,6 @@
     "JavaScript/Websocket总结.md",
     "React/React构建组件的方式有哪些.md",
     "大厂面试题汇总/几道编程题.md",
-    "大厂面试题汇总/面试题1.md",
     "大厂面试题汇总",
     "JavaScript/assets/6e80e5e0-7cb8-11eb-85f6-6fac77c0c9b3.png",
     "index.html~",
