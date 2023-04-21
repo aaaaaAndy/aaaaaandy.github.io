@@ -9,6 +9,7 @@ body {
 
   /* 行宽 */
   --file-line-width: 100%;
+
 }
 
 .theme-light {
@@ -53,6 +54,8 @@ body {
 /* 单行 */
 .markdown-source-view.mod-cm6 .cm-line {
   padding: 3px 2px;
+
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 /* 行内代码 */
@@ -62,6 +65,8 @@ body {
   padding: var(--padding-inline-code);
   border-radius: var(--radius-inline-code);
 }
+
+.cm-s-obsidian span.cm-inline-code + 
 
 .markdown-rendered code {
   color: var(--color-inline-code);
@@ -85,9 +90,12 @@ body {
 
 /* 代码块 */
 .cm-s-obsidian div.HyperMD-codeblock-begin-bg {
-  padding-top: 4px;
+  margin-top: 4px; !important;
 }
 
-.cm-s-obsidian div.HyperMD-codeblock-end-bg {
-  padding-bottom: 4px;
+.cm-s-obsidian div.HyperMD-codeblock-end-bg::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
 }
