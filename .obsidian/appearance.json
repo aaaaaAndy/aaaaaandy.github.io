@@ -1,0 +1,11 @@
+{
+  "accentColor": "#f70820",
+  "enabledCssSnippets": [
+    "theme",
+    "index"
+  ],
+  "cssTheme": "",
+  "theme": "obsidian",
+  "textFontFamily": "JetBrains Mono NL,华文细黑,等线,Microsoft YaHei UI,Microsoft YaHei",
+  "interfaceFontFamily": "Consolas"
+}
