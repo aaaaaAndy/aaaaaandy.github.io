@@ -129,4 +129,3 @@ import('/images/tree/tree.png').then(res => {
 	imgUrl = res;
 });
 ```
-
