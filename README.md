@@ -53,6 +53,9 @@
 - [ ] [作用域链](JavaScript/作用域链.md)
 - [ ] [Javascript如何实现继承](JavaScript/Javascript如何实现继承.md)
 
+## ES6
+1. [对象新增了哪些扩展](es6/对象新增了哪些扩展.md)
+
 ## React
 1. [高阶组件](React/高阶组件.md)
 2. [如何提高组件的渲染效率](React/如何提高组件的渲染效率.md)
