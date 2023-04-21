@@ -6,8 +6,8 @@
 
 我个人则倾向于用“隐式强制类型转换”(implicit coercion)和“显式强制类型转换”(explicit coercion)来区分：
 
--   显式强制类型转换：手动地将一种类型的值转为另一种类型，常见的显式转换方法有：`Number`、`String`、`Boolean`、`parseInt`、`parseFloat`、`toString` 等等；
--   隐式强制类型转换：一般是在涉及运算符的时候才出现的情况，比如两个不同类型的变量相加减、取反等。
+- 显式强制类型转换：手动地将一种类型的值转为另一种类型，常见的显式转换方法有：`Number`、`String`、`Boolean`、`parseInt`、`parseFloat`、`toString` 等等；
+- 隐式强制类型转换：一般是在涉及运算符的时候才出现的情况，比如两个不同类型的变量相加减、取反等。
 
 ### 1. 转换为字符串
 

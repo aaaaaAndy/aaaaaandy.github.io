@@ -1,7 +1,6 @@
 📆: 2023-04-05 11:45:42
 🏷: #click  
 ***
-
 ## 一、`onclick` 与 `click`
 
 `onclick`是绑定事件，`click`是方法，`click`本身是方法作用是触发`onclick`事件，只要执行了元素的`click()`方法，就会触发`onclick`事件。
