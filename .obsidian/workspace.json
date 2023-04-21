@@ -23,7 +23,7 @@
             }
           },
           {
-            "id": "5950f47ee297b3ed",
+            "id": "d009fdf3f7ff07f7",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -32,8 +32,7 @@
                 "mode": "source",
                 "source": false
               }
-            },
-            "group": "505c91ee5b6ec91d"
+            }
           }
         ],
         "currentTab": 1
@@ -51,8 +50,7 @@
               "state": {
                 "file": "JavaScript/不同设备的click.md"
               }
-            },
-            "group": "505c91ee5b6ec91d"
+            }
           }
         ]
       }
@@ -181,14 +179,15 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "5950f47ee297b3ed",
+  "active": "d009fdf3f7ff07f7",
   "lastOpenFiles": [
+    "README.md",
     "面试题汇总分类 2.md",
+    "面试题汇总分类.md",
+    "JavaScript/不同设备的click.md",
     "JavaScript/函数防抖和节流.md",
     "typescript/class.md",
     "JavaScript/JavaScript闭包.md",
-    "README.md",
-    "面试题汇总分类.md",
     "汇总.md",
     "JavaScript/DOM事件模型.md",
     "JavaScript/DOM常用操作.md",
@@ -208,7 +207,6 @@
     "JavaScript/Websocket总结.md",
     "React/React构建组件的方式有哪些.md",
     "大厂面试题汇总/几道编程题.md",
-    "大厂面试题汇总/面试题1.md",
     "大厂面试题汇总",
     "JavaScript/assets/6e80e5e0-7cb8-11eb-85f6-6fac77c0c9b3.png",
     "index.html~",
