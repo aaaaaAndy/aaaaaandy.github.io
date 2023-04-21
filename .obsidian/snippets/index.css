@@ -6,6 +6,9 @@ body {
   --tag-padding-y: 0.18em;
 
   --list-bullet-size: 0.4em;
+
+  /* 行宽 */
+  --file-line-width: 90%;
 }
 
 .markdown-source-view.mod-cm6 .hr {
