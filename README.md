@@ -54,7 +54,8 @@
 - [ ] [Javascript如何实现继承](JavaScript/Javascript如何实现继承.md)
 
 ## ES6
-1. [对象新增了哪些扩展](es6/对象新增了哪些扩展.md)
+1. [var、let、const之间的区别](es6/var、let、const之间的区别.md)
+2. [对象新增了哪些扩展](es6/对象新增了哪些扩展.md)
 
 ## TypeScript
 

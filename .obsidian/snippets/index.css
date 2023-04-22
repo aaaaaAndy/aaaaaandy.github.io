@@ -8,7 +8,7 @@ body {
   --list-bullet-size: 0.4em;
 
   /* 行宽 */
-  --file-line-width: 700px;
+  --file-line-width: 100%;
 
   /* 弹窗圆角  */
   --prompt-border-radius: 5px;
@@ -62,14 +62,18 @@ body {
   display: none;
 }
 
+.view-content > .markdown-source-view.mod-cm6 > .cm-editor > .cm-scroller::-webkit-scrollbar {
+  display: none;
+}
+
 /* 2号标题 */
 .HyperMD-header-2, .inline-title[data-level='2'], .HyperMD-list-line .cm-header-2 {
-  padding: 1.4rem 0 !important;
+  padding: 1rem 0 !important;
 }
 
 /* 3号标题 */
 .HyperMD-header-3, .inline-title[data-level='3'], .HyperMD-list-line .cm-header-3 {
-  padding: 1.2rem 0 !important;
+  padding: 1rem 0 !important;
 }
 
 /* 单行 */
@@ -120,4 +124,9 @@ body {
 
 .markdown-source-view.mod-cm6 .cm-content div.HyperMD-codeblock-end-bg {
   margin-bottom: 4px !important;
+}
+
+/* 列表  */
+.markdown-source-view.mod-cm6 .cm-content > .cm-line.HyperMD-list-line {
+  margin-left: 1rem !important;
 }

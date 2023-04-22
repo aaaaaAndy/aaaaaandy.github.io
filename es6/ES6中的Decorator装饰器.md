@@ -1,22 +1,16 @@
-
-
+🏷: #ES6 #Decorator
+***
 ## 一、介绍
-
 Decorator，即装饰器，从名字上很容易让我们联想到装饰者模式
-
 简单来讲，装饰者模式就是一种在不改变原类和使用继承的情况下，动态地扩展对象功能的设计理论。
-
 `ES6`中`Decorator`功能亦如此，其本质也不是什么高大上的结构，就是一个普通的函数，用于扩展类属性和类方法
-
 这里定义一个士兵，这时候他什么装备都没有
-
 ```javascript
 class soldier{ 
 }
 ```
 
 定义一个得到 AK 装备的函数，即装饰器
-
 ```javascript
 function strong(target){
     target.AK = true

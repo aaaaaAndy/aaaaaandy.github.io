@@ -1,21 +1,14 @@
 
 ## 一、是什么
-
 在单页应用中，一个`web`项目只有一个`html`页面，一旦页面加载完成之后，就不用因为用户的操作而进行页面的重新加载或者跳转，其特性如下：
-
 - 改变 url 且不让浏览器像服务器发送请求
 - 在不刷新页面的前提下动态改变浏览器地址栏中的URL地址
 
 其中主要分成了两种模式：
-
 - hash 模式：在url后面加上#，如http://127.0.0.1:5500/home/#/page1
 - history 模式：允许操作浏览器的曾经在标签页或者框架里访问的会话历史记录
-
-
 ## 二、使用
-
 `React Router`对应的`hash`模式和`history`模式对应的组件为：
-
 - HashRouter
 - BrowserRouter
 
@@ -151,11 +144,6 @@ class Route extends Component {
 export default Route;
 
 ```
-
-
-
 ## 参考文献
-
 - https://juejin.cn/post/6870376090297171975#heading-9
-
 - https://segmentfault.com/a/1190000023560665

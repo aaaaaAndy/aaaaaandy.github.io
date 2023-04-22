@@ -1,11 +1,11 @@
 {
   "accentColor": "#eb5757",
-  "theme": "moonstone",
+  "theme": "obsidian",
   "enabledCssSnippets": [
     "theme",
     "index"
   ],
   "textFontFamily": "Segoe UI",
-  "cssTheme": "",
+  "cssTheme": "Obsidianotion",
   "interfaceFontFamily": "Microsoft Sans Serif"
 }
