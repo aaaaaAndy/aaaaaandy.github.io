@@ -53,9 +53,9 @@ body {
   border-radius: var(--prompt-border-radius);
 }
 
-img {
-  margin: 4px 0;
-  border-radius: var(--img-border-radius);
+.markdown-source-view.mod-cm6 .cm-content img {
+  margin: 4px 0 !important;
+  border-radius: var(--img-border-radius) !important;
 }
 
 .modal.mod-settings .vertical-tab-header::-webkit-scrollbar {
@@ -114,7 +114,7 @@ img {
 }
 
 /* 代码块 */
-.cm-s-obsidian div.HyperMD-codeblock-begin-bg {
+.markdown-source-view.mod-cm6 .cm-content div.HyperMD-codeblock-begin-bg {
   margin-top: 4px; !important;
 }
 
