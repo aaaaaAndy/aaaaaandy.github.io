@@ -8,7 +8,7 @@ body {
   --list-bullet-size: 0.4em;
 
   /* 行宽 */
-  --file-line-width: 100%;
+  --file-line-width: 700px;
 
   /* 弹窗圆角  */
   --prompt-border-radius: 5px;
