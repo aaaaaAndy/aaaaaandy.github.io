@@ -54,6 +54,7 @@ body {
 }
 
 img {
+  margin: 4px 0;
   border-radius: var(--img-border-radius);
 }
 
