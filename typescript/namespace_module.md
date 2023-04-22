@@ -1,8 +1,5 @@
 # 面试官：说说对 TypeScript 中命名空间与模块的理解？区别？
 
- ![](https://static.vue-js.com/9378d760-137e-11ec-8e64-91fdec0f05a1.png)
-
-
 ## 一、模块
 
 `TypeScript` 与` ECMAScript` 2015 一样，任何包含顶级 `import` 或者 `export` 的文件都被当成一个模块

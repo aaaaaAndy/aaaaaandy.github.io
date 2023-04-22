@@ -1,6 +1,7 @@
 {
   "useMarkdownLinks": true,
   "newLinkFormat": "relative",
-  "vimMode": false,
-  "alwaysUpdateLinks": true
+  "vimMode": true,
+  "alwaysUpdateLinks": true,
+  "promptDelete": false
 }

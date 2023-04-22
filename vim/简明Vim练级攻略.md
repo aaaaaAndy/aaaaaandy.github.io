@@ -1,15 +1,11 @@
 🏷: #vim 
 
 `vim`的学习曲线相当的大（参看[各种文本编辑器的学习曲线](https://coolshell.cn/articles/3125.html)），所以，如果你一开始看到的是一大堆VIM的命令分类，你一定会对这个编辑器失去兴趣的。下面的文章翻译自《[Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/)》，我觉得这是给新手最好的VIM的升级教程了，没有列举所有的命令，只是列举了那些最有用的命令。非常不错。
-
 ## 第一级 - 存活
-
 1. 安装 [vim](https://www.vim.org/)
 2. 启动 vim
 3. **什么也别干！**请先阅读
-
 当你安装好一个编辑器后，你一定会想在其中输入点什么东西，然后看看这个编辑器是什么样子。但vim不是这样的，请按照下面的命令操作：
-
 - 启动Vim后，vim在 *`Normal`* 模式下。
 - 让我们进入 *`Insert`* 模式，请按下键 `i` 。(陈皓注：你会看到vim左下角有一个–`insert`–字样，表示，你可以以插入的方式输入了）
 - 此时，你可以输入文本了，就像你用“记事本”一样。
