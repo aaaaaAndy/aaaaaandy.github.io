@@ -115,12 +115,9 @@ body {
 
 /* 代码块 */
 .markdown-source-view.mod-cm6 .cm-content div.HyperMD-codeblock-begin-bg {
-  margin-top: 4px; !important;
+  margin-top: 4px !important;
 }
 
-.cm-s-obsidian div.HyperMD-codeblock-end-bg::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 4px;
+.markdown-source-view.mod-cm6 .cm-content div.HyperMD-codeblock-end-bg {
+  margin-bottom: 4px !important;
 }
