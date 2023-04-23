@@ -73,7 +73,12 @@ body {
 
 /* 3号标题 */
 .HyperMD-header-3, .inline-title[data-level='3'], .HyperMD-list-line .cm-header-3 {
-  padding: 1rem 0 !important;
+  padding: 0.8rem 0 !important;
+}
+
+/* 4号标题 */
+.HyperMD-header-4, .inline-title[data-level='4'], .HyperMD-list-line .cm-header-4 {
+  padding: 0.6rem 0 !important;
 }
 
 /* 单行 */
