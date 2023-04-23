@@ -6,6 +6,7 @@
   ],
   "cssTheme": "",
   "theme": "obsidian",
-  "textFontFamily": "",
-  "interfaceFontFamily": ""
+  "textFontFamily": "JetBrains Mono",
+  "interfaceFontFamily": "",
+  "monospaceFontFamily": "JetBrains Mono"
 }

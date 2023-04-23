@@ -55,8 +55,14 @@
 
 ## ES6
 1. [var、let、const之间的区别](es6/var、let、const之间的区别.md)
-2. [对象新增了哪些扩展](es6/对象新增了哪些扩展.md)
-
+2. [ES6中数组新增了哪些扩展](es6/ES6中数组新增了哪些扩展.md)
+3. [ES6中对象新增了哪些扩展](es6/ES6中对象新增了哪些扩展.md)
+4. [ES6中函数新增了哪些扩展](es6/ES6中函数新增了哪些扩展.md)
+5. [ES6中的Promise](es6/ES6中的Promise.md)
+6. [ES6中的Proxy](es6/ES6中的Proxy.md)
+7. [ES6中的Module](es6/ES6中的Module.md)
+8. [ES6中的Proxy](es6/ES6中的Proxy.md)
+9. [ES6中的Decorator装饰器](es6/ES6中的Decorator装饰器.md)
 ## TypeScript
 
 
