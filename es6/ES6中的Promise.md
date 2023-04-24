@@ -55,7 +55,30 @@ const promise = new Promise(function(resolve, reject) {});
 - catch()
 - finally()
 #### then()
-`then`是实例状态发生改变时的回调函数，第一个参数是`resolved`状态的回调函数，第二个参数是`rejected`状态的回调函数
+`then`是实例状态发生改变时的回调函数，第一个参数是`resolved`状态的回调函数，第二个参数是`rejected`状态的回调函数，语法如下：
+```javascript
+then(onFulfilled)
+then(onFulfilled, onRejected)
+```
+用法示例
+```js
+const p1 = new Promise((resolve, reject) => {
+  resolve("Success!");
+  // or
+  // reject(new Error("Error!"));
+});
+
+p1.then(
+  (value) => {
+    console.log(value); // Success!
+  },
+  (reason) => {
+    console.error(reason); // Error!
+  },
+);
+
+```
+
 `then`方法返回的是一个新的`Promise`实例，也就是`promise`能链式书写的原因
 ```javascript
 getJSON("/posts.json").then(function(json) {
