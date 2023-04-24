@@ -61,7 +61,7 @@
 5. [ES6中的Promise](es6/ES6中的Promise.md)
 6. [ES6中的Proxy](es6/ES6中的Proxy.md)
 7. [ES6中的Module](es6/ES6中的Module.md)
-8. [ES6中的Proxy](es6/ES6中的Proxy.md)
+8. [ES6中的Generator](es6/ES6中的Generator.md)
 9. [ES6中的Decorator装饰器](es6/ES6中的Decorator装饰器.md)
 ## TypeScript
 
