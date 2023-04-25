@@ -190,5 +190,5 @@ define([
 ```
 类似的插件还有json和mdown，用于加载json文件和markdown文件。
 ## 参考文档
-- [Javascript模块化编程（三）：require.js的用法 - 阮一峰的网络日志 (ruanyifeng.com)](https://www.ruanyifeng.com/blog/2012/11/require_js.html)
-- [RequireJS](https://requirejs.org/)
+- [Javascript模块化编程（三）：require.js的用法 - 阮一峰的网络日](https://www.ruanyifeng.com/blog/2012/11/require_js.html)
+- [RequireJS官网](https://requirejs.org/)
