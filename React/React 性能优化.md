@@ -1,43 +1,27 @@
 🏷: #react #性能优化
 ***
-
 ## 一、是什么
-
 `React`凭借`virtual DOM`和`diff`算法拥有高效的性能，但是某些情况下，性能明显可以进一步提高
-
 在前面文章中，我们了解到类组件通过调用`setState`方法， 就会导致`render`，父组件一旦发生`render`渲染，子组件一定也会执行`render`渲染
-
 当我们想要更新一个子组件的时候，如下图绿色部分：
 
  ![](https://static.vue-js.com/b41f6f30-f270-11eb-ab90-d9ae814b240d.png)
-
 理想状态只调用该路径下的组件`render`：
-
  ![](https://static.vue-js.com/bc0f2460-f270-11eb-85f6-6fac77c0c9b3.png)
-
 但是`react`的默认做法是调用所有组件的`render`，再对生成的虚拟`DOM`进行对比（黄色部分），如不变则不进行更新
-
  ![](https://static.vue-js.com/c2f0c4f0-f270-11eb-85f6-6fac77c0c9b3.png)
-
 从上图可见，黄色部分`diff`算法对比是明显的性能浪费的情况
-
 ## 二、如何做
-
 在[React中如何避免不必要的render](https://mp.weixin.qq.com/s/h4NX4Plr6TCjoIhlawiJTg)中，我们了解到如何避免不必要的`render`来应付上面的问题，主要手段是通过`shouldComponentUpdate`、`PureComponent`、`React.memo`，这三种形式这里就不再复述
-
 除此之外， 常见性能优化常见的手段有如下：
-
 - 避免使用内联函数
 - 使用 React Fragments 避免额外标记
 - 使用 Immutable
 - 懒加载组件
 - 事件绑定方式
 - 服务端渲染
-
 #### 避免使用内联函数
-
 如果我们使用内联函数，则每次调用`render`函数时都会创建一个新的函数实例，如下：
-
 ```jsx
 import React from "react";
 
@@ -52,9 +36,7 @@ export default class InlineFunctionComponent extends React.Component {
   }
 }
 ```
-
 我们应该在组件内部创建一个函数，并将事件绑定到该函数本身。这样每次调用 `render` 时就不会创建单独的函数实例，如下：
-
 ```jsx
 import React from "react";
 
