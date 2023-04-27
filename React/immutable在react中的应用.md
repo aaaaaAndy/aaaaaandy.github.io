@@ -1,7 +1,3 @@
-# 面试官：说说你对immutable的理解？如何应用在react项目中
-
- ![](https://static.vue-js.com/797e9470-ea3f-11eb-ab90-d9ae814b240d.png)
-
 ## 一、是什么
 
 Immutable，不可改变的，在计算机中，即指一旦创建，就不能再被更改的数据
