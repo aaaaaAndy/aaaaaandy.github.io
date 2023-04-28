@@ -584,7 +584,7 @@ body {
   --color-cyan-rgb: 83, 223, 221;
   --color-cyan: #53DFDD;
   --color-blue-rgb: 2, 122, 255;
-  --color-blue: #027aff;
+  --color-blue: #56A8F5;
   --color-purple-rgb: 168, 130, 255;
   --color-purple: #a882ff;
   --color-pink-rgb: 250, 153, 205;
@@ -633,11 +633,11 @@ body {
     0px 30px 90px rgba(0, 0, 0, 0.2);
   /* Code */
   --code-white-space: pre-wrap;
-  --code-size: var(--font-smallest);
+  --code-size: var(--font-smaller);
   --code-background: var(--background-primary-alt);
   --code-normal: var(--text-muted);
   --code-comment: var(--text-faint);
-  --code-function: var(--color-yellow);
+  --code-function: var(--color-blue);
   --code-important: var(--color-orange);
   --code-keyword: var(--color-orange);
   --code-operator: var(--color-red);
@@ -655,102 +655,10 @@ iframe {
     --highlight-mix-blend-mode: darken;
   }
 }
-@font-face {
-  font-family: 'Avenir Next';
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-  src: url(public/fonts/94f2f163d4b698242fef.otf);
-}
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 200;
-  font-display: swap;
-  src: url(public/fonts/72505e6a122c6acd5471.woff2) format('woff2');
-}
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(public/fonts/2d5198822ab091ce4305.woff2) format('woff2');
-}
-@font-face {
-  font-family: 'Inter';
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url(public/fonts/c8ba52b05a9ef10f4758.woff2);
-}
-@font-face {
-  font-family: 'Inter';
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-  src: url(public/fonts/cb10ffd7684cd9836a05.woff2);
-}
-@font-face {
-  font-family: 'Inter';
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-  src: url(public/fonts/b5f0f109bc88052d4000.woff2);
-}
-@font-face {
-  font-family: 'Inter';
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-  src: url(public/fonts/cbe0ae49c52c920fd563.woff2);
-}
-@font-face {
-  font-family: 'Inter';
-  font-weight: 800;
-  font-style: italic;
-  font-display: swap;
-  src: url(public/fonts/535a6cf662596b3bd6a6.woff2);
-}
-@font-face {
-  font-family: 'Source Code Pro';
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-  src: url(public/fonts/70cc7ff27245e82ad414.ttf);
-}
-@font-face {
-  font-family: 'Source Code Pro';
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-  src: url(public/fonts/454577c22304619db035.ttf);
-}
-@font-face {
-  font-family: 'Source Code Pro';
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-  src: url(public/fonts/52ac8f3034507f1d9e53.ttf);
-}
-@font-face {
-  font-family: 'Source Code Pro';
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-  src: url(public/fonts/05b618077343fbbd92b7.ttf);
-}
-@font-face {
-  font-family: 'Flow Circular';
-  font-display: swap;
-  src: url(public/fonts/4bb6ac751d1c5478ff3a.woff2);
-}
-@font-face {
-  font-family: '??';
-  unicode-range: U+0;
-}
 body {
-  --font-default: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
-  --font-monospace-default: Menlo, SFMono-Regular, Consolas, "Roboto Mono", 'Source Code Pro', monospace;
+  --font-default: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  /*--font-default: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;*/
+  --font-monospace-default: Jetbrains Mono, Menlo, SFMono-Regular, Consolas, "Roboto Mono", 'Source Code Pro', monospace;
   --font-interface-override: '??';
   --font-interface-theme: '??';
   --font-interface: var(--font-interface-override), var(--font-interface-theme), var(--default-font, '??'), var(--font-default);
@@ -1596,6 +1504,9 @@ span.CodeMirror-selectedtext {
 }
 .view-content > .markdown-source-view.mod-cm6 > .cm-editor > .cm-scroller {
   padding: var(--file-margins);
+}
+.view-content > .markdown-source-view.mod-cm6 > .cm-editor > .cm-scroller::-webkit-scrollbar {
+  display: none;
 }
 .empty-state {
   position: absolute;
@@ -5653,7 +5564,7 @@ body:not(.is-translucent):not(.is-mobile) .workspace-tabs {
   }
 }
 .tree-item-self .tree-item-icon {
-  display: flex;
+  display: none;
   align-items: center;
   padding-inline-end: var(--size-2-3);
   opacity: var(--icon-opacity);
@@ -6951,7 +6862,7 @@ ul > li.is-collapsed::marker {
   tab-size: var(--list-indent);
 }
 .markdown-source-view.mod-cm6 .cm-content > .cm-line.HyperMD-list-line {
-  margin-left: 0.5em;
+  margin-left: 1em !important;
 }
 /* Space between list items */
 .markdown-source-view ol > li,
@@ -7078,6 +6989,7 @@ li.is-collapsed .list-bullet:after,
 .markdown-source-view.mod-cm6 .cm-formatting-list-ul,
 .markdown-source-view.mod-cm6 .cm-formatting-list-ol {
   white-space: pre;
+  font-style: italic;
 }
 a {
   color: var(--link-color);
@@ -7215,6 +7127,7 @@ body.is-mobile .markdown-source-view.mod-cm6 .cm-underline {
 .markdown-source-view.mod-cm6 .cm-link .cm-underline,
 .markdown-source-view.mod-cm6 .cm-url .cm-underline {
   cursor: var(--cursor-link);
+  font-style: italic;
 }
 @media (hover: hover) {
   .markdown-source-view.mod-cm6 .cm-hmd-internal-link .cm-underline:hover {
@@ -7860,6 +7773,9 @@ em {
   padding: 0 var(--size-4-3) var(--size-4-6) var(--size-4-3);
   scroll-padding-block: var(--size-4-2);
 }
+.nav-files-container::-webkit-scrollbar {
+  display: none;
+}
 /* Vault name */
 .nav-folder.mod-root > .nav-folder-title {
   font-size: var(--vault-name-font-size);
@@ -7920,7 +7836,8 @@ body:not(.is-grabbing) .nav-file-title.is-active:hover,
 body:not(.is-grabbing) .nav-folder-title.is-active:hover,
 .nav-file-title.is-active,
 .nav-folder-title.is-active {
-  color: var(--nav-item-color-active);
+  /*color: var(--nav-item-color-active);*/
+  color: var(--link-external-color);
   background-color: var(--nav-item-background-active);
   font-weight: var(--nav-item-weight-active);
 }
