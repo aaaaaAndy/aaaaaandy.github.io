@@ -138,12 +138,22 @@ body {
   margin-bottom: 4px !important;
 }
 
+.markdown-rendered pre {
+  padding: var(--size-4-4) var(--size-4-4);
+}
+
+.markdown-rendered code {
+  margin: var(--size-4-1);
+}
+
 /* 列表  */
 .markdown-source-view.mod-cm6 .cm-content > .cm-line.HyperMD-list-line {
   margin-left: 1rem !important;
 }
 
 /* 链接  */
-.markdown-source-view.mod-cm6 .cm-link .cm-underline, .markdown-source-view.mod-cm6 .cm-url .cm-underline {
+.markdown-source-view.mod-cm6 .cm-link .cm-underline, .markdown-source-view.mod-cm6 .cm-url .cm-underline,
+.external-link {
   font-style: italic;
+  text-decoration: none;
 }

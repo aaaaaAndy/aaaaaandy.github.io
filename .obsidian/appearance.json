@@ -3,9 +3,9 @@
   "enabledCssSnippets": [
     "theme"
   ],
-  "cssTheme": "Simple",
+  "cssTheme": "Docusaurus",
   "theme": "obsidian",
   "textFontFamily": "",
   "interfaceFontFamily": "",
-  "monospaceFontFamily": "JetBrains Mono"
+  "monospaceFontFamily": ""
 }
