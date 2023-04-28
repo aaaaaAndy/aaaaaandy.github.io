@@ -1,14 +1,17 @@
 🏷: #JavaScript #var #let #const
 ***
 ## 一、var
+
 在ES5中，顶层对象的属性和全局变量是等价的，用`var`声明的变量既是全局变量，也是顶层变量
 注意：顶层对象，在浏览器环境指的是`window`对象，在 `Node` 指的是`global`对象
+
 ```javascript
 var a = 10;
 console.log(window.a) // 10
 ```
 
 使用`var`声明的变量存在变量提升的情况
+
 ```javascript
 console.log(a) // undefined
 var a = 20
@@ -49,9 +52,9 @@ console.log(a) // 30
 ```
 
 ## 二、let
-`let`是`ES6`新增的命令，用来声明变量
 
-用法类似于`var`，但是所声明的变量，只在`let`命令所在的代码块内有效
+`let`是`ES6`新增的命令，用来声明变量。用法类似于`var`，但是所声明的变量，只在`let`命令所在的代码块内有效
+
 ```javascript
 {
     let a = 20
@@ -77,6 +80,7 @@ if (true) {
 
 使用`let`声明变量前，该变量都不可用，也就是大家常说的“暂时性死区”
 最后，`let`不允许在相同作用域中重复声明
+
 ```javascript
 let a = 20
 let a = 30
@@ -84,6 +88,7 @@ let a = 30
 ```
 
 注意的是相同作用域，下面这种情况是不会报错的
+
 ```javascript
 let a = 20
 {

@@ -245,12 +245,12 @@ body {
   /* Links */
   --link-color: var(--text-accent);
   --link-color-hover: var(--text-accent-hover);
-  --link-decoration: underline;
+  --link-decoration: none;
   --link-decoration-hover: underline;
   --link-decoration-thickness: auto;
   --link-external-color: var(--text-accent);
   --link-external-color-hover: var(--text-accent-hover);
-  --link-external-decoration: underline;
+  --link-external-decoration: none;
   --link-external-decoration-hover: underline;
   --link-external-filter: none;
   --link-unresolved-color: var(--text-accent);
@@ -300,7 +300,7 @@ body {
   --modal-max-width-narrow: 800px;
   --modal-border-width: var(--border-width);
   --modal-border-color: var(--color-base-40, var(--background-modifier-border-focus));
-  --modal-radius: var(--radius-l);
+  --modal-radius: var(--radius-m);
   --modal-community-sidebar-width: 280px;
   /* Popovers - file previews */
   --popover-width: 450px;
@@ -633,7 +633,7 @@ body {
     0px 30px 90px rgba(0, 0, 0, 0.2);
   /* Code */
   --code-white-space: pre-wrap;
-  --code-size: var(--font-smaller);
+  --code-size: var(--font-smallest);
   --code-background: var(--background-primary-alt);
   --code-normal: var(--text-muted);
   --code-comment: var(--text-faint);
@@ -1535,7 +1535,6 @@ span.CodeMirror-selectedtext {
   -webkit-user-modify: read-write;
 }
 .markdown-source-view.mod-cm6 .cm-content > * {
-  margin: 0 !important;
   display: block;
 }
 .markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] {
@@ -2138,6 +2137,9 @@ body:not(.show-inline-title) .inline-title:not([data-level]) {
   max-width: 250px;
   overflow: auto;
   border-right: 1px solid var(--divider-color);
+}
+.modal.mod-settings .vertical-tab-header::-webkit-scrollbar {
+  display: none;
 }
 .modal.mod-settings .modal-content {
   margin-top: 0;
@@ -5127,7 +5129,7 @@ body:not(.native-scrollbars) .modal-close-button {
 .prompt {
   display: flex;
   flex-direction: column;
-  border-radius: var(--radius-l);
+  border-radius: var(--radius-m);
   background-color: var(--background-primary);
   box-shadow: var(--shadow-l);
   border: var(--prompt-border-width) solid var(--prompt-border-color);
@@ -5381,6 +5383,10 @@ body:not(.is-translucent):not(.is-mobile) .workspace-tabs {
   background-color: var(--background-primary);
   padding-left: var(--size-4-12);
   padding-right: var(--size-4-12);
+}
+.horizontal-tab-content::-webkit-scrollbar,
+.vertical-tab-content::-webkit-scrollbar {
+  display: none;
 }
 .vertical-tabs-container {
   display: flex;
@@ -5958,6 +5964,14 @@ kbd {
   font-size: var(--code-size);
   background-color: var(--code-background);
   vertical-align: baseline;
+  margin: 0 var(--size-2-2);
+  padding: var(--size-2-1) var(--size-2-2);
+  border-radius: var(--radius-s);
+}
+.cm-s-obsidian span.cm-formatting-code,
+.cm-s-obsidian span.cm-formatting-code + span.cm-inline-code {
+  margin: 0;
+  border-radius: 0;
 }
 .cm-s-obsidian span.cm-inline-code span.cm-inline-code.cm-hmd-indented-code {
   background-color: transparent;
@@ -6168,7 +6182,7 @@ code[class*="language-"] {
   color: var(--code-function);
 }
 .token.class-name {
-  color: var(--color-base-25);
+  color: var(--color-base-70);
 }
 .token.keyword {
   color: var(--code-keyword);
@@ -6674,7 +6688,6 @@ h6 a,
 .inline-title[data-level='2'],
 .HyperMD-list-line .cm-header-2 {
   font-variant: var(--h2-variant);
-  letter-spacing: -0.015em;
   line-height: var(--h2-line-height);
   font-size: var(--h2-size);
   color: var(--h2-color);
@@ -7090,6 +7103,7 @@ a {
   background-position-y: 4px;
   cursor: var(--cursor-link);
   filter: var(--link-external-filter);
+  font-style: oblique;
 }
 @media (hover: hover) {
   .external-link:hover {
@@ -7190,6 +7204,8 @@ a {
 .markdown-source-view.mod-cm6 .cm-underline {
   text-decoration-line: var(--link-decoration);
   text-decoration-thickness: var(--link-decoration-thickness);
+  font-style: oblique;
+  font-size: var(--font-smaller);
 }
 body.is-mobile .markdown-source-view.mod-cm6 .cm-underline {
   -webkit-user-select: text;
