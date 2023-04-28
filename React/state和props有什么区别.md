@@ -44,6 +44,7 @@ this.setState(
 ## 二、props
 
 `React` 的核心思想就是组件化思想，页面会被切分成一些独立的、可复用的组件
+
 组件从概念上看就是一个函数，可以接受一个参数作为输入值，这个参数就是 `props`，所以可以把 `props` 理解为从外部传入组件内部的数据
 
 `react` 具有单向数据流的特性，所以他的主要作用是从父组件向子组件中传递数据
@@ -77,4 +78,4 @@ const element = <Welcome name="Sara" onNameChanged={this.handleName} />;
 
 ## 参考文献
 - [https://lucybain.com/blog/2016/react-state-vs-pros/](https://lucybain.com/blog/2016/react-state-vs-pros/)
-- [https://juejin.cn/post/6844904009203974158](https://juejin.cn/post/6844904009203974158)
+- [react中state、props以及两者的区别](https://juejin.cn/post/6844904009203974158)

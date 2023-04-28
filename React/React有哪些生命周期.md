@@ -1,7 +1,6 @@
-
+🏷: #react #生命周期
+***
 ## 一、是什么
-
-在[以前文章](https://mp.weixin.qq.com/s?__biz=MzU1OTgxNDQ1Nw==&mid=2247484176&idx=1&sn=5623421ed2678046ed9e438aadf6e26f&chksm=fc10c146cb67485015f24f7e9f5862c4c685fc33485fe30e1b375a534b4031978439c554e0c0&scene=178&cur_album_id=1711105826272116736#rd)中，我们了解到生命周期定义
 
 生命周期`（Life Cycle）`的概念应用很广泛，特别是在经济、环境、技术、社会等诸多领域经常出现，其基本涵义可以通俗地理解为“从摇篮到坟墓”`（Cradle-to-Grave）`的整个过程
 
@@ -16,7 +15,6 @@
 - 更新阶段
 - 卸载阶段
 
-
 ### 创建阶段
 
 创建阶段主要分成了以下几个生命周期方法：
@@ -25,7 +23,6 @@
 - getDerivedStateFromProps
 - render
 - componentDidMount
-
 
 #### constructor
 
@@ -93,7 +90,7 @@
 
 该方法返回的一个`Snapshot`值，作为`componentDidUpdate`第三个参数传入
 
-```javascriptx
+```jsx
 getSnapshotBeforeUpdate(prevProps, prevState) {
     console.log('#enter getSnapshotBeforeUpdate');
     return 'foo';
@@ -114,7 +111,7 @@ componentDidUpdate(prevProps, prevState, snapshot) {
 
 ### 卸载阶段
 
-## componentWillUnmount
+#### componentWillUnmount
 
 此方法用于组件卸载前，清理一些注册是监听事件，或者取消订阅的网络请求等
 
@@ -122,15 +119,19 @@ componentDidUpdate(prevProps, prevState, snapshot) {
 
 ## 三、总结
 
-新版生命周期整体流程如下图所示：
+### < react 16.3
 
- ![](https://static.vue-js.com/66c999c0-d373-11eb-85f6-6fac77c0c9b3.png)
+![](assets/Pasted%20image%2020230428153515.png)
 
-旧的生命周期流程图如下：
+### react 16.3
 
-![](https://static.vue-js.com/d379e420-d374-11eb-ab90-d9ae814b240d.png)
+![](assets/Pasted%20image%2020230428153615.png)
 
-通过两个图的对比，可以发现新版的生命周期减少了以下三种方法：
+### >= react 16.4
+
+![](assets/Pasted%20image%2020230428153715.png)
+
+可以发现新版的生命周期减少了以下三种方法：
 
 - componentWillMount
 - componentWillReceiveProps
@@ -146,5 +147,6 @@ componentDidUpdate(prevProps, prevState, snapshot) {
 
 ## 参考文献
 
-- https://github.com/pomelovico/keep/issues/23
-- https://segmentfault.com/a/1190000020268993
+- [React lifecycle methods diagram](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+- [React生命周期梳理](https://github.com/pomelovico/keep/issues/23)
+- [javascript -16.3 新版react生命周期 图示](https://segmentfault.com/a/1190000020268993)

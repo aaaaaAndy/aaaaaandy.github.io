@@ -7,14 +7,6 @@
       "key": "E"
     }
   ],
-  "editor:open-search-replace": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "R"
-    }
-  ],
   "insert-template": [
     {
       "modifiers": [
@@ -22,6 +14,14 @@
         "Shift"
       ],
       "key": "P"
+    }
+  ],
+  "editor:open-search-replace": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "R"
     }
   ]
 }

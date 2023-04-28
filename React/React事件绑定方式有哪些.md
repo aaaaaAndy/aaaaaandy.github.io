@@ -1,9 +1,11 @@
 🏷: #react #事件绑定
 ***
 ## 一、是什么
+
 在`react`应用中，事件名都是用小驼峰格式进行书写，例如`onclick`要改写成`onClick`
 
 最简单的事件绑定如下：
+
 ```jsx
 class ShowAlert extends React.Component {
   showAlert() {
@@ -106,8 +108,6 @@ class App extends React.Component {
   }
 }
 ```
-
-
 
 ## 三、区别
 

@@ -151,12 +151,13 @@ class Parent extends React.Component {
 
 ```jsx
 class MyClass extends React.Component {
-  static contextType = PriceContext;
   render() {
     let price = this.context;
     /* 基于这个值进行渲染工作 */
   }
 }
+
+MyClass.contextType = PriceContext;
 ```
 
 `Consumer`组件：
@@ -179,7 +180,3 @@ class MyClass extends React.Component {
 由于`React`是单向数据流，主要思想是组件不会改变接收的数据，只会监听数据的变化，当数据发生变化时它们会使用接收到的新值，而不是去修改已有的值
 
 因此，可以看到通信过程中，数据的存储位置都是存放在上级位置中
-
-## 参考文献
-
-- https://react.docschina.org/docs/context.html
