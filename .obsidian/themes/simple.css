@@ -27,12 +27,17 @@ body {
 }
 
 .theme-dark {
-  --color-inline-code: #EB5757;
+/*  --color-inline-code: #EB5757;*/
 /*  --bg-inline-code: rgba(135,131,120,0.15);*/
+  --color-inline-code: #E3E3E3;
   --bg-inline-code: hsla(0,0%,100%,.1);
   --radius-inline-code: 2px;
   --padding-inline-code: 2px 4px;
   --blockquote-background-color: #252525;
+
+  /* code */
+  --code-keyword: #CF8E6D;
+  --code-function: #ABADB3;
 }
 
 .markdown-source-view.mod-cm6 .hr {
