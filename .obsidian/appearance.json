@@ -1,10 +1,9 @@
 {
   "accentColor": "#eb5757",
   "enabledCssSnippets": [
-    "theme",
-    "index"
+    "theme"
   ],
-  "cssTheme": "simple",
+  "cssTheme": "Simple",
   "theme": "obsidian",
   "textFontFamily": "",
   "interfaceFontFamily": "",
