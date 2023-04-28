@@ -37,7 +37,8 @@ body {
 
   /* code */
   --code-keyword: #CF8E6D;
-  --code-function: #ABADB3;
+  --code-function: #56A8F5;
+  --code-tag: #2FBAA3;
 }
 
 .markdown-source-view.mod-cm6 .hr {
@@ -140,4 +141,9 @@ body {
 /* 列表  */
 .markdown-source-view.mod-cm6 .cm-content > .cm-line.HyperMD-list-line {
   margin-left: 1rem !important;
+}
+
+/* 链接  */
+.markdown-source-view.mod-cm6 .cm-link .cm-underline, .markdown-source-view.mod-cm6 .cm-url .cm-underline {
+  font-style: italic;
 }
