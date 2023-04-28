@@ -50,26 +50,17 @@ class Welcome extends React.Component {
 
 const element = <Welcome name="Sara" onNameChanged={this.handleName} />;
 ```
-
 上述 `name` 属性与 `onNameChanged` 方法都能在子组件的 `props` 变量中访问
-
 在子组件中，`props` 在内部不可变的，如果想要改变它看，只能通过外部组件传入新的 `props` 来重新渲染子组件，否则子组件的 `props` 和展示形式不会改变
-
 ## 三、区别
-
 相同点：
-
 - 两者都是 JavaScript 对象
 - 两者都是用于保存信息
 - props 和 state 都能触发渲染更新
-
 区别：
-
 - props 是外部传递给组件的，而 state 是在组件内被组件自己管理的，一般在 constructor 中初始化
 - props 在组件内部是不可修改的，但 state 在组件内部可以进行修改
 - state 是多变的、可以修改
-
 ## 参考文献
-
 - [https://lucybain.com/blog/2016/react-state-vs-pros/](https://lucybain.com/blog/2016/react-state-vs-pros/)
 - [https://juejin.cn/post/6844904009203974158](https://juejin.cn/post/6844904009203974158)
