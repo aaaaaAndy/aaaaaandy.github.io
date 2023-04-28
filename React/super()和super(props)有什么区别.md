@@ -51,9 +51,7 @@ class sub extends sup {
 const instance = new YourComponent(props);
 instance.props = props;
 ```
-
 所以无论有没有 `constructor`，在 `render` 中 `this.props` 都是可以使用的，这是 `React` 自动附带的，是可以不写的：
-
 ```jsx
 class HelloMessage extends React.Component {
   render() {
@@ -61,11 +59,8 @@ class HelloMessage extends React.Component {
   }
 }
 ```
-
 但是也不建议使用 `super()` 代替 `super(props)`
-
 因为在 `React` 会在类组件构造函数生成实例后再给 `this.props` 赋值，所以在不传递 `props` 在 `super` 的情况下，调用 `this.props` 为 `undefined`，如下情况：
-
 ```jsx
 class Button extends React.Component {
   constructor(props) {
@@ -76,9 +71,7 @@ class Button extends React.Component {
   }
 }
 ```
-
 而传入 `props` 的则都能正常访问，确保了 `this.props` 在构造函数执行完毕之前已被赋值，更符合逻辑，如下：
-
 ```jsx
 class Button extends React.Component {
   constructor(props) {
@@ -89,16 +82,10 @@ class Button extends React.Component {
   }
 }
 ```
-
 ## 三、总结
-
 在 `React` 中，类组件基于 `ES6`，所以在 `constructor` 中必须使用 `super`
-
 在调用 `super` 过程，无论是否传入 `props`，`React` 内部都会将 `porps` 赋值给组件实例 `porps` 属性中
-
 如果只调用了 `super()`，那么 `this.props` 在 `super()` 和构造函数结束之间仍是 `undefined`
-
 ## 参考文献
-
 - [https://overreacted.io/zh-hans/why-do-we-write-super-props/](https://overreacted.io/zh-hans/why-do-we-write-super-props/)
 - [https://segmentfault.com/q/1010000008340434](https://segmentfault.com/q/1010000008340434)

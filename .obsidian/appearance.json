@@ -4,9 +4,9 @@
     "theme",
     "index"
   ],
-  "cssTheme": "",
+  "cssTheme": "simple",
   "theme": "obsidian",
-  "textFontFamily": "JetBrains Mono",
+  "textFontFamily": "",
   "interfaceFontFamily": "",
   "monospaceFontFamily": "JetBrains Mono"
 }

@@ -1,11 +1,8 @@
 🏷: #react #类组件 #函数组件
 ***
 类的编写形式去编写组件，该类必须继承`React.Component`
-
 如果想要访问父组件传递过来的参数，可通过`this.props`的方式去访问
-
 在组件中必须实现`render`方法，在`return`中返回`React`对象，如下：
-
 ```jsx
 class Welcome extends React.Component {
   constructor(props) {
@@ -16,23 +13,16 @@ class Welcome extends React.Component {
   }
 }
 ```
-
 ## 二、函数组件
-
 函数组件，顾名思义，就是通过函数编写的形式去实现一个`React`组件，是`React`中定义组件最简单的方式
-
 ```jsx
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
 ```
-
 函数第一个参数为`props`用于接收父组件传递过来的参数
-
 ## 三、区别
-
 针对两种`React`组件，其区别主要分成以下几大方向：
-
 - 编写形式
 - 状态管理
 - 生命周期
