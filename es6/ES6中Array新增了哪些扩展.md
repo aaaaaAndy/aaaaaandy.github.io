@@ -123,6 +123,7 @@ let arr = [...obj]; // TypeError: Cannot spread non-iterable object
 ## 二、构造函数新增的方法
 
 关于构造函数，数组新增的方法有如下：
+
 - Array.from()
 - Array.of()
 
