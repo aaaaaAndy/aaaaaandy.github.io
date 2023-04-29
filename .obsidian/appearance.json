@@ -1,10 +1,10 @@
 {
   "accentColor": "#eb5757",
-  "theme": "moonstone",
+  "theme": "obsidian",
   "enabledCssSnippets": [
     "theme"
   ],
-  "textFontFamily": "",
+  "textFontFamily": "JetBrains Mono",
   "cssTheme": "Docusaurus",
   "interfaceFontFamily": "",
   "monospaceFontFamily": "JetBrains Mono NL",

@@ -575,7 +575,8 @@ body {
   --mono-rgb-0: 0, 0, 0;
   --mono-rgb-100: 255, 255, 255;
   --color-red-rgb: 251, 70, 76;
-  --color-red: #fb464c;
+  /*--color-red: #fb464c;*/
+  --color-red: #eb5656;
   --color-orange-rgb: 233, 151, 63;
   --color-orange: #E9973F;
   --color-yellow-rgb: 224, 222, 113;
@@ -5874,7 +5875,8 @@ kbd {
   margin: 0;
 }
 .markdown-rendered code {
-  color: var(--code-normal);
+  /*color: var(--code-normal);*/
+  color: var(--color-red);
   font-family: var(--font-monospace);
   background-color: var(--code-background);
   border-radius: var(--radius-s);
@@ -5882,7 +5884,8 @@ kbd {
   padding: 0.1em 0.25em;
 }
 .cm-s-obsidian span.cm-inline-code {
-  color: var(--code-normal);
+  /*color: var(--code-normal);*/
+  color: var(--color-red);
   font-size: var(--code-size);
   background-color: var(--code-background);
   vertical-align: baseline;
@@ -6874,8 +6877,8 @@ ul > li.is-collapsed::marker {
   tab-size: var(--list-indent);
 }
 .markdown-source-view.mod-cm6 .cm-content > .cm-line.HyperMD-list-line {
-  margin-left: 1em !important;
   padding: 0;
+  text-indent: 0px !important;
 }
 /* Space between list items */
 .markdown-source-view ol > li,
@@ -7131,7 +7134,7 @@ a {
   text-decoration-line: var(--link-decoration);
   text-decoration-thickness: var(--link-decoration-thickness);
   font-style: oblique;
-  font-size: var(--font-smaller);
+  font-size: 16px;
 }
 body.is-mobile .markdown-source-view.mod-cm6 .cm-underline {
   -webkit-user-select: text;
