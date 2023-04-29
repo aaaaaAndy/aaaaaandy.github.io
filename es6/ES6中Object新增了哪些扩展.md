@@ -53,8 +53,11 @@ const obj = {
 
 new obj.f() // 报错
 ```
+
 ## 二、属性名表达式
+
 ES6 允许字面量定义对象时，将表达式放在括号内
+
 ```javascript
 let lastWord = 'last word';
 

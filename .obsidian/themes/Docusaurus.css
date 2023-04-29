@@ -241,6 +241,7 @@ body {
   --layer-dragged-item: 80;
   /* Line heights */
   --line-height-normal: 1.5;
+  --line-height-medium: 1.4;
   --line-height-tight: 1.3;
   /* Links */
   --link-color: var(--text-accent);
@@ -440,7 +441,7 @@ body {
   --tag-border-color-hover: hsla(var(--interactive-accent-hsl), 0.15);
   --tag-border-width: 0px;
   --tag-padding-x: 0.65em;
-  --tag-padding-y: 0.18em;
+  --tag-padding-y: 0.1em;
   --tag-radius: 2em;
   /* Window frame */
   --titlebar-background: var(--background-secondary);
@@ -532,7 +533,6 @@ body {
   --color-base-05: #fcfcfc;
   --color-base-10: #fafafa;
   --color-base-20: #f6f6f6;
-  --color-base-23: #f0f0f0;
   --color-base-25: #e3e3e3;
   --color-base-30: #e0e0e0;
   --color-base-35: #d4d4d4;
@@ -568,7 +568,6 @@ body {
   --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071),
     0px 6.3px 24.7px rgba(0, 0, 0, 0.112),
     0px 30px 90px rgba(0, 0, 0, 0.2);
-  --code-background: var(--color-base-23);
 }
 .theme-dark {
   color-scheme: dark;
@@ -636,8 +635,8 @@ body {
   /* Code */
   --code-white-space: pre-wrap;
   --code-size: var(--font-smaller);
+  --code-background: var(--background-primary-alt);
   --code-normal: var(--text-muted);
-  --code-background: var(--color-base-20);
   --code-comment: var(--text-faint);
   --code-function: var(--color-blue);
   --code-important: var(--color-orange);
@@ -1400,10 +1399,17 @@ span.CodeMirror-selectedtext {
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
   max-width: var(--file-line-width);
+  padding-top: 16px;
+}
+.markdown-source-view.mod-cm6.is-readable-line-width div.hr {
+  padding: 26px 0 10px 0;
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-line {
   max-width: var(--file-line-width);
-  padding: 3px 2px;
+  min-height: 16px;
+}
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-line > br {
+  display: none;
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-table-row {
   max-width: 100%;
@@ -6010,6 +6016,7 @@ pre[class*="language-"] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+  padding: 24px 16px;
 }
 @media print {
   code[class*="language-"],
@@ -6708,7 +6715,6 @@ hr {
 .markdown-source-view.mod-cm6 .hr {
   display: flex;
   align-items: center;
-  margin: 16px 0 !important;
 }
 .markdown-source-view.mod-cm6 hr {
   margin: 0;
@@ -6867,6 +6873,7 @@ ul > li.is-collapsed::marker {
 }
 .markdown-source-view.mod-cm6 .cm-content > .cm-line.HyperMD-list-line {
   margin-left: 1em !important;
+  padding: 0;
 }
 /* Space between list items */
 .markdown-source-view ol > li,
