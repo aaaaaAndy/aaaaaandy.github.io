@@ -1402,7 +1402,7 @@ span.CodeMirror-selectedtext {
   padding-top: 16px;
 }
 .markdown-source-view.mod-cm6.is-readable-line-width div.hr {
-  padding: 26px 0 10px 0;
+  padding: 26px 0;
 }
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-line {
   max-width: var(--file-line-width);
