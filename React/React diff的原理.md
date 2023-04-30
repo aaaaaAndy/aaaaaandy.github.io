@@ -1,6 +1,5 @@
 🏷: #react #diff
 ***
-
 ## 一、是什么
 
 跟`Vue`一致，`React`通过引入`Virtual DOM`的概念，极大地避免无效的`Dom`操作，使我们的页面的构建效率提到了极大的提升
@@ -133,8 +132,8 @@
 ```
 
 由于`dom`节点的移动操作开销是比较昂贵的，没有`key`的情况下要比有`key`的性能更好
+
 ## 参考文献
 
 - https://zhuanlan.zhihu.com/p/140489744
-
 - https://zhuanlan.zhihu.com/p/20346379

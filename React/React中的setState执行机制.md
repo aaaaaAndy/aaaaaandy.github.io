@@ -1,4 +1,5 @@
-
+🏷: #react #setState
+***
 ## 一、是什么
 
 一个组件的显示形态可以由数据状态和外部参数所决定，而数据状态就是`state`
@@ -69,8 +70,6 @@ Component.prototype.setState = function(partialState, callback) {
 
 从上面可以看到`setState`第一个参数可以是一个对象，或者是一个函数，而第二个参数是一个回调函数，用于可以实时的获取到更新之后的数据
 
-
-
 ## 二、更新类型
 
 在使用`setState`更新数据的时候，`setState`的更新类型分成：
@@ -105,8 +104,6 @@ changeText() {
 }
 ```
 
-
-
 ### 同步更新
 
 同样先给出一个在`setTimeout`中更新的例子：
@@ -138,14 +135,10 @@ componentDidMount() {
 }
 ```
 
-
-
 ### 小结
 
 - 在组件生命周期或React合成事件中，setState是异步
 - 在setTimeout或者原生dom事件中，setState是同步
-
-
 
 ### 三、批量更新
 
@@ -201,8 +194,6 @@ onClick = () => {
 ```
 
 而在`setTimeout`或者原生`dom`事件中，由于是同步的操作，所以并不会进行覆盖现象
-
-
 
 ## 参考文献
 

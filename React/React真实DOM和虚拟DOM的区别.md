@@ -1,4 +1,5 @@
-
+🏷: #react #真实DOM #虚拟DOM
+***
 ## 一、是什么
 
 Real DOM，真实 `DOM`，意思为文档对象模型，是一个结构化文本的抽象，在页面渲染出的每一个结点都是一个真实 `DOM` 结构，如下：
@@ -35,9 +36,7 @@ const vDom = React.createElement(
 可以看到，`JSX` 就是为了简化直接调用 `React.createElement()` 方法：
 
 - 第一个参数是标签名，例如 h1、span、table...
-
 - 第二个参数是个对象，里面存着标签的一些属性，例如 id、class 等
-
 - 第三个参数是节点中的文本
 
 通过 `console.log(VDOM)`，则能够得到虚拟 `VDOM` 消息
@@ -75,7 +74,6 @@ const vDom = React.createElement(
 使用虚拟 `DOM` 的优势如下：
 
 - 简单方便：如果使用手动操作真实 `DOM` 来完成页面，繁琐又容易出错，在大规模应用下维护起来也很困难
-
 - 性能方面：使用 Virtual DOM，能够有效避免真实 DOM 数频繁更新，减少多次引起重绘与回流，提高性能
 - 跨平台：React 借助虚拟 DOM，带来了跨平台的能力，一套代码多端运行
 

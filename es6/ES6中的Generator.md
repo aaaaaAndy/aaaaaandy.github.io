@@ -144,6 +144,7 @@ for (let [key, value] of objectEntries(jane)) {
 ## 三、异步解决方案
 
 回顾之前展开异步解决的方案：
+
 - 回调函数
 - Promise 对象
 - generator 函数
@@ -298,3 +299,4 @@ for (let [key, value] of iterEntries(myObj)) {
 
 ## 参考文献
 - https://es6.ruanyifeng.com/#docs/generator-async
+

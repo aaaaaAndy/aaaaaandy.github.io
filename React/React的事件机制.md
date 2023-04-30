@@ -145,6 +145,6 @@ document.body.addEventListener('click', e => {
 
 
 ## 参考文献
-- https://zh-hans.reactjs.org/docs/events.html
-- https://segmentfault.com/a/1190000015725214?utm_source=sf-similar-article
-- https://segmentfault.com/a/1190000038251163
+- [合成事件 – React (reactjs.org)](https://zh-hans.legacy.reactjs.org/docs/events.html)
+- [javascript - React讲解 - 事件系统](https://segmentfault.com/a/1190000015725214?utm_source=sf-similar-article)
+- [javascript - 探索 React 合成事件](https://segmentfault.com/a/1190000038251163)
