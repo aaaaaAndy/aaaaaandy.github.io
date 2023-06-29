@@ -1,0 +1,21 @@
+{
+  "name": "aaaaaandy.github.io",
+  "version": "1.0.0",
+  "description": "> An awesome project.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "docsify serve .",
+    "start": "serve .",
+    "dp": "sh git.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaaaaAndy/aaaaaandy.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaaaaAndy/aaaaaandy.github.io/issues"
+  },
+  "homepage": "https://github.com/aaaaaAndy/aaaaaandy.github.io#readme"
+}
