@@ -1,6 +1,12 @@
-🏷: #JavaScript #var #let #const
-
-***
+---
+slug: /es6
+sidebar_position: 1
+tags:
+ - es6 
+ - var
+ - let
+ - const
+---
 
 ## 一、var
 

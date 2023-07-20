@@ -1,8 +1,3 @@
-# 面试官：说说你对Node.js 的理解？优缺点？应用场景？
-
- ![](https://static.vue-js.com/b565d240-c1e6-11eb-ab90-d9ae814b240d.png)
-
-
 
 ## 一、是什么
 `Node.js` 是一个开源与跨平台的 `JavaScript` 运行时环境

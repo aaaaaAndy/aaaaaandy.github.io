@@ -1,7 +1,10 @@
 ---
 title: charles远程代理
 date: 2021-02-01 10:36:04
-tags: [Charles, remote proxy]
+tags: 
+  - Charles
+  - remote
+  - proxy
 categories: Charles
 ---
 
@@ -13,13 +16,13 @@ categories: Charles
 
 1.  打开`map remote`:
 
-<img src="https://raw.githubusercontent.com/aaaaaAndy/picture/main/images/20210201105713.jpg" alt="map-remote" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/aaaaaAndy/picture/main/images/20210201105713.jpg" alt="map-remote" width="300"/>
 
 2.  以**少数派**中一个页面为例，配置一个页面到测试环境的代理，接口不进行代理
 
-<img src="https://raw.githubusercontent.com/aaaaaAndy/picture/main/images/20210201105855.jpg" alt="map-remote-add" style="zoom:50%;" />
+![](https://raw.githubusercontent.com/aaaaaAndy/picture/main/images/20210201105855.jpg)
 
-<img src="https://raw.githubusercontent.com/aaaaaAndy/picture/main/images/20210201105908.jpg" alt="sspai-map-remote" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/aaaaaAndy/picture/main/images/20210201105908.jpg" width="600"/>
 
 ### 3. 抓包查看结果
 
@@ -30,7 +33,5 @@ categories: Charles
 1.  开发时借用测试环境接口进行联调，因为开发环境总是不稳定的，相对比而言我更愿意使用开发环境的页面访问测试环境的接口；
 2.  解`bug`，`H5`的开发不像`web`可以随时看到各种情况，所以每当解`BUG`时我经常把页面发到开发环境，同时调用测试环境接口验证`BUG`。
 
-<img src="https://raw.githubusercontent.com/aaaaaAndy/picture/main/images/20210201110000.jpg" alt="map-result" style="zoom:50%;" />
-
-<!-- more -->
+![](https://raw.githubusercontent.com/aaaaaAndy/picture/main/images/20210201110000.jpg)
 

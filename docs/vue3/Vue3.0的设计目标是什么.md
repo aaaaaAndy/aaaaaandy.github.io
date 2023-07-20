@@ -1,3 +1,9 @@
+---
+slug: /vue3
+sidebar_position: 1
+tags:
+ - vue3 
+---
 
 ![](https://static.vue-js.com/b93b49c0-5c58-11eb-85f6-6fac77c0c9b3.png)
 

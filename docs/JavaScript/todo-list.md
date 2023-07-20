@@ -1,3 +1,8 @@
+---
+slug: /JavaScript
+sidebar_position: 1
+---
+
 ## `ES6`
 
 #### 6.1 Promise(基本上要求可以手写Promise.all方法)
