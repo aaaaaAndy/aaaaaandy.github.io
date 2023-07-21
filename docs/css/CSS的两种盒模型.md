@@ -26,7 +26,7 @@ date: 2019-09-14 22:02:06
 
 如下代码：
 
-<iframe height="400" style="width: 100%;" scrolling="no" title="box-sizing-content-box" src="https://codepen.io/aaaaaandy/embed/oNEYNdQ?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="400" width="100%" scrolling="no" title="box-sizing-content-box" src="https://codepen.io/aaaaaandy/embed/oNEYNdQ?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/aaaaaandy/pen/oNEYNdQ">
   box-sizing-content-box</a> by aaaaaAndy (<a href="https://codepen.io/aaaaaandy">@aaaaaandy</a>)
   on <a href="https://codepen.io">CodePen</a>.
@@ -79,7 +79,7 @@ box-sizing: content-box|border-box|inherit:
 
 在上面的例子中，如果想要宽度限制在 200px，可以将其设置为 IE 盒子模型：
 
-<iframe height="400" style="width: 100%;" scrolling="no" title="box-sizing-border-box" src="https://codepen.io/aaaaaandy/embed/jOZVOzV?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="400" width="100%" scrolling="no" title="box-sizing-border-box" src="https://codepen.io/aaaaaandy/embed/jOZVOzV?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/aaaaaandy/pen/jOZVOzV">
   box-sizing-border-box</a> by aaaaaAndy (<a href="https://codepen.io/aaaaaandy">@aaaaaandy</a>)
   on <a href="https://codepen.io">CodePen</a>.

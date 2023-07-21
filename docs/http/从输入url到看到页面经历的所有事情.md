@@ -37,7 +37,7 @@
 
 ## 二、TCP连接
 
-具体流程查看：[HTTP三次握手与四次挥手](/network/shake-wave-hands.html#三次握手)
+具体流程查看：[HTTP三次握手与四次挥手](三次握手&&四次挥手.md)
 
 ## 三、发送HTTP请求
 

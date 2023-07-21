@@ -13,7 +13,7 @@ date: 2019-08-12 20:02:06
 
 在以前也讲过盒子模型，默认情况下是一个矩形，实现也很简单
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="border-triangle-10-width" src="https://codepen.io/aaaaaandy/embed/yLvbvOp?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" width="100%" scrolling="no" title="border-triangle-10-width" src="https://codepen.io/aaaaaandy/embed/yLvbvOp?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/aaaaaandy/pen/yLvbvOp">
   border-triangle-10-width</a> by aaaaaAndy (<a href="https://codepen.io/aaaaaandy">@aaaaaandy</a>)
   on <a href="https://codepen.io">CodePen</a>.
@@ -21,7 +21,7 @@ date: 2019-08-12 20:02:06
 
 将`border`设置`50px`，效果图如下所示：
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="border-triangle-50-width" src="https://codepen.io/aaaaaandy/embed/vYdmdJO?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" width="100%" scrolling="no" title="border-triangle-50-width" src="https://codepen.io/aaaaaandy/embed/vYdmdJO?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/aaaaaandy/pen/vYdmdJO">
   border-triangle-50-width</a> by aaaaaAndy (<a href="https://codepen.io/aaaaaandy">@aaaaaandy</a>)
   on <a href="https://codepen.io">CodePen</a>.
@@ -29,7 +29,7 @@ date: 2019-08-12 20:02:06
 
 白色区域则为`width`、`height`，这时候只需要你将白色区域部分宽高逐渐变小，最终变为0，则变成如下图所示：
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="border-triangle-width-0" src="https://codepen.io/aaaaaandy/embed/rNJmJzq?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" width="100%" scrolling="no" title="border-triangle-width-0" src="https://codepen.io/aaaaaandy/embed/rNJmJzq?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/aaaaaandy/pen/rNJmJzq">
   border-triangle-width-0</a> by aaaaaAndy (<a href="https://codepen.io/aaaaaandy">@aaaaaandy</a>)
   on <a href="https://codepen.io">CodePen</a>.
@@ -41,7 +41,7 @@ date: 2019-08-12 20:02:06
 
 最终实现代码如下：
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="border-triangle-01" src="https://codepen.io/aaaaaandy/embed/XWZRZey?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" width="100%" scrolling="no" title="border-triangle-01" src="https://codepen.io/aaaaaandy/embed/XWZRZey?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/aaaaaandy/pen/XWZRZey">
   border-triangle-01</a> by aaaaaAndy (<a href="https://codepen.io/aaaaaandy">@aaaaaandy</a>)
   on <a href="https://codepen.io">CodePen</a>.
@@ -49,7 +49,7 @@ date: 2019-08-12 20:02:06
 
 如果想要实现一个只有边框是空心的三角形，由于这里不能再使用`border`属性，所以最直接的方法是利用伪类新建一个小一点的三角形定位上去
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="border-triangle-02" src="https://codepen.io/aaaaaandy/embed/qBxmxoe?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" width="100%" scrolling="no" title="border-triangle-02" src="https://codepen.io/aaaaaandy/embed/qBxmxoe?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/aaaaaandy/pen/qBxmxoe">
   border-triangle-02</a> by aaaaaAndy (<a href="https://codepen.io/aaaaaandy">@aaaaaandy</a>)
   on <a href="https://codepen.io">CodePen</a>.
@@ -59,7 +59,7 @@ date: 2019-08-12 20:02:06
 
 将元素定位进行微调以及改变颜色，就能够完成下方效果图：
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="border-triangle-03" src="https://codepen.io/aaaaaandy/embed/ExQmQRJ?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" width="100%" scrolling="no" title="border-triangle-03" src="https://codepen.io/aaaaaandy/embed/ExQmQRJ?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/aaaaaandy/pen/ExQmQRJ">
   border-triangle-03</a> by aaaaaAndy (<a href="https://codepen.io/aaaaaandy">@aaaaaandy</a>)
   on <a href="https://codepen.io">CodePen</a>.
@@ -89,7 +89,7 @@ date: 2019-08-12 20:02:06
 
 实现代码如下：
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="border-triangle-04" src="https://codepen.io/aaaaaandy/embed/YzeVeJq?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" width="100%" scrolling="no" title="border-triangle-04" src="https://codepen.io/aaaaaandy/embed/YzeVeJq?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/aaaaaandy/pen/YzeVeJq">
   border-triangle-04</a> by aaaaaAndy (<a href="https://codepen.io/aaaaaandy">@aaaaaandy</a>)
   on <a href="https://codepen.io">CodePen</a>.

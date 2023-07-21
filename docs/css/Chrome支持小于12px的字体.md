@@ -42,7 +42,7 @@ Chrome 中文版浏览器会默认设定页面的最小字号是12px，英文版
 
 使用 `zoom` 来”支持“ 12px 以下的字体
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="font-size-min-zoom" src="https://codepen.io/aaaaaandy/embed/WNMjMmz?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" width="100%" scrolling="no" title="font-size-min-zoom" src="https://codepen.io/aaaaaandy/embed/WNMjMmz?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/aaaaaandy/pen/WNMjMmz">
   font-size-min-zoom</a> by aaaaaAndy (<a href="https://codepen.io/aaaaaandy">@aaaaaandy</a>)
   on <a href="https://codepen.io">CodePen</a>.
@@ -59,7 +59,7 @@ Chrome 中文版浏览器会默认设定页面的最小字号是12px，英文版
 
 注意的是，使用`scale`属性只对可以定义宽高的元素生效，所以，下面代码中将`span`元素转为行内块元素
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="font-size-min-scale" src="https://codepen.io/aaaaaandy/embed/QWQvmEZ?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" width="100%" scrolling="no" title="font-size-min-scale" src="https://codepen.io/aaaaaandy/embed/QWQvmEZ?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/aaaaaandy/pen/QWQvmEZ">
   font-size-min-scale</a> by aaaaaAndy (<a href="https://codepen.io/aaaaaandy">@aaaaaandy</a>)
   on <a href="https://codepen.io">CodePen</a>.

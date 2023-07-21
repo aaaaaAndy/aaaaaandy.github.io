@@ -48,7 +48,7 @@ margin塌陷问题：在标准文档流中，块级标签之间竖直方向的ma
 
 - 非 BFC 布局，效果如下，两个容器外边距都是100px，但是实际上两个容器之间的边距总共只有100px
  
-    <iframe height="600" style="width: 100%;" scrolling="no" title="bfc-margin" src="https://codepen.io/aaaaaandy/embed/dydzjKM?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+    <iframe height="600" width="100%" scrolling="no" title="bfc-margin" src="https://codepen.io/aaaaaandy/embed/dydzjKM?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
       See the Pen <a href="https://codepen.io/aaaaaandy/pen/dydzjKM">
       bfc-margin</a> by aaaaaAndy (<a href="https://codepen.io/aaaaaandy">@aaaaaandy</a>)
       on <a href="https://codepen.io">CodePen</a>.
@@ -56,7 +56,7 @@ margin塌陷问题：在标准文档流中，块级标签之间竖直方向的ma
 
 - 将每一个 block 放入一个 BFC 容器中，（其实将一个 block 元素放入 BFC 容器中也行），给 container 添加了 `overflow: hidden;` 属性之后，该元素就变成了 BFC 容器，其内部的元素将不会影响到外部元素。
 
-    <iframe height="700" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/aaaaaandy/embed/poarZOQ?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+    <iframe height="700" width="100%" scrolling="no" title="Untitled" src="https://codepen.io/aaaaaandy/embed/poarZOQ?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
       See the Pen <a href="https://codepen.io/aaaaaandy/pen/poarZOQ">
       Untitled</a> by aaaaaAndy (<a href="https://codepen.io/aaaaaandy">@aaaaaandy</a>)
       on <a href="https://codepen.io">CodePen</a>.
@@ -67,7 +67,7 @@ margin塌陷问题：在标准文档流中，块级标签之间竖直方向的ma
 
 - 浮动的元素会脱离普通文档流，也就撑不起来父元素的高度。如下，我们给了父元素边框 1px 的宽度，由此可以看到，内部元素添加浮动属性之后，父元素的高度只剩下了上下两个边框的高度。
 
-    <iframe height="400" style="width: 100%;" scrolling="no" title="bfc-float" src="https://codepen.io/aaaaaandy/embed/oNEeMmL?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+    <iframe height="400" width="100%" scrolling="no" title="bfc-float" src="https://codepen.io/aaaaaandy/embed/oNEeMmL?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
       See the Pen <a href="https://codepen.io/aaaaaandy/pen/oNEeMmL">
       bfc-float</a> by aaaaaAndy (<a href="https://codepen.io/aaaaaandy">@aaaaaandy</a>)
       on <a href="https://codepen.io">CodePen</a>.
@@ -75,7 +75,7 @@ margin塌陷问题：在标准文档流中，块级标签之间竖直方向的ma
 
 - 添加属性使得父元素变为 BFC 容器，解决浮动引起的问题
 
-    <iframe height="400" style="width: 100%;" scrolling="no" title="bfc-clear-float" src="https://codepen.io/aaaaaandy/embed/eYVEjxa?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+    <iframe height="400" width="100%" scrolling="no" title="bfc-clear-float" src="https://codepen.io/aaaaaandy/embed/eYVEjxa?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
       See the Pen <a href="https://codepen.io/aaaaaandy/pen/eYVEjxa">
       bfc-clear-float</a> by aaaaaAndy (<a href="https://codepen.io/aaaaaandy">@aaaaaandy</a>)
       on <a href="https://codepen.io">CodePen</a>.
@@ -85,7 +85,7 @@ margin塌陷问题：在标准文档流中，块级标签之间竖直方向的ma
 
 - 一个浮动元素覆盖了正常文档流元素
 
-    <iframe height="300" style="width: 100%;" scrolling="no" title="bfc-cover" src="https://codepen.io/aaaaaandy/embed/YzexjMZ?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+    <iframe height="300" width="100%" scrolling="no" title="bfc-cover" src="https://codepen.io/aaaaaandy/embed/YzexjMZ?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
       See the Pen <a href="https://codepen.io/aaaaaandy/pen/YzexjMZ">
       bfc-cover</a> by aaaaaAndy (<a href="https://codepen.io/aaaaaandy">@aaaaaandy</a>)
       on <a href="https://codepen.io">CodePen</a>.
@@ -93,11 +93,9 @@ margin塌陷问题：在标准文档流中，块级标签之间竖直方向的ma
 
 - 变为 BFC 容器，给正常流元素添加 `overflow: hidden;` 触发其成为 BFC 容器。 该方法可用于自适应两栏布局。
 
-    <iframe height="300" style="width: 100%;" scrolling="no" title="bfc-fix-cover" src="https://codepen.io/aaaaaandy/embed/JjpyBqG?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+    <iframe height="300" width="100%" scrolling="no" title="bfc-fix-cover" src="https://codepen.io/aaaaaandy/embed/JjpyBqG?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
       See the Pen <a href="https://codepen.io/aaaaaandy/pen/JjpyBqG">
       bfc-fix-cover</a> by aaaaaAndy (<a href="https://codepen.io/aaaaaandy">@aaaaaandy</a>)
       on <a href="https://codepen.io">CodePen</a>.
     </iframe>
 
-
-<!-- more -->
