@@ -23,6 +23,9 @@
     "paths": {
       "@site/*": [
         "./*"
+      ],
+      "@theme": [
+        "node_modules/@docusaurus/theme-classic"
       ]
     }
   },

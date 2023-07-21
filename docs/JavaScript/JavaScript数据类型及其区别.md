@@ -1,6 +1,11 @@
-📆: 2017-12-23 13:34:16
-🏷: #JavaScript #type 
-***
+---
+sidebar_position: 1
+tags:
+ - JavaScript
+ - 数据类型
+ - 显示转换
+ - 隐式转换
+---
 
 ## 一、概述
 
@@ -165,11 +170,11 @@ parseInt('10', 2)     // 2
 ```javascript
 String(123)
 String('123')
-String(true) 
-String(false) 
-String(undefined) 
-String(null) 
-String({a: 123}) 
+String(true)
+String(false)
+String(undefined)
+String(null)
+String({a: 123})
 String([1, 2, 3])
 ```
 
@@ -201,14 +206,14 @@ String([1, 2, 3])   // '1,2,3'
 猜猜下面各项都会转换成什么值？
 
 ```javascript
-Boolean(0) 
-Boolean(1) 
+Boolean(0)
+Boolean(1)
 Boolean('0')
 Boolean('1')
 Boolean('')
 Boolean(NaN)
-Boolean({}) 
-Boolean([]) 
+Boolean({})
+Boolean([])
 Boolean(new Boolean(false))
 ```
 
@@ -245,11 +250,11 @@ Boolean(new Boolean(false)) // true
 
 可以得出个小结，除了下面几种会被转化成false，其他都换被转化成true
 
-- `undefined` 
-- `null` 
-- `false` 
-- `+0` 
-- `-0` 
+- `undefined`
+- `null`
+- `false`
+- `+0`
+- `-0`
 - `NaN`
 - `""`
 
@@ -268,12 +273,12 @@ Boolean(new Boolean(false)) // true
 ```javascript
 '5' + 1
 '5' + true
-'5' + false 
-'5' + {} 
-'5' + [] 
+'5' + false
+'5' + {}
+'5' + []
 '5' + function (){}
-'5' + undefined 
-'5' + null 
+'5' + undefined
+'5' + null
 ```
 
 #### **答案5**
@@ -304,11 +309,11 @@ Boolean(new Boolean(false)) // true
 ```javascript
 '5' - '2'
 '5' * '2'
-true - 1 
+true - 1
 false - 1
 '1' - 1
 '5' * []
-false / '5' 
+false / '5'
 'abc' - 1
 null + 1
 undefined + 1
