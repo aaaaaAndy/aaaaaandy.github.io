@@ -3,6 +3,7 @@ sidebar_position: 2
 tags:
  - JavaScript
  - 类型转换
+ - ToPrimitive
 ---
 
 ## 一、显式/隐式类型转换
