@@ -1,10 +1,14 @@
-📆: 2020-03-25 17:28:34
-🏷: #JavaScript #IntersectionObserver #无限滚动 #懒惰加载
-***
+---
+tags:
+  - IntersectionObserver
+  - 无限滚动
+  - 懒加载
+  - 视频自动加载
+---
 
 日常需求中, 经常会遇到列表需要上拉加载下一页数据, 也就是一个无限滚动的效果, 过去我们的实现方案无外乎监听`scroll`的变化, 通过`scrollTop`, `scrollHeight`和 `clientHeight`来判断滚动的高度, 从而决定是否加载下一页的数据，但这一方案额外增加了`JavaScript`的计算量，造成了性能问题，实不能称为一个完美的解决方案。但是今天我们有了一个完美的方案: `IntersectionObserver`：
 
-> IntersectionObserver接口 (从属于Intersection Observer API) 提供了一种异步观察目标元素与其祖先元素或顶级文档视窗(viewport)交叉状态的方法。祖先元素与视窗(viewport)被称为根(root)。
+> IntersectionObserver 接口 (从属于 Intersection Observer API) 提供了一种异步观察目标元素与其祖先元素或顶级文档视窗(viewport)交叉状态的方法。祖先元素与视窗(viewport)被称为根(root)。
 
 ## 一、API
 
@@ -33,7 +37,7 @@ io.unobserve(document.getElementById('footer'));
 io.disconnect();
 
 // 返回所有观察目标的IntersectionObserverEntry数组
-io.takeRecords()
+io.takeRecords();
 ```
 
 ### 3. `options`属性对象
@@ -45,10 +49,10 @@ options = {
   // 一般用于监听容器内滚动
   root: null,
   // 计算交叉时添加到根root边界盒的矩形偏移量，类似于margin
-  rootMargin: "0px 0px 0px 0px",
+  rootMargin: '0px 0px 0px 0px',
   // 一个包含阈值的列表，按升序排列，列表中的每个阈值都是监听对象的交叉区域与边界区域的比率。当达到该阈值时就会触发callback，如果构造器未传入值，则默认值为0
-  thresholds: [0, 0.5, 1]
-}
+  thresholds: [0, 0.5, 1],
+};
 ```
 
 ### 4. `IntersectionObserverEntry`对象
@@ -94,7 +98,7 @@ entries = {
 
 ![https://raw.githubusercontent.com/aaaaaAndy/picture/main/images/20210305134211.jpg](https://raw.githubusercontent.com/aaaaaAndy/picture/main/images/20210305134211.jpg)
 
-虽然`Chrome`从51版本就开始支持了这个新`API`，但是我们日常开发中不单单开发只针对`Chrome`平台的应用，所以兼容性还是要做的。
+虽然`Chrome`从 51 版本就开始支持了这个新`API`，但是我们日常开发中不单单开发只针对`Chrome`平台的应用，所以兼容性还是要做的。
 
 ### 2. 异步执行
 
@@ -110,13 +114,13 @@ entries = {
 
    `npm`方式
 
-    ```bash
-    yarn add intersection-observer
-    ```
+   ```bash
+   yarn add intersection-observer
+   ```
 
    `script`方式
 
-   先把[intersection-observer.js](https://github.com/w3c/IntersectionObserver/blob/main/polyfill/intersection-observer.js)下载到本地对应的目录，当然也可以放在cdn上
+   先把[intersection-observer.js](https://github.com/w3c/IntersectionObserver/blob/main/polyfill/intersection-observer.js)下载到本地对应的目录，当然也可以放在 cdn 上
 
 2. 引入垫片
 
@@ -124,30 +128,32 @@ entries = {
 
    `npm`方式
 
-    ```
-    import 'intersection-observer';
-    ```
+   ```
+   import 'intersection-observer';
+   ```
 
    `script`方式
 
-    ```html
-    <script src="path/to/intersection-observer.js"></script>
-    ```
+   ```html
+   <script src="path/to/intersection-observer.js"></script>
+   ```
 
 3. 放心使用
 
-    ```jsx
-    const io = new IntersectionObserver((entries) => {
-    	if (entries[0].intersectionRatio > 0) {
-    	  loadMore();
-      }
-     }, {
-      threshold: [0.5],
-    });
-    
-    io.observe(document.getElementById('footer'));
-    ```
+   ```jsx
+   const io = new IntersectionObserver(
+     (entries) => {
+       if (entries[0].intersectionRatio > 0) {
+         loadMore();
+       }
+     },
+     {
+       threshold: [0.5],
+     }
+   );
 
+   io.observe(document.getElementById('footer'));
+   ```
 
 ### 2. 惰性加载(`lazy load`)
 
@@ -155,32 +161,30 @@ entries = {
 
 1. 针对对应的静态资源（如`img`），先不要设置`src`，而是先给一个`data-src`属性用来保存每个`img`对应的静态资源路径：
 
-    ```html
-    <img src="placeholder.png" data-src="img-1.jpg" />
-    <img src="placeholder.png" data-src="img-2.jpg" />
-    <img src="placeholder.png" data-src="img-3.jpg" />
-    ```
+   ```html
+   <img src="placeholder.png" data-src="img-1.jpg" />
+   <img src="placeholder.png" data-src="img-2.jpg" />
+   <img src="placeholder.png" data-src="img-3.jpg" />
+   ```
 
 2. 监听对应的静态资源`DOM`，当它们进入可视区域内时把`data-src`上的静态资源路径赋值给相应的`src`属性，来进行加载渲染。
 
-    ```jsx
-    function query(selector) {
-      return Array.from(document.querySelectorAll(selector));
-    }
-    
-    var io = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          entry.target.src = entry.target.dataset.src;
-          observer.unobserve(entry.target);
-        });
-      }
-    );
-    
-    query('.lazy-loaded').forEach(function (item) {
-      observer.observe(item);
-    });
-    ```
+   ```jsx
+   function query(selector) {
+     return Array.from(document.querySelectorAll(selector));
+   }
 
+   var io = new IntersectionObserver((entries) => {
+     entries.forEach((entry) => {
+       entry.target.src = entry.target.dataset.src;
+       observer.unobserve(entry.target);
+     });
+   });
+
+   query('.lazy-loaded').forEach(function (item) {
+     observer.observe(item);
+   });
+   ```
 
 ### 3. 视频自动播放
 
@@ -188,29 +192,32 @@ entries = {
 
 1. 引入这个视频
 
-    ```html
-    <video src="foo.mp4" controls=""></video>
-    ```
+   ```html
+   <video src="foo.mp4" controls=""></video>
+   ```
 
 2. 监听视频`DOM`，自动播放或者暂停
 
-    ```jsx
-    let video = document.querySelector('video');
-    let isPaused = false;
-    
-    let observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.intersectionRatio != 1  && !video.paused) {
-          video.pause();
-          isPaused = true;
-        } else if (isPaused) {
-          video.play();
-          isPaused=false;
-        }
-      });
-    }, {threshold: 1});
-    
-    observer.observe(video);
-    ```
+   ```jsx
+   let video = document.querySelector('video');
+   let isPaused = false;
+
+   let observer = new IntersectionObserver(
+     (entries, observer) => {
+       entries.forEach((entry) => {
+         if (entry.intersectionRatio != 1 && !video.paused) {
+           video.pause();
+           isPaused = true;
+         } else if (isPaused) {
+           video.play();
+           isPaused = false;
+         }
+       });
+     },
+     { threshold: 1 }
+   );
+
+   observer.observe(video);
+   ```
 
 <!-- more -->

@@ -1,11 +1,13 @@
-🏷: #JavaScript #继承
-***
+---
+tags:
+  - 继承
+---
 
 ## 一、是什么
 
 继承（inheritance）是面向对象软件技术当中的一个概念。
 
-如果一个类别B“继承自”另一个类别A，就把这个B称为“A的子类”，而把A称为“B的父类别”也可以称“A是B的超类”
+如果一个类别 B“继承自”另一个类别 A，就把这个 B 称为“A 的子类”，而把 A 称为“B 的父类别”也可以称“A 是 B 的超类”
 
 - 继承的优点
 
@@ -20,12 +22,12 @@
 定义一个类（Class）叫汽车，汽车的属性包括颜色、轮胎、品牌、速度、排气量等
 
 ```javascript
-class Car{
-    constructor(color,speed){
-        this.color = color
-        this.speed = speed
-        // ...
-    }
+class Car {
+  constructor(color, speed) {
+    this.color = color;
+    this.speed = speed;
+    // ...
+  }
 }
 ```
 
@@ -33,11 +35,11 @@ class Car{
 
 ```javascript
 // 货车
-class Truck extends Car{
-    constructor(color,speed){
-        super(color,speed)
-        this.Container = true // 货箱
-    }
+class Truck extends Car {
+  constructor(color, speed) {
+    super(color, speed);
+    this.Container = true; // 货箱
+  }
 }
 ```
 
@@ -46,12 +48,12 @@ class Truck extends Car{
 在“轿车”继承“汽车”的同时，也可以重新定义汽车的某些属性，并重写或覆盖某些属性和方法，使其获得与“汽车”这个父类不同的属性和方法
 
 ```javascript
-class Truck extends Car{
-    constructor(color,speed){
-        super(color,speed)
-        this.color = "black" //覆盖
-        this.Container = true // 货箱
-    }
+class Truck extends Car {
+  constructor(color, speed) {
+    super(color, speed);
+    this.color = 'black'; //覆盖
+    this.Container = true; // 货箱
+  }
 }
 ```
 
@@ -75,15 +77,15 @@ class Truck extends Car{
 举个例子
 
 ```javascript
- function Parent() {
-    this.name = 'parent1';
-    this.play = [1, 2, 3]
-  }
-  function Child() {
-    this.type = 'child2';
-  }
-  Child1.prototype = new Parent();
-  console.log(new Child())
+function Parent() {
+  this.name = 'parent1';
+  this.play = [1, 2, 3];
+}
+function Child() {
+  this.type = 'child2';
+}
+Child1.prototype = new Parent();
+console.log(new Child());
 ```
 
 上面代码看似没问题，实际存在潜在问题
@@ -97,54 +99,50 @@ console.log(s1.play, s2.play); // [1,2,3,4]
 
 改变`s1`的`play`属性，会发现`s2`也跟着发生变化了，这是因为两个实例使用的是同一个原型对象，内存空间是共享的
 
-
-
 ### 构造函数继承
 
 借助 `call `调用`Parent`函数
 
 ```javascript
-function Parent(){
-    this.name = 'parent1';
+function Parent() {
+  this.name = 'parent1';
 }
 
 Parent.prototype.getName = function () {
-    return this.name;
-}
+  return this.name;
+};
 
-function Child(){
-    Parent1.call(this);
-    this.type = 'child'
+function Child() {
+  Parent1.call(this);
+  this.type = 'child';
 }
 
 let child = new Child();
-console.log(child);  // 没问题
-console.log(child.getName());  // 会报错
+console.log(child); // 没问题
+console.log(child.getName()); // 会报错
 ```
 
 可以看到，父类原型对象中一旦存在父类之前自己定义的方法，那么子类将无法继承这些方法
 
 相比第一种原型链继承方式，父类的引用属性不会被共享，优化了第一种继承方式的弊端，但是只能继承父类的实例属性和方法，不能继承原型属性或者方法
 
-
-
 ### 组合继承
 
 前面我们讲到两种继承方式，各有优缺点。组合继承则将前两种方式继承起来
 
 ```javascript
-function Parent3 () {
-    this.name = 'parent3';
-    this.play = [1, 2, 3];
+function Parent3() {
+  this.name = 'parent3';
+  this.play = [1, 2, 3];
 }
 
 Parent3.prototype.getName = function () {
-    return this.name;
-}
+  return this.name;
+};
 function Child3() {
-    // 第二次调用 Parent3()
-    Parent3.call(this);
-    this.type = 'child3';
+  // 第二次调用 Parent3()
+  Parent3.call(this);
+  this.type = 'child3';
 }
 
 // 第一次调用 Parent3()
@@ -154,14 +152,12 @@ Child3.prototype.constructor = Child3;
 var s3 = new Child3();
 var s4 = new Child3();
 s3.play.push(4);
-console.log(s3.play, s4.play);  // 不互相影响
+console.log(s3.play, s4.play); // 不互相影响
 console.log(s3.getName()); // 正常输出'parent3'
 console.log(s4.getName()); // 正常输出'parent3'
 ```
 
 这种方式看起来就没什么问题，方式一和方式二的问题都解决了，但是从上面代码我们也可以看到` Parent3` 执行了两次，造成了多构造一次的性能开销
-
-
 
 ### 原型式继承
 
@@ -171,30 +167,28 @@ console.log(s4.getName()); // 正常输出'parent3'
 
 ```javascript
 let parent4 = {
-    name: "parent4",
-    friends: ["p1", "p2", "p3"],
-    getName: function() {
-      return this.name;
-    }
-  };
+  name: 'parent4',
+  friends: ['p1', 'p2', 'p3'],
+  getName: function () {
+    return this.name;
+  },
+};
 
-  let person4 = Object.create(parent4);
-  person4.name = "tom";
-  person4.friends.push("jerry");
+let person4 = Object.create(parent4);
+person4.name = 'tom';
+person4.friends.push('jerry');
 
-  let person5 = Object.create(parent4);
-  person5.friends.push("lucy");
+let person5 = Object.create(parent4);
+person5.friends.push('lucy');
 
-  console.log(person4.name); // tom
-  console.log(person4.name === person4.getName()); // true
-  console.log(person5.name); // parent4
-  console.log(person4.friends); // ["p1", "p2", "p3","jerry","lucy"]
-  console.log(person5.friends); // ["p1", "p2", "p3","jerry","lucy"]
+console.log(person4.name); // tom
+console.log(person4.name === person4.getName()); // true
+console.log(person5.name); // parent4
+console.log(person4.friends); // ["p1", "p2", "p3","jerry","lucy"]
+console.log(person5.friends); // ["p1", "p2", "p3","jerry","lucy"]
 ```
 
 这种继承方式的缺点也很明显，因为`Object.create `方法实现的是浅拷贝，多个实例的引用类型属性指向相同的内存，存在篡改的可能
-
-
 
 ### 寄生式继承
 
@@ -202,19 +196,19 @@ let parent4 = {
 
 ```javascript
 let parent5 = {
-    name: "parent5",
-    friends: ["p1", "p2", "p3"],
-    getName: function() {
-        return this.name;
-    }
+  name: 'parent5',
+  friends: ['p1', 'p2', 'p3'],
+  getName: function () {
+    return this.name;
+  },
 };
 
 function clone(original) {
-    let clone = Object.create(original);
-    clone.getFriends = function() {
-        return this.friends;
-    };
-    return clone;
+  let clone = Object.create(original);
+  clone.getFriends = function () {
+    return this.friends;
+  };
+  return clone;
 }
 
 let person5 = clone(parent5);
@@ -225,36 +219,34 @@ console.log(person5.getFriends()); // ["p1", "p2", "p3"]
 
 其优缺点也很明显，跟上面讲的原型式继承一样
 
-
-
 ### 寄生组合式继承
 
 寄生组合式继承，借助解决普通对象的继承问题的` Object.create` 方法，在前面几种继承方式的优缺点基础上进行改造，这也是所有继承方式里面相对最优的继承方式
 
 ```javascript
-function clone (parent, child) {
-    // 这里改用 Object.create 就可以减少组合继承中多进行一次构造的过程
-    child.prototype = Object.create(parent.prototype);
-    child.prototype.constructor = child;
+function clone(parent, child) {
+  // 这里改用 Object.create 就可以减少组合继承中多进行一次构造的过程
+  child.prototype = Object.create(parent.prototype);
+  child.prototype.constructor = child;
 }
 
 function Parent6() {
-    this.name = 'parent6';
-    this.play = [1, 2, 3];
+  this.name = 'parent6';
+  this.play = [1, 2, 3];
 }
 Parent6.prototype.getName = function () {
-    return this.name;
-}
+  return this.name;
+};
 function Child6() {
-    Parent6.call(this);
-    this.friends = 'child5';
+  Parent6.call(this);
+  this.friends = 'child5';
 }
 
 clone(Parent6, Child6);
 
 Child6.prototype.getFriends = function () {
-    return this.friends;
-}
+  return this.friends;
+};
 
 let person6 = new Child6();
 console.log(person6); //{friends:"child5",name:"child5",play:[1,2,3],__proto__:Parent6}
@@ -264,51 +256,46 @@ console.log(person6.getFriends()); // child5
 
 可以看到 person6 打印出来的结果，属性都得到了继承，方法也没问题
 
-
-
 文章一开头，我们是使用`ES6` 中的`extends `关键字直接实现 `JavaScript `的继承
 
 ```javascript
 class Person {
   constructor(name) {
-    this.name = name
+    this.name = name;
   }
   // 原型方法
   // 即 Person.prototype.getName = function() { }
   // 下面可以简写为 getName() {...}
   getName = function () {
-    console.log('Person:', this.name)
-  }
+    console.log('Person:', this.name);
+  };
 }
 class Gamer extends Person {
   constructor(name, age) {
     // 子类中存在构造函数，则需要在使用“this”之前首先调用 super()。
-    super(name)
-    this.age = age
+    super(name);
+    this.age = age;
   }
 }
-const asuna = new Gamer('Asuna', 20)
-asuna.getName() // 成功访问到父类的方法
+const asuna = new Gamer('Asuna', 20);
+asuna.getName(); // 成功访问到父类的方法
 ```
 
 利用`babel`工具进行转换，我们会发现`extends`实际采用的也是寄生组合继承方式，因此也证明了这种方式是较优的解决继承的方式
-
-
 
 ## 三、总结
 
 下面以一张图作为总结：
 
- ![](https://static.vue-js.com/0df74700-731c-11eb-ab90-d9ae814b240d.png)
+![](https://static.vue-js.com/0df74700-731c-11eb-ab90-d9ae814b240d.png)
 
 通过`Object.create` 来划分不同的继承方式，最后的寄生式组合继承方式是通过组合继承改造之后的最优继承方式，而 `extends` 的语法糖和寄生组合继承的方式基本类似
 
 ## 相关链接
+
 https://zh.wikipedia.org/wiki/%E7%BB%A7%E6%89%BF
 
-
-📆: 2019-06-12 15:49:51
-🏷: #JavaScript #继承 
+📆: 2019-06-12 15:49:51 🏷: #JavaScript #继承
 
 ## 一、构造函数继承
 
@@ -319,8 +306,8 @@ function Animal() {
 
 function Cat(name) {
   Animal.apply(this, arguments);
-  
-  this.name = name
+
+  this.name = name;
 }
 ```
 
@@ -335,16 +322,16 @@ function Animal() {
 
 Animal.prototype.getSpecies = function () {
   return this.species;
-}
+};
 
 function Cat(name) {
   this.name = name;
 }
 
 Cat.prototype = new Animal();
-Cat.prototype.getName = function() {
+Cat.prototype.getName = function () {
   return this.name;
-}
+};
 ```
 
 原型链的问题 原型链虽然很强大，可以用它来实现继承，但它也存在一些问题。其中，最主要的问题来自包含引用类型值的原型。
@@ -360,17 +347,17 @@ function Animal(species) {
 
 Animal.prototype.getSpecies = function () {
   return this.species;
-}
+};
 
 function Cat(name, species) {
   Animal.call(this, species);
-  this.name = name
+  this.name = name;
 }
 
 Cat.prototype = new Animal();
-Cat.prototype.getName = function() {
+Cat.prototype.getName = function () {
   return this.name;
-}
+};
 ```
 
 无论什么情况下，都会调用两次超类型构造函数：一次是在创建子类型原型的时候，另一次是在子类型构造函数内部
@@ -381,7 +368,7 @@ Cat.prototype.getName = function() {
 
 ```javascript
 function object(o) {
-  function F(){};
+  function F() {}
   F.prototype = o;
   return new F();
 }
@@ -398,11 +385,11 @@ function object(o) {
 ```javascript
 function createAnother(original) {
   var clone = object(original);
-  
-  clone.sayHi = function() {
+
+  clone.sayHi = function () {
     console.log('hi');
-  }
-  
+  };
+
   return clone;
 }
 ```
@@ -428,18 +415,17 @@ function Animal(species) {
 
 Animal.prototype.getSpecies = function () {
   return this.species;
-}
+};
 
 function Cat(name, species) {
   Animal.call(this, species);
-  this.name = name
+  this.name = name;
 }
 
 inheritPrototype(Cat, Animal);
-Cat.prototype.getName = function() {
+Cat.prototype.getName = function () {
   return this.name;
-}
+};
 ```
 
 这个例子的高效率体现在它只调用了一次`SuperType`构造函数，并且因此避免了在`SubType.prototype`上面创建不必要的、多余的属性。与此同时，原型链还能保持不变；因此，还能够正常使用`instanceof`和`isPrototypeOf()`。开发人员普遍认为寄生组合式继承是引用类型最理想的继承范式。
-

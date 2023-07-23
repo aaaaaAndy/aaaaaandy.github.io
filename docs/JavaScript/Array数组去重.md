@@ -1,9 +1,8 @@
 ---
 sidebar_position: 11
 tags:
- - JavaScript
- - Array
- - 去重
+  - Array
+  - 去重
 ---
 
 ### 1. 利用`ES6`中`set`去重
@@ -20,7 +19,7 @@ function unique(arr) {
 
 // 方法2
 function unique(arr) {
-  return [...new Set(arr)]
+  return [...new Set(arr)];
 }
 ```
 
@@ -30,19 +29,19 @@ function unique(arr) {
 
 ```javascript
 function unique(arr) {
-	var result = [];
-	var obj = {};
+  var result = [];
+  var obj = {};
 
-	for (let i = 0; i < arr.length; i++) {
-		if (obj[arr[i]]) {
-			obj[arr[i]]++;
-		} else {
-			result.push(arr[i]);
-			obj[arr[i]] = 1;
-		}
-	}
+  for (let i = 0; i < arr.length; i++) {
+    if (obj[arr[i]]) {
+      obj[arr[i]]++;
+    } else {
+      result.push(arr[i]);
+      obj[arr[i]] = 1;
+    }
+  }
 
-	return result;
+  return result;
 }
 ```
 
@@ -50,22 +49,21 @@ function unique(arr) {
 
 与 [#2.利用对象去重](#2-利用对象去重) 相似，都是以空间换时间，循环一次数组。
 
-
 ```javascript
 function unique(arr) {
-	var result = [];
-	var map = new Map();
+  var result = [];
+  var map = new Map();
 
-	for (let i = 0; i < arr.length; i++) {
-		if (map.has(arr[i])) {
-			map.set(arr[i], true);
-		} else {
-			map.set(arr[i], false);
-			result.push(arr[i]);
-		}
-	}
+  for (let i = 0; i < arr.length; i++) {
+    if (map.has(arr[i])) {
+      map.set(arr[i], true);
+    } else {
+      map.set(arr[i], false);
+      result.push(arr[i]);
+    }
+  }
 
-	return result;
+  return result;
 }
 ```
 
@@ -77,20 +75,19 @@ function unique(arr) {
 
 ```javascript
 function unique(arr) {
-	var result = [];
-	arr.sort();
+  var result = [];
+  arr.sort();
 
-	result.push(arr[0]);
-	for (let i = 1; i < arr.length; i++) {
-		if (arr[i] !== arr[i - 1]) {
-			result.push(arr[i]);
-		}
-	}
+  result.push(arr[0]);
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] !== arr[i - 1]) {
+      result.push(arr[i]);
+    }
+  }
 
-	return result;
+  return result;
 }
 ```
-
 
 ### 5. 双层循环，利用`splice`去重
 
@@ -98,64 +95,62 @@ function unique(arr) {
 
 ```javascript
 function unique(arr) {
-	for (let i = 0; i < arr.length; i++) {
-		for (let j = i + 1; j < arr.length; j++) {
-			if (arr[i] === arr[j]) {
-				arr.splice(j, 1);
-				j--;
-			}
-		}
-	}
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] === arr[j]) {
+        arr.splice(j, 1);
+        j--;
+      }
+    }
+  }
 
-	return arr;
+  return arr;
 }
 ```
 
 ### 6. `includes`去重
 
-此方法是方法 [#5-双层循环利用splice去重](#5-双层循环利用splice去重) 的进化版，
-只是把内层循环换成了数组本身的遍历方法。个人认为此方法其实比[#5-双层循环利用splice去重](#5-双层循环利用splice去重)
-更耗时，因为使用数组遍历方法时还要生成迭代器对象，而直接 `for` 循环是遍历数组最快的方法。
+此方法是方法 [#5-双层循环利用 splice 去重](#5-双层循环利用splice去重) 的进化版，只是把内层循环换成了数组本身的遍历方法。个人认为此方法其实比[#5-双层循环利用 splice 去重](#5-双层循环利用splice去重) 更耗时，因为使用数组遍历方法时还要生成迭代器对象，而直接 `for` 循环是遍历数组最快的方法。
 
 ```javascript
 function unique(arr) {
-	var result = [];
-  
-	for (let i = 0; i < arr.length; i++) {
-		if (!result.includes(arr[i])) {
-			result.push(arr[i]);
-		}
+  var result = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (!result.includes(arr[i])) {
+      result.push(arr[i]);
+    }
   }
-  
-	return result;
+
+  return result;
 }
 ```
 
 ### 7. `indexOf`去重
 
-此方法与 [#6-includes去重](#6-includes去重) 相似。
+此方法与 [#6-includes 去重](#6-includes去重) 相似。
 
 ```javascript
 function unique(arr) {
-	var result = [];
+  var result = [];
 
-	for (let i = 0; i < arr.length; i++) {
-		if (result.indexOf(arr[i]) === -1) {
-			result.push(arr[i]);
-		}
-	}
+  for (let i = 0; i < arr.length; i++) {
+    if (result.indexOf(arr[i]) === -1) {
+      result.push(arr[i]);
+    }
+  }
 
-	return result;
+  return result;
 }
 ```
 
 ### 8. `filter`去重
 
-此方法相当于把双层循环的两层循环都换成了数组的遍历方法，起性能甚至比 [#6-includes去重](#6-includes去重) 和 [#7-indexof去重](#7-indexof去重) 更差。
+此方法相当于把双层循环的两层循环都换成了数组的遍历方法，起性能甚至比 [#6-includes 去重](#6-includes去重) 和 [#7-indexof 去重](#7-indexof去重) 更差。
 
 ```javascript
 function unique(arr) {
-	return arr.filter((item, index) => arr.indexOf(item, 0) === index);
+  return arr.filter((item, index) => arr.indexOf(item, 0) === index);
 }
 ```
 
@@ -165,7 +160,9 @@ function unique(arr) {
 
 ```javascript
 function unique(arr) {
-	return arr.reduce((acc, cur) => acc.includes(cur) ? acc : [...acc, cur], []);
+  return arr.reduce(
+    (acc, cur) => (acc.includes(cur) ? acc : [...acc, cur]),
+    []
+  );
 }
 ```
-

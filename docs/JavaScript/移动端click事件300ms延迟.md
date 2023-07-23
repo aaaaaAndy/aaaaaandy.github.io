@@ -1,12 +1,14 @@
-📆: 2022-05-25 14:27:14
-🏷: #click 
-***
+---
+tags:
+  - click
+  - 300ms
+---
 
 ## 一、追根溯源
 
 移动端为什么会出现`click`事件的`300ms`延迟？
 
-这应该属于科技进步过程中的不完美。在2007年，苹果公司在发布首款`iphone`前夕，遇到一个问题：当时的网站大都为大屏幕的设备所设计，于是苹果的工程师在解决小屏幕手机浏览大屏幕网站的问题上做了一些约定，其中一个就是有名的双击缩放。
+这应该属于科技进步过程中的不完美。在 2007 年，苹果公司在发布首款`iphone`前夕，遇到一个问题：当时的网站大都为大屏幕的设备所设计，于是苹果的工程师在解决小屏幕手机浏览大屏幕网站的问题上做了一些约定，其中一个就是有名的双击缩放。
 
 双击缩放：顾名思义就是连续两次点击屏幕，苹果自带的`safari`浏览器就会将网页缩放到它的原始比例，那么怎么实现这种双击缩放呢？很简单，就是在第一次点击之后先不触发`click`事件，而是等待`300ms`，如果在这`300ms`之内还有第二次点击，那么就对网页进行缩放；如果没有第二次点击，则再`300ms`结束后再触发`click`事件。鉴于`iphone`当时的成功，很多移动浏览器都赋值了这一功能。在当时，人们刚刚接触移动浏览器，不会在乎这`300ms`的延迟，但是随着科技的发展，用户对体验的要求也更高，这`300ms`的问题就尤为突出。
 
@@ -23,26 +25,25 @@
 - `Chrome on Android(all versions)`
 - `IOS 9.3`
 
-    ```html
-    <meta name="viewport" content="user-scalable=no" />
-    <meta name="viewport" content="initial-scale=1,maximum-scale=1" />
-    ```
+  ```html
+  <meta name="viewport" content="user-scalable=no" />
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1" />
+  ```
 
-    ```css
-    html {
-    	touch-action: manipulation;
-    }
-    ```
+  ```css
+  html {
+    touch-action: manipulation;
+  }
+  ```
 
 - `IE on Windows Phone`
 
-    ```css
-    html {
-    	touch-action: manipulation; // IE11+  
-    	-ms-touch-action: manipulation; // IE10
-    }
-    ```
-
+  ```css
+  html {
+    touch-action: manipulation; // IE11+
+    -ms-touch-action: manipulation; // IE10
+  }
+  ```
 
 ### 2. 不禁用缩放
 
@@ -55,16 +56,15 @@
 - `Chrome 32+ on Android`
 - `IOS 9.3`
 
-    ```html
-    <meta name="viewport" content="width=device-width" />
-    ```
+  ```html
+  <meta name="viewport" content="width=device-width" />
+  ```
 
   如果不添加`width=device-width`不管是`Android`还是`IOS`中已修复的版本中仍然会出现延时的问题。
 
-
 ### 3. `CSS touch-action`
 
-`touch-action`这个CSS属性。这个属性指定了相应元素上能够触发的用户代理（也就是浏览器）的默认行为。如果将该属性值设置为`touch-action: none`，那么表示在该元素上的操作不会触发用户代理的任何默认行为，就无需进行300ms的延迟判断。
+`touch-action`这个 CSS 属性。这个属性指定了相应元素上能够触发的用户代理（也就是浏览器）的默认行为。如果将该属性值设置为`touch-action: none`，那么表示在该元素上的操作不会触发用户代理的任何默认行为，就无需进行 300ms 的延迟判断。
 
 ### 4. `FashClick`
 
@@ -76,7 +76,7 @@
 
 `Android WebView` 中 300ms 的延迟问题和移动端浏览器解决思路一致。
 
-###  2. `IOS Webview`
+### 2. `IOS Webview`
 
 `IOS Webview`的问题有点头大，因为在`IOS8`之前一直都是`UIWebview`，`IOS8`出了个`WKWebview`。其实直到现在，`UIWebview`的`300ms`延迟问题一直存在，哪怕是新版的`IOS`版本，但是`WkWebview`在`IOS9.3`的时候将这个问题修复了。
 

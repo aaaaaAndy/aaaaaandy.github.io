@@ -1,6 +1,8 @@
-📆: 2020-01-04 17:36:42
-🏷: #JavaScript #事件冒泡 #事件捕获
-***
+---
+tags:
+  - 事件冒泡
+  - 事件捕获
+---
 
 ## 一、`JavaScript`中的事件传播模式
 
@@ -36,9 +38,9 @@ DOM.addEventListener(type, handler, useCaptue);
 
 ```javascript
 function handleClick(e) {
-	// code...  
-	e.stopPropagation();
-	window.event.cancelBubble = true;
+  // code...
+  e.stopPropagation();
+  window.event.cancelBubble = true;
 }
 ```
 
@@ -48,9 +50,9 @@ function handleClick(e) {
 
 ```javascript
 function handleClick(e) {
-	// code...  
-	e.preventDefault();
-	window.event.returnValue = false;
+  // code...
+  e.preventDefault();
+  window.event.returnValue = false;
 }
 ```
 
@@ -60,17 +62,17 @@ function handleClick(e) {
 
 ```javascript
 var dom = document.getElementById('click');
-dom.onclick = function() {
-	return false;
-}
+dom.onclick = function () {
+  return false;
+};
 ```
 
 - 引入`jQuery`的话既阻止默认行为又防止对象冒泡。
 
 ```javascript
-$('#click').on('click', function() {
-	return false;
-})
+$('#click').on('click', function () {
+  return false;
+});
 ```
 
 <!-- more -->

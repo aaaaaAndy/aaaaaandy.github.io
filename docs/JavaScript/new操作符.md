@@ -1,5 +1,8 @@
-🏷: #JavaScript #new
-***
+---
+tags:
+  - new
+---
+
 ## 一、是什么
 
 在`JavaScript`中，`new`操作符用于创建一个给定构造函数的实例对象
@@ -7,16 +10,16 @@
 例子
 
 ```javascript
-function Person(name, age){
-    this.name = name;
-    this.age = age;
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
 }
 Person.prototype.sayName = function () {
-    console.log(this.name)
-}
-const person1 = new Person('Tom', 20)
-console.log(person1)  // Person {name: "Tom", age: 20}
-t.sayName() // 'Tom'
+  console.log(this.name);
+};
+const person1 = new Person('Tom', 20);
+console.log(person1); // Person {name: "Tom", age: 20}
+t.sayName(); // 'Tom'
 ```
 
 从上面可以看到：
@@ -28,11 +31,11 @@ t.sayName() // 'Tom'
 
 ```javascript
 function Test(name) {
-  this.name = name
-  return 1
+  this.name = name;
+  return 1;
 }
-const t = new Test('xxx')
-console.log(t.name) // 'xxx'
+const t = new Test('xxx');
+console.log(t.name); // 'xxx'
 ```
 
 可以发现，构造函数中返回一个原始值，然而这个返回值并没有作用
@@ -41,18 +44,16 @@ console.log(t.name) // 'xxx'
 
 ```javascript
 function Test(name) {
-  this.name = name
-  console.log(this) // Test { name: 'xxx' }
-  return { age: 26 }
+  this.name = name;
+  console.log(this); // Test { name: 'xxx' }
+  return { age: 26 };
 }
-const t = new Test('xxx')
-console.log(t) // { age: 26 }
-console.log(t.name) // 'undefined'
+const t = new Test('xxx');
+console.log(t); // { age: 26 }
+console.log(t.name); // 'undefined'
 ```
 
 从上面可以发现，构造函数如果返回值为一个对象，那么这个返回值会被正常使用
-
-
 
 ## 二、流程
 
@@ -67,22 +68,20 @@ console.log(t.name) // 'undefined'
 举个例子：
 
 ```javascript
-function Person(name, age){
-    this.name = name;
-    this.age = age;
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
 }
-const person1 = new Person('Tom', 20)
-console.log(person1)  // Person {name: "Tom", age: 20}
-t.sayName() // 'Tom'
+const person1 = new Person('Tom', 20);
+console.log(person1); // Person {name: "Tom", age: 20}
+t.sayName(); // 'Tom'
 ```
 
 流程图如下：
 
- ![](https://static.vue-js.com/b429b990-7a39-11eb-85f6-6fac77c0c9b3.png)
+![](https://static.vue-js.com/b429b990-7a39-11eb-85f6-6fac77c0c9b3.png)
 
-
-
-## 三、手写new操作符
+## 三、手写 new 操作符
 
 现在我们已经清楚地掌握了`new`的执行过程
 
@@ -90,14 +89,14 @@ t.sayName() // 'Tom'
 
 ```javascript
 function mynew(Func, ...args) {
-    // 1.创建一个新对象
-    const obj = {}
-    // 2.新对象原型指向构造函数原型对象
-    obj.__proto__ = Func.prototype
-    // 3.将构建函数的this指向新对象
-    let result = Func.apply(obj, args)
-    // 4.根据返回值判断
-    return result instanceof Object ? result : obj
+  // 1.创建一个新对象
+  const obj = {};
+  // 2.新对象原型指向构造函数原型对象
+  obj.__proto__ = Func.prototype;
+  // 3.将构建函数的this指向新对象
+  let result = Func.apply(obj, args);
+  // 4.根据返回值判断
+  return result instanceof Object ? result : obj;
 }
 ```
 
@@ -105,23 +104,22 @@ function mynew(Func, ...args) {
 
 ```javascript
 function mynew(func, ...args) {
-    const obj = {}
-    obj.__proto__ = func.prototype
-    let result = func.apply(obj, args)
-    return result instanceof Object ? result : obj
+  const obj = {};
+  obj.__proto__ = func.prototype;
+  let result = func.apply(obj, args);
+  return result instanceof Object ? result : obj;
 }
 function Person(name, age) {
-    this.name = name;
-    this.age = age;
+  this.name = name;
+  this.age = age;
 }
 Person.prototype.say = function () {
-    console.log(this.name)
-}
+  console.log(this.name);
+};
 
-let p = mynew(Person, "huihui", 123)
-console.log(p) // Person {name: "huihui", age: 123}
-p.say() // huihui
+let p = mynew(Person, 'huihui', 123);
+console.log(p); // Person {name: "huihui", age: 123}
+p.say(); // huihui
 ```
 
 可以发现，代码虽然很短，但是能够模拟实现`new`
-

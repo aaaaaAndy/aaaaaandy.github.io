@@ -1,5 +1,4 @@
 ---
-slug: /JavaScript
 sidebar_position: 1
 ---
 

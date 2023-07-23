@@ -1,6 +1,12 @@
-📆: 2020-03-12 17:29:44
-🏷: #width #height #clientWidth #clientHeight #innerWidth #innerHeight
-***
+---
+tags:
+  - width
+  - height
+  - clientWidth
+  - clientHeight
+  - innerWidth
+  - innerHeight
+---
 
 在`JavaScript`中存在各种宽高属性，如`height`, `clientHeight`, `innerHeight`,`outerHeight`等等，那么它们究竟有什么区别呢？
 
@@ -13,7 +19,7 @@
 - `window`对象的`location`属性引用的是`Location`对象，表示该窗口中当前文档的`URL`，`document`的对象的`location`属性也是应用了`Location`对象
 
 ```javascript
-window.location === document.location;  // true
+window.location === document.location; // true
 ```
 
 ## 二、`window`上的宽高
@@ -68,14 +74,14 @@ WX20210310-132749@2x
 如果没有滚动条，即为元素设定的宽度和高度，如果有滚动条，滚动条会遮盖元素的宽高，即为本来的宽高减去滚动条的宽高。
 
 ```css
-body{
-	border: 20px solid #000;
-	margin: 10px;
-	padding: 40px;
-	background: #eee;
-	height: 350px;
-	width: 500px;
-	overflow: scroll;
+body {
+  border: 20px solid #000;
+  margin: 10px;
+  padding: 40px;
+  background: #eee;
+  height: 350px;
+  width: 500px;
+  overflow: scroll;
 }
 ```
 
@@ -90,23 +96,23 @@ console.log(document.body.clientWidth);
 - `document.body.clientLeft`：返回元素周围边框的宽度；
 - `document.body.clientTop`：返回元素周围边框的高度；
 
-如果不指定一个元素的边框或者定位该元素，则这个值一直为0；
+如果不指定一个元素的边框或者定位该元素，则这个值一直为 0；
 
 ```css
-body{
-	border: 20px solid #000;
-	margin: 10px;
-	padding: 40px;
-	background: #eee;
-	height: 350px;
-	width: 500px;
-	overflow: scroll;
+body {
+  border: 20px solid #000;
+  margin: 10px;
+  padding: 40px;
+  background: #eee;
+  height: 350px;
+  width: 500px;
+  overflow: scroll;
 }
 ```
 
 ```javascript
-console.log(document.body.clientLeft);    //20
-console.log(document.body.clientTop);    //20
+console.log(document.body.clientLeft); //20
+console.log(document.body.clientTop); //20
 ```
 
 ### 2. `document.offset`
@@ -117,22 +123,22 @@ console.log(document.body.clientTop);    //20
 这两个属性是`content+padding+border`的宽度和高度。这里需要注意，如果有滚动条的话还需要加上滚动条的宽高，不是减去。
 
 ```css
-body{
-	border: 20px solid #000;
-	margin: 10px;
-	padding: 40px;
-	background: #eee;
-	height: 350px;
-	width: 500px;
-	overflow: scroll;
+body {
+  border: 20px solid #000;
+  margin: 10px;
+  padding: 40px;
+  background: #eee;
+  height: 350px;
+  width: 500px;
+  overflow: scroll;
 }
 ```
 
 ```javascript
-console.log("offsetWidth=",document.body.offsetWidth);
+console.log('offsetWidth=', document.body.offsetWidth);
 //620（width+margin*2+padding*2+border*2）
 
-console.log("offsetHeight=",document.body.offsetHeight);
+console.log('offsetHeight=', document.body.offsetHeight);
 //470（width+margin*2+padding*2+border*2）
 ```
 
@@ -144,13 +150,13 @@ console.log("offsetHeight=",document.body.offsetHeight);
 **总结**
 
 - 假如无`padding`无滚动条无`border`：
-    - `offsetWidth=clientWidth=style.width`
+  - `offsetWidth=clientWidth=style.width`
 - 假如有`padding`无滚动条有`border`：
-    - `offsetWidth=style.width+style.padding*2+(border-width)*2`
-    - `offsetWidth=clientWidth+border宽度*2`
+  - `offsetWidth=style.width+style.padding*2+(border-width)*2`
+  - `offsetWidth=clientWidth+border宽度*2`
 - 假如有`padding`有滚动条，且滚动条是显示的，有`border`：
-    - `offsetWidth=style.width+style.padding*2+(border-width)*2`
-    - `offsetWidth=clientWidth+滚动条宽度+border宽度*2`
+  - `offsetWidth=style.width+style.padding*2+(border-width)*2`
+  - `offsetWidth=clientWidth+滚动条宽度+border宽度*2`
 
 ### 3. `document.scroll`
 
@@ -168,18 +174,18 @@ console.log("offsetHeight=",document.body.offsetHeight);
 
 有三种方法获得浏览器尺寸
 
-- 对于IE, chrome, firefox, opera, safari浏览器
+- 对于 IE, chrome, firefox, opera, safari 浏览器
 
 ```javascript
 var wid = window.innerHeight;
 var hei = window.innerWidth;
 ```
 
-- 对于IE8, 7, 6, 5浏览器
+- 对于 IE8, 7, 6, 5 浏览器
 
 ```javascript
 var wid = document.documentElement.clientWidth;
-var hei = document.documentElement.clientHeight
+var hei = document.documentElement.clientHeight;
 ```
 
 - 或者

@@ -1,12 +1,9 @@
-
 ---
-sidebar_position: 1
+sidebar_position: 2
 tags:
  - JavaScript
  - 类型转换
 ---
-
-🏷: #JavaScript #类型转换
 
 ## 一、显式/隐式类型转换
 

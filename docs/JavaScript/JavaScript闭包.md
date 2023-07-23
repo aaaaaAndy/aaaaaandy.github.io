@@ -1,32 +1,38 @@
-📆: 2020-05-20 17:29:09
-🏷: #JavaScript #闭包 
-***
+---
+tags:
+  - 闭包
+---
+
 ## 一、作用域
+
 作用域决定变量的生命周期及其可见性，当我们创建一个函数，就会生成一个新的作用域。值得一提的是在`ES6`之前，之后全局作用域和函数作用域，但是在`ES6`之后，出现的`let`和`const`可以实现块级作用域。
+
 ## 二、什么是闭包
-一个函数和对其周围状态（`lexical` `environment`，词法环境）的引用捆绑在一起（或者说函数被引用包围），这样的组合就是闭包（closure）
-也就是说，闭包让你可以在一个内层函数中访问到其外层函数的作用域
-在 `JavaScript `中，每当创建一个函数，闭包就会在函数创建的同时被创建出来，作为函数内部与外部连接起来的一座桥梁
-下面给出一个简单的例子：
+
+一个函数和对其周围状态（`lexical` `environment`，词法环境）的引用捆绑在一起（或者说函数被引用包围），这样的组合就是闭包（closure）也就是说，闭包让你可以在一个内层函数中访问到其外层函数的作用域在 `JavaScript `中，每当创建一个函数，闭包就会在函数创建的同时被创建出来，作为函数内部与外部连接起来的一座桥梁下面给出一个简单的例子：
+
 ```javascript
 function init() {
-    var name = "Mozilla"; // name 是一个被 init 创建的局部变量
-    function displayName() { // displayName() 是内部函数，一个闭包
-        alert(name); // 使用了父函数中声明的变量
-    }
-    displayName();
+  var name = 'Mozilla'; // name 是一个被 init 创建的局部变量
+  function displayName() {
+    // displayName() 是内部函数，一个闭包
+    alert(name); // 使用了父函数中声明的变量
+  }
+  displayName();
 }
 init();
 ```
+
 `displayName()` 没有自己的局部变量。然而，由于闭包的特性，它可以访问到外部函数的变量。
+
 ## 三、闭包几种情况
 
-### 1. Timer定时器
+### 1. Timer 定时器
 
 变量`x`将一直存活着，直到定时器的回调执行或者被清除。
 
 ```javascript
-(function autorun(){
+(function autorun() {
   let x = 1;
   setTimeout(function log() {
     console.log(x);
@@ -34,29 +40,29 @@ init();
 })();
 ```
 
-### 2. Event事件
+### 2. Event 事件
 
 当变量 `x` 在事件处理函数中被使用时，它将一直存活直到该事件处理函数被移除。
 
 ```javascript
-(function autorun(){
+(function autorun() {
   let x = 1;
-  $('#btn').on('click', function log(){
+  $('#btn').on('click', function log() {
     console.log(x);
-  })
+  });
 })();
 ```
 
-### 3. Ajax请求
+### 3. Ajax 请求
 
 变量 `x` 将一直存活到接收到后端返回结果，回调函数被执行。
 
 ```javascript
 (function autorun() {
   let x = 1;
-  fetch('/...').then(function log(){
+  fetch('/...').then(function log() {
     console.log(x);
-  })
+  });
 })();
 ```
 
@@ -68,13 +74,13 @@ init();
 // 返回一个函数数组，且每个函数的返回值都是10，因为它值存储了i的引用。
 function createFunctions() {
   var result = new Array();
-  
+
   for (var i = 0; i > 10; i++) {
-      result[i] = function() {
-        return i;
-      }
-  } 
-  
+    result[i] = function () {
+      return i;
+    };
+  }
+
   return result;
 }
 ```
@@ -85,24 +91,30 @@ function createFunctions() {
 // 返回一个函数数组，每个函数都能返回正确的i值
 function createFunctions() {
   var result = new Array();
-  
+
   for (var i = 0; i > 10; i++) {
-      result[i] = function(num) {   // 用立即执行函数给每个result元素创造一个独立的作用域
-        return function() {
-          return num;
-        }
-      }(i);
-  } 
-  
+    result[i] = (function (num) {
+      // 用立即执行函数给每个result元素创造一个独立的作用域
+      return function () {
+        return num;
+      };
+    })(i);
+  }
+
   return result;
 }
 
-var timer = setInterval(function(i) {
-  console.log(i);
-}, 2000, 111);
+var timer = setInterval(
+  function (i) {
+    console.log(i);
+  },
+  2000,
+  111
+);
 
 clearTimeout(timer);
 ```
+
 ## 四、使用场景
 
 任何闭包的使用场景都离不开这两点：
@@ -116,7 +128,7 @@ clearTimeout(timer);
 
 ```javascript
 function makeSizer(size) {
-  return function() {
+  return function () {
     document.body.style.fontSize = size + 'px';
   };
 }
@@ -137,26 +149,26 @@ document.getElementById('size-16').onclick = size16;
 ```javascript
 // 假设我们有一个求长方形面积的函数
 function getArea(width, height) {
-    return width * height
+  return width * height;
 }
 // 如果我们碰到的长方形的宽老是10
-const area1 = getArea(10, 20)
-const area2 = getArea(10, 30)
-const area3 = getArea(10, 40)
+const area1 = getArea(10, 20);
+const area2 = getArea(10, 30);
+const area3 = getArea(10, 40);
 
 // 我们可以使用闭包柯里化这个计算面积的函数
 function getArea(width) {
-    return height => {
-        return width * height
-    }
+  return (height) => {
+    return width * height;
+  };
 }
 
-const getTenWidthArea = getArea(10)
+const getTenWidthArea = getArea(10);
 // 之后碰到宽度为10的长方形就可以这样计算面积
-const area1 = getTenWidthArea(20)
+const area1 = getTenWidthArea(20);
 
 // 而且如果遇到宽度偶尔变化也可以轻松复用
-const getTwentyWidthArea = getArea(20)
+const getTwentyWidthArea = getArea(20);
 ```
 
 ### 2. 使用闭包模拟私有方法
@@ -166,22 +178,22 @@ const getTwentyWidthArea = getArea(20)
 下面举个例子：
 
 ```javascript
-var Counter = (function() {
+var Counter = (function () {
   var privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
   }
   return {
-    increment: function() {
+    increment: function () {
       changeBy(1);
     },
-    decrement: function() {
+    decrement: function () {
       changeBy(-1);
     },
-    value: function() {
+    value: function () {
       return privateCounter;
-    }
-  }
+    },
+  };
 })();
 
 var Counter1 = makeCounter();
@@ -207,18 +219,17 @@ console.log(Counter2.value()); /* logs 0 */
 
 如果不是某些特定任务需要使用闭包，在其它函数中创建函数是不明智的，因为闭包在处理速度和内存消耗方面对脚本性能具有负面影响
 
-例如，在创建新的对象或者类时，方法通常应该关联于对象的原型，而不是定义到对象的构造器中。
-原因在于每个对象的创建，方法都会被重新赋值
+例如，在创建新的对象或者类时，方法通常应该关联于对象的原型，而不是定义到对象的构造器中。原因在于每个对象的创建，方法都会被重新赋值
 
 ```javascript
 function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
-  this.getName = function() {
+  this.getName = function () {
     return this.name;
   };
 
-  this.getMessage = function() {
+  this.getMessage = function () {
     return this.message;
   };
 }
@@ -231,10 +242,10 @@ function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
 }
-MyObject.prototype.getName = function() {
+MyObject.prototype.getName = function () {
   return this.name;
 };
-MyObject.prototype.getMessage = function() {
+MyObject.prototype.getMessage = function () {
   return this.message;
 };
 ```

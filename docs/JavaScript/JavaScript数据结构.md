@@ -1,7 +1,11 @@
-🏷: #JavaScript #数据结构
-***
+---
+sidebar_position: 5
+tags:
+ - JavaScript
+ - 数据结构
+---
 
-## 一、什么是数据结构？
+## 什么是数据结构
 
 数据结构是计算机存储、组织数据的方式。
 数据结构意味着接口或封装：一个数据结构可被视为两个函数之间的接口，或者是由数据类型联合组成的存储内容的访问方法封装。
@@ -10,6 +14,7 @@
 数组是最简单的内存数据结构
 下面是常见的数据结构：
 
+```text title="数据结构"
 1. 数组（Array）
 2. 栈（Stack）
 3. 队列（Queue）
@@ -19,6 +24,7 @@
 7. 树（Tree）
 8. 图（Graph）
 9. 堆（Heap）
+```
 
 ## 数组（Array）
 
@@ -41,15 +47,16 @@
 在栈里，新元素都接近栈顶，旧元素都接近栈底。
 
 每次加入新的元素和拿走元素都在顶部操作
-![](https://upload-images.jianshu.io/upload_images/13253432-ddcb884374470d2c?imageMogr2/auto-orient/strip|imageView2/2/format/webp)
 
+![stack](assets/stack-lifo.png)
 
 ## 队列（Queue）
+
 队列是遵循先进先出（FIFO，也称为先来先服务）原则的一组有序的项
 队列在尾部添加新元素，并从顶部移除元素
 最新添加的元素必须排在队列的末尾
-![](https://upload-images.jianshu.io/upload_images/13253432-55ad7c7db40d3796?imageMogr2/auto-orient/strip|imageView2/2/format/webp)
 
+![](assets/queue-fifo.png)
 
 ## 链表（Linked List）
 链表也是一种列表，已经设计了数组，为什么还需要链表呢？

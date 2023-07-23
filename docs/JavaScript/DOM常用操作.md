@@ -1,21 +1,26 @@
-🏷: #JavaScript #DOM #createElement #querySelector #innerHtml #appendChild
-***
+---
+tags:
+  - DOM
+  - createElement
+  - querySelector
+  - innerHtml
+  - appendChild
+---
 
 ## 一、DOM
-文档对象模型 (DOM) 是 `HTML` 和 `XML` 文档的编程接口
-它提供了对文档的结构化的表述，并定义了一种方式可以使从程序中对该结构进行访问，从而改变文档的结构，样式和内容
 
-任何 `HTML `或` XML `文档都可以用 `DOM `表示为一个由节点构成的层级结构
-节点分很多类型，每种类型对应着文档中不同的信息和（或）标记，也都有自己不同的特性、数据和方法，而且与其他类型有某种关系，如下所示：
+文档对象模型 (DOM) 是 `HTML` 和 `XML` 文档的编程接口它提供了对文档的结构化的表述，并定义了一种方式可以使从程序中对该结构进行访问，从而改变文档的结构，样式和内容
+
+任何 `HTML `或`XML`文档都可以用 `DOM `表示为一个由节点构成的层级结构节点分很多类型，每种类型对应着文档中不同的信息和（或）标记，也都有自己不同的特性、数据和方法，而且与其他类型有某种关系，如下所示：
 
 ```html
 <html>
-    <head>
-        <title>Page</title>
-    </head>
-    <body>
-        <p>Hello World!</p >
-    </body>
+  <head>
+    <title>Page</title>
+  </head>
+  <body>
+    <p>Hello World!</p>
+  </body>
 </html>
 ```
 
@@ -23,15 +28,11 @@
 
 ```html
 <div>
-    <p title="title">
-        content
-    </p >
+  <p title="title">content</p>
 </div>
 ```
 
 上述结构中，`div`、`p`就是元素节点，`content`就是文本节点，`title`就是属性节点
-
-
 
 ## 二、操作
 
@@ -49,8 +50,6 @@
 - 添加节点
 - 删除节点
 
-
-
 ### 创建节点
 
 #### createElement
@@ -58,20 +57,16 @@
 创建新元素，接受一个参数，即要创建元素的标签名
 
 ```javascript
-const divEl = document.createElement("div");
+const divEl = document.createElement('div');
 ```
-
-
 
 #### createTextNode
 
 创建一个文本节点
 
 ```javascript
-const textEl = document.createTextNode("content");
+const textEl = document.createTextNode('content');
 ```
-
-
 
 #### createDocumentFragment
 
@@ -83,8 +78,6 @@ const fragment = document.createDocumentFragment();
 
 当请求把一个`DocumentFragment` 节点插入文档树时，插入的不是 `DocumentFragment `自身，而是它的所有子孙节点
 
-
-
 #### createAttribute
 
 创建属性节点，可以是自定义属性
@@ -94,8 +87,6 @@ const dataAttribute = document.createAttribute('custom');
 consle.log(dataAttribute);
 ```
 
-
-
 ### 获取节点
 
 #### querySelector
@@ -103,50 +94,51 @@ consle.log(dataAttribute);
 传入任何有效的` css` 选择器，即可选中单个 `DOM `元素（首个）：
 
 ```javascript
-document.querySelector('.element')
-document.querySelector('#element')
-document.querySelector('div')
-document.querySelector('[name="username"]')
-document.querySelector('div + p > span')
+document.querySelector('.element');
+document.querySelector('#element');
+document.querySelector('div');
+document.querySelector('[name="username"]');
+document.querySelector('div + p > span');
 ```
 
 如果页面上没有指定的元素时，返回 `null`
-
-
 
 #### querySelectorAll
 
 返回一个包含节点子树内所有与之相匹配的`Element`节点列表，如果没有相匹配的，则返回一个空节点列表
 
 ```javascript
-const notLive = document.querySelectorAll("p");
+const notLive = document.querySelectorAll('p');
 ```
 
 需要注意的是，该方法返回的是一个 `NodeList `的静态实例，它是一个静态的“快照”，而非“实时”的查询
 
-
-
-
-
 关于获取`DOM`元素的方法还有如下，就不一一述说
 
 ```javascript
-document.getElementById('id属性值');返回拥有指定id的对象的引用
-document.getElementsByClassName('class属性值');返回拥有指定class的对象集合
-document.getElementsByTagName('标签名');返回拥有指定标签名的对象集合
-document.getElementsByName('name属性值'); 返回拥有指定名称的对象结合
-document/element.querySelector('CSS选择器');  仅返回第一个匹配的元素
-document/element.querySelectorAll('CSS选择器');   返回所有匹配的元素
-document.documentElement;  获取页面中的HTML标签
-document.body; 获取页面中的BODY标签
-document.all[''];  获取页面中的所有元素节点的对象集合型
+document.getElementById('id属性值');
+返回拥有指定id的对象的引用;
+document.getElementsByClassName('class属性值');
+返回拥有指定class的对象集合;
+document.getElementsByTagName('标签名');
+返回拥有指定标签名的对象集合;
+document.getElementsByName('name属性值');
+返回拥有指定名称的对象结合;
+document / element.querySelector('CSS选择器');
+仅返回第一个匹配的元素;
+document / element.querySelectorAll('CSS选择器');
+返回所有匹配的元素;
+document.documentElement;
+获取页面中的HTML标签;
+document.body;
+获取页面中的BODY标签;
+document.all[''];
+获取页面中的所有元素节点的对象集合型;
 ```
 
 除此之外，每个`DOM`元素还有`parentNode`、`childNodes`、`firstChild`、`lastChild`、`nextSibling`、`previousSibling`属性，关系图如下图所示
 
- ![](https://static.vue-js.com/c100f450-7fdc-11eb-ab90-d9ae814b240d.png)
-
-
+![](https://static.vue-js.com/c100f450-7fdc-11eb-ab90-d9ae814b240d.png)
 
 ### 更新节点
 
@@ -164,8 +156,6 @@ p.innerHTML = 'ABC <span style="color:red">RED</span> XYZ';
 // <p>...</p >的内部结构已修改
 ```
 
-
-
 #### innerText、textContent
 
 自动对字符串进行`HTML`编码，保证无法设置任何`HTML`标签
@@ -181,8 +171,6 @@ p.innerText = '<script>alert("Hi")</script>';
 
 两者的区别在于读取属性时，`innerText`不返回隐藏元素的文本，而`textContent`返回所有文本
 
-
-
 #### style
 
 `DOM`节点的`style`属性对应所有的`CSS`，可以直接获取或设置。遇到`-`需要转化为驼峰命名
@@ -196,19 +184,13 @@ p.style.fontSize = '20px'; // 驼峰命名
 p.style.paddingTop = '2em';
 ```
 
-
-
-
-
 ### 添加节点
 
 #### innerHTML
 
-如果这个DOM节点是空的，例如，`<div></div>`，那么，直接使用`innerHTML = '<span>child</span>'`就可以修改`DOM`节点的内容，相当于添加了新的`DOM`节点
+如果这个 DOM 节点是空的，例如，`<div></div>`，那么，直接使用`innerHTML = '<span>child</span>'`就可以修改`DOM`节点的内容，相当于添加了新的`DOM`节点
 
-如果这个DOM节点不是空的，那就不能这么做，因为`innerHTML`会直接替换掉原来的所有子节点
-
-
+如果这个 DOM 节点不是空的，那就不能这么做，因为`innerHTML`会直接替换掉原来的所有子节点
 
 #### appendChild
 
@@ -229,8 +211,8 @@ p.style.paddingTop = '2em';
 添加一个`p`元素
 
 ```javascript
-const js = document.getElementById('js')
-js.innerHTML = "JavaScript"
+const js = document.getElementById('js');
+js.innerHTML = 'JavaScript';
 const list = document.getElementById('list');
 list.appendChild(js);
 ```
@@ -252,37 +234,31 @@ list.appendChild(js);
 如果动态添加新的节点，则先创建一个新的节点，然后插入到指定的位置
 
 ```javascript
-const list = document.getElementById('list'),
+const list = document.getElementById('list');
 const haskell = document.createElement('p');
 haskell.id = 'haskell';
 haskell.innerText = 'Haskell';
 list.appendChild(haskell);
 ```
 
-
-
 #### insertBefore
 
 把子节点插入到指定的位置，使用方法如下：
 
 ```javascript
-parentElement.insertBefore(newElement, referenceElement)
+parentElement.insertBefore(newElement, referenceElement);
 ```
 
 子节点会插入到`referenceElement`之前
-
-
 
 #### setAttribute
 
 在指定元素中添加一个属性节点，如果元素中已有该属性改变属性值
 
 ```javascript
-const div = document.getElementById('id')
-div.setAttribute('class', 'white');//第一个参数属性名，第二个参数属性值。
+const div = document.getElementById('id');
+div.setAttribute('class', 'white'); //第一个参数属性名，第二个参数属性值。
 ```
-
-
 
 ### 删除节点
 
@@ -301,4 +277,5 @@ removed === self; // true
 删除后的节点虽然不在文档树中了，但其实它还在内存中，可以随时再次被添加到别的位置
 
 ## 相关链接
+
 https://developer.mozilla.org/zh-CN/docs/Web/API/Document_Object_Model
