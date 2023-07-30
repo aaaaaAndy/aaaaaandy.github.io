@@ -3,6 +3,12 @@ sidebar_position: 5
 tags:
  - JavaScript
  - 数据结构
+ - 数组
+ - 栈
+ - 队列
+ - 链表
+ - 字典
+ - 散列表
 ---
 
 ## 什么是数据结构

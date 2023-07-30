@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 ## `ES6`
@@ -116,11 +116,11 @@ Map的键和值可以是任何数据类型，键值对按照插入顺序排列�
 
 ## JavaScript 里最大的安全的整数为什么是2的53次方减一
 
-## JavaScript里为什么0.1+0.1不等于0.3 
+## JavaScript里为什么0.1+0.1不等于0.3
 
 http://bartaz.github.io/ieee754-visualization/
 
-##  H5拉起App，如果没有安装跳转应用市场
+## H5拉起App，如果没有安装跳转应用市场
 
 ## Object.defineProperties都有哪些参数，以及参数解释
 

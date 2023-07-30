@@ -75,17 +75,30 @@ console.log(newArr); // [1, 2, 3, 4, 5, 6]
 
 ### 5. `reduce` + `concat`
 
-> reduce() 方法对数组中的每个元素按序执行一个由您提供的 reducer 函数，每一次运行 reducer 会将先前元素的计算结果作为参数传入，最后将其结果汇总为单个返回值。
+> `reduce()` 方法对数组中的每个元素按序执行一个由您提供的 reducer 函数，每一次运行 reducer 会将先前元素的计算结果作为参数传入，最后将其结果汇总为单个返回值。
 
-reduce 语法如下，其中 previousValue 是当前遍历传入的初始值，也是上一次遍历的返回值，这就决定了reduce方法天生适合做这种事：
+`reduce` 语法如下，其中 `accumulator` 是当前遍历传入的初始值，也是上一次遍历的返回值，这就决定了 `reduce` 方法天生适合做这种事：
 
 ```javascript
-reduce((previousValue, currentValue, currentIndex, array) => {
+reduce((accumulator, currentValue, currentIndex, array) => {
 	/* ... */
 }, initialValue)
 ```
 
-如下代码所示，acc 是每一次遍历时传入的上一次遍历的结果，cur 是当前值，先判断当前值如果是数组则递归调用 flatten 函数，如果是基础类型数据，则 acc 会 concat 进来，而且这里 return 的返回值是作为下一次遍历的 acc 传入。
+#### `reduce` 参数
+
+:::tip
+`callbackFn`：为数组中每个元素执行的函数。其返回值将作为下一次调用 `callbackFn` 时的 `accumulator` 参数。对于最后一次调用，返回值将作为 `reduce()` 的返回值。该函数被调用时将传入以下参数：
+
+- `accumulator`：上一次调用 `callbackFn` 的结果。在第一次调用时，如果指定了 `initialvalue` 则为指定的值，否则为 `array[0]` 的值。
+- `currentvalue`：当前元素的值。在第一次调用时，如果指定了 `initialvalue，则为` `array[0]` 的值，否则为 `array[1]`。
+- `currentIndex`：`currentValue` 在数组中的索引位置。在第一次调用时，如果指定了 `initialvalue` 则为 0，否则为 1。
+- `array`：调用了 `reduce()` 的数组本身。
+
+`initialvalue`： *[可选]* 第一次调用回调时初始化 `accumulator` 的值。如果指定了 `initialValue，则` `callbackFn` 从数组中的第一个值作为 `currentvalue` 开始执行。如果没有指定 `initialvalue，则` `accumulator` 初始化为数组中的第一个值，并且 `callbackfn` 从数组中的第二个值作为 `currentvalue` 开始执行。在这种情况下，如果数组为空（没有第一个值可以作为 `accumulator` 返回），则会抛出错误。
+:::
+
+如下代码所示，`acc` 是每一次遍历时传入的上一次遍历的结果，cur 是当前值，先判断当前值如果是数组则递归调用 `flatten` 函数，如果是基础类型数据，则 `acc` 会 `concat` 进来，而且这里 `return` 的返回值是作为下一次遍历的 `acc` 传入。
 
 ```javascript
 const arr = [1, 2, [3, 4], [5, [6, 7]]];
@@ -101,7 +114,7 @@ console.log(flatten(arr)); // [ 1, 2, 3, 4, 5, 6, 7 ]
 
 ### 6. `while` + `some` + `concat`
 
-> some() 方法测试数组中是不是至少有 1 个元素通过了被提供的函数测试。它返回的是一个 Boolean 类型的值。
+> `some()` 方法测试数组中是不是至少有 1 个元素通过了被提供的函数测试。它返回的是一个 `Boolean` 类型的值。
 
 这里着重理解 while 方法体内的内容：`[].concat(...arr)` 是对数组进行两个层级的展开，也就是说它能将二维数组转成一维，所以这里的逻辑就是每当 while 判断数组里有多维数组时，就多展开一层，直到所有的层级展开完毕。
 

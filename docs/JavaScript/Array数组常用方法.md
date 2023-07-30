@@ -2,15 +2,42 @@
 sidebar_position: 10
 tags:
  - Array
+ - push
+ - pop
+ - shift
+ - unshift
+ - splice
+ - concat
+ - slice
+ - copyWithin
+ - indexOf
+ - includes
+ - find
+ - findIndex
+ - findLast
+ - findLastIndex
+ - reverse
+ - sort
+ - join
+ - flat
+ - flatMap
+ - forEach
+ - map
+ - filter
+ - some
+ - every
+ - fill
+ - Array.from
+ - Array.of
 ---
 
-数组的基本操作可以归纳为：增、删、改、查、排序、转换、迭代。
+数组的基本操作可以归纳为：***增、删、改、查、排序、转换、迭代***。
 
 ## 一、增
 
 下面前三种是对原数组产生影响的增添方法，第四种则不会对原数组产生影响。
 
-### push()
+### `push()`
 
 push() 方法将一个或多个元素添加到数组的末尾，并返回该数组的新长度。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
 
@@ -20,7 +47,7 @@ let count = colors.push('red', 'green'); // 推入两项
 console.log(count); // 2
 ```
 
-### unshift()
+### `unshift()`
 
 unshift() 方法将一个或多个元素添加到数组的开头，并返回该数组的新长度。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
 
@@ -30,7 +57,7 @@ let count = colors.unshift('red', 'green'); // 从数组开头推入两项
 alert(count); // 2
 ```
 
-### splice()
+### `splice()`
 
 splice() 方法通过删除或替换现有元素或者原地添加新的元素来修改数组，并以数组形式返回被修改的内容。此方法会改变原数组。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) 传入三个参数，分别是开始位置、0（要删除的元素数量，这里是新增，就是不删除元素，所以是 0）、插入的元素，返回修改的元素。
 
@@ -41,7 +68,7 @@ console.log(colors); // red,yellow,orange,green,blue
 console.log(removed); // []
 ```
 
-### concat()
+### `concat()`
 
 concat() 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
 
@@ -56,7 +83,7 @@ console.log(colors2); // ["red", "green", "blue", "yellow", "black", "brown"]
 
 下面三种都会影响原数组，最后一项不影响原数组：
 
-### pop()
+### `pop()`
 
 pop() 方法从数组中删除最后一个元素，并返回该元素的值。此方法会更改数组的长度。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
 
@@ -67,7 +94,7 @@ console.log(item); // green
 console.log(colors.length); // 1
 ```
 
-### shift()
+### `shift()`
 
 shift() 方法从数组中删除第一个元素，并返回该元素的值。此方法更改数组的长度。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
 
@@ -78,7 +105,7 @@ console.log(item); // red
 console.log(colors.length); // 1
 ```
 
-### splice()
+### `splice()`
 
 splice() 方法通过删除或替换现有元素或者原地添加新的元素来修改数组，并以数组形式返回被修改的内容。此方法会改变原数组。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) 传入三个参数，分别是开始位置、1（要删除的元素数量）、插入的元素(这里是删除，所以不传入插入元素)，返回修改的元素
 
@@ -89,7 +116,7 @@ console.log(colors); // green,blue
 console.log(removed); // red，只有一个元素的数组
 ```
 
-### slice()
+### `slice()`
 
 slice() 方法返回一个新的数组对象，这一对象是一个由 begin 和 end 决定的原数组的浅拷贝（包括 begin，不包括 end，这里两个下标都支持负索引）。原始数组不会被改变。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
 
@@ -109,7 +136,7 @@ concole.log(colors5); // blue,yellow
 
 ## 三、改
 
-### splice()
+### `splice()`
 
 `splice()`方法通过删除或替换现有元素或者原地添加新的元素来修改数组，并以数组形式返回被修改的内容。此方法会改变原数组。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) 传入三个类型的参数，分别是:
 
@@ -124,7 +151,7 @@ console.log(colors); // red,red,purple,blue
 console.log(removed); // green，只有一个元素的数组
 ```
 
-### copyWithin()
+### `copyWithin()`
 
 `copyWithin()`方法浅复制数组的一部分到同一数组中的另一个位置，并返回它，不会改变原数组的长度。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin) 语法如下：
 
@@ -152,7 +179,7 @@ console.log(array1.copyWithin(1, 3));
 
 即查找元素，返回元素坐标或者元素值
 
-### indexOf()
+### `indexOf()`
 
 **indexOf()** 方法返回在数组中可以找到一个给定元素的第一个索引，如果不存在，则返回-1。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
 
@@ -161,7 +188,7 @@ let numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
 numbers.indexOf(4); // 3
 ```
 
-### includes()
+### `includes()`
 
 includes() 方法用来判断一个数组是否包含一个指定的值，根据情况，如果包含则返回 true，否则返回 false。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
 
@@ -170,7 +197,7 @@ let numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
 numbers.includes(4); // true
 ```
 
-### find()
+### `find()`
 
 find() 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
 
@@ -188,7 +215,7 @@ const people = [
 people.find((element, index, array) => element.age < 28); // // {name: "Matt", age: 27}
 ```
 
-### findIndex()
+### `findIndex()`
 
 findIndex()方法返回数组中满足提供的测试函数的第一个元素的索引。若没有找到对应元素则返回-1。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)
 
@@ -201,7 +228,7 @@ console.log(array1.findIndex(isLargeNumber));
 // expected output: 3
 ```
 
-### findLast()
+### `findLast()`
 
 findLast() 方法返回数组中满足提供的测试函数条件的最后一个元素的值。如果没有找到对应元素，则返回 undefined。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast)
 
@@ -214,7 +241,7 @@ console.log(found);
 // expected output: 130
 ```
 
-### findLastIndex()
+### `findLastIndex()`
 
 findLastIndex() 方法返回数组中满足提供的测试函数条件的最后一个元素的索引。若没有找到对应元素，则返回 -1。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/findLastIndex)
 
@@ -231,7 +258,7 @@ console.log(array1.findLastIndex(isLargeNumber));
 
 数组有两个方法可以用来对元素重新排序：
 
-### reverse()
+### `reverse()`
 
 `reverse()` 方法将数组中元素的位置颠倒，并返回该数组。数组的第一个元素会变成最后一个，数组的最后一个元素变成第一个。该方法会改变原数组。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)
 
@@ -241,7 +268,7 @@ values.reverse();
 alert(values); // 5,4,3,2,1
 ```
 
-### sort()
+### `sort()`
 
 `sort()` 方法用原地算法对数组的元素进行排序，并返回数组。默认排序顺序是在将元素转换为字符串，然后比较它们的 UTF-16 代码单元值序列时构建的[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 
@@ -262,7 +289,7 @@ alert(values); // 0,1,5,10,15
 
 ## 六、转换
 
-### join()
+### `join()`
 
 join() 方法将一个数组（或一个类数组对象）的所有元素连接成一个字符串并返回这个字符串。如果数组只有一个项目，那么将返回该项目而不使用分隔符。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join)
 
@@ -272,7 +299,7 @@ alert(colors.join(',')); // red,green,blue
 alert(colors.join('||')); // red||green||blue
 ```
 
-### flat()
+### `flat()`
 
 flat() 方法会按照一个可指定的深度递归遍历数组，并将所有元素与遍历到的子数组中的元素合并为一个新数组返回。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)
 
@@ -288,7 +315,7 @@ console.log(arr2.flat(2));
 // expected output: [0, 1, 2, [3, 4]]
 ```
 
-### flatMap()
+### `flatMap()`
 
 flatMap() 方法首先使用映射函数映射每个元素，然后将结果压缩成一个新数组。它与 map 连着深度值为 1 的 flat 几乎相同，但 flatMap 通常在合并成一种方法的效率稍微高一些。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap)
 
@@ -310,7 +337,7 @@ arr1.flatMap((x) => [[x * 2]]);
 
 常用来迭代数组的方法（都不改变原数组）有如下：
 
-### some()
+### `some()`
 
 some() 方法测试数组中是不是至少有 1 个元素通过了被提供的函数测试。它返回的是一个 Boolean 类型的值。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
 
@@ -320,7 +347,7 @@ let someResult = numbers.every((item, index, array) => item > 2);
 console.log(someResult); // true
 ```
 
-### 2. every()
+### `every()`
 
 every() 方法测试一个数组内的所有元素是否都能通过某个指定函数的测试。它返回一个布尔值。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
 
@@ -330,7 +357,7 @@ let everyResult = numbers.every((item, index, array) => item > 2);
 console.log(everyResult); // false
 ```
 
-### forEach()
+### `forEach()`
 
 forEach() 方法对数组的每个元素执行一次给定的函数。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 
@@ -341,7 +368,7 @@ numbers.forEach((item, index, array) => {
 });
 ```
 
-### map()
+### `map()`
 
 map() 方法创建一个新数组，这个新数组由原数组中的每个元素都调用一次提供的函数后的返回值组成。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
@@ -351,7 +378,7 @@ let mapResult = numbers.map((item, index, array) => item * 2);
 console.log(mapResult); // 2,4,6,8,10,8,6,4,2
 ```
 
-### filter()
+### `filter()`
 
 filter() 方法创建一个新数组，其包含通过所提供函数实现的测试的所有元素。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 
@@ -363,7 +390,7 @@ console.log(filterResult); // 3,4,5,4,3
 
 ## 八、创建数组
 
-### Array()
+### `Array()`
 
 Array() 构造器用于创建 Array 对象。参数只有一数字 n 时表示这是创建一个 n 个长度的数组[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Array)
 
@@ -378,7 +405,7 @@ new Array(element0, element1, ..., elementN)
 new Array(arrayLength)
 ```
 
-### fill()
+### `fill()`
 
 fill() 方法用一个固定值填充一个数组中从起始索引到终止索引内的全部元素。不包括终止索引。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/fill)
 
@@ -397,7 +424,7 @@ console.log(array1.fill(6));
 // expected output: [6, 6, 6, 6]
 ```
 
-### Array.from()
+### `Array.from()`
 
 Array.from() 方法对一个类似数组或可迭代对象创建一个新的，浅拷贝的数组实例。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
 
@@ -409,9 +436,13 @@ console.log(Array.from([1, 2, 3], (x) => x + x));
 // expected output: Array [2, 4, 6]
 ```
 
-### Array.of()
+### `Array.of()`
 
-Array.of() 方法创建一个具有可变数量参数的新数组实例，而不考虑参数的数量或类型。 Array.of() 和 Array 构造函数之间的区别在于处理整数参数：Array.of(7) 创建一个具有单个元素 7 的数组，而 Array(7) 创建一个长度为 7 的空数组（注意：这是指一个有 7 个空位 (empty) 的数组，而不是由 7 个 undefined 组成的数组）。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/of)
+Array.of() 方法创建一个具有可变数量参数的新数组实例，而不考虑参数的数量或类型。 
+
+:::tip `Array.of`与`Array`
+`Array.of()` 和 `Array` 构造函数之间的区别在于处理整数参数：`Array.of(7)` 创建一个具有单个元素 7 的数组，而 `Array(7)` 创建一个长度为 7 的空数组（注意：这是指一个有 7 个空位 (empty) 的数组，而不是由 7 个 undefined 组成的数组）。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/of)
+:::
 
 ```javascript
 Array.of(7); // [7]

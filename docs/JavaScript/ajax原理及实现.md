@@ -1,5 +1,8 @@
-🏷: #JavaScript #ajax
-***
+---
+tags:
+ - JavaScript
+ - ajax
+---
 
 ## 一、是什么
 

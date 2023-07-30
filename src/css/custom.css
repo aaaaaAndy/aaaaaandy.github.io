@@ -55,6 +55,8 @@ blockquote {
 }
 
 .markdown p > code,
-.markdown li > code {
+.markdown li > code,
+h3 > code,
+mdxadmonitiontitle > code {
   margin: 0 4px;
 }

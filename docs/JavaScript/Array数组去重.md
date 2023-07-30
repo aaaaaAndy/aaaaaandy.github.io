@@ -3,6 +3,15 @@ sidebar_position: 11
 tags:
   - Array
   - 去重
+  - Set
+  - Object
+  - map
+  - sort
+  - splice
+  - includes
+  - indexOf
+  - filter
+  - reduce
 ---
 
 ### 1. 利用`ES6`中`set`去重

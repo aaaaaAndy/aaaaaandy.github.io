@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 tags:
  - JavaScript
  - 类型转换
@@ -8,11 +8,11 @@ tags:
 
 ## 一、显式/隐式类型转换
 
-> 类型转换发生在静态类型语言的编译阶段，而强制类型转换则发生在动态类型语言的运行时(runtime)。然而在 JavaScript 中通常将它们统称为强制类型转换。
+> 类型转换发生在静态类型语言的编译阶段，而强制类型转换则发生在动态类型语言的运行时(runtime)。然而在 javascript 中通常将它们统称为强制类型转换。
 
 我个人则倾向于用“隐式强制类型转换”(implicit coercion)和“显式强制类型转换”(explicit coercion)来区分：
 
-- 显式强制类型转换：手动地将一种类型的值转为另一种类型，常见的显式转换方法有：`Number`、`String`、`Boolean`、`parseInt`、`parseFloat`、`toString` 等等；
+- 显式强制类型转换：手动地将一种类型的值转为另一种类型，常见的显式转换方法有：`number`、`string`、`boolean`、`parseint`、`parsefloat`、`tostring` 等等；
 - 隐式强制类型转换：一般是在涉及运算符的时候才出现的情况，比如两个不同类型的变量相加减、取反等。
 
 ### 1. 转换为字符串
