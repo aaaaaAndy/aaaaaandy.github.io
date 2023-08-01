@@ -40,7 +40,13 @@ function checkscope() {
   return f();
 }
 
-checkscope(); // 其上下文入栈出栈顺序为push(<checkscope> functionContext);push(<f> functionContext);pop();pop();
+checkscope(); 
+
+// 其上下文入栈出栈顺序为
+// push(<checkscope> functionContext);
+// push(<f> functionContext);
+// pop();
+// pop();
 ```
 
 ```javascript
@@ -53,7 +59,13 @@ function checkscope() {
   return f;
 }
 
-checkscope()(); // 其入栈出栈顺序为push(<checkscope> functionContext);pop();push(<f> functionContext);pop();
+checkscope()(); 
+
+// 其入栈出栈顺序为
+// push(<checkscope> functionContext);
+// pop();
+// push(<f> functionContext);
+// pop();
 ```
 
 ## 四、怎么创建执行上下文

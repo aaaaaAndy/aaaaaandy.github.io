@@ -1,5 +1,4 @@
 ---
-slug: /es6
 sidebar_position: 1
 tags:
  - es6 
