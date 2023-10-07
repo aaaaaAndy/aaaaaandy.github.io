@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkaaaaaandy_github_io=self.webpackChunkaaaaaandy_github_io||[]).push([[5552],{36162:a=>{a.exports=JSON.parse('{"label":"vue","permalink":"/docs/tags/vue","allTagsPath":"/docs/tags","count":1,"items":[{"id":"vue/\u7b80\u5355\u4ecb\u7ecd\u4e0bvue","title":"\u7b80\u5355\u4ecb\u7ecd\u4e0bvue","description":"*","permalink":"/docs/vue"}]}')}}]);
