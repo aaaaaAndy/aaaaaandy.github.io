@@ -1,12 +1,3 @@
 {
-  "accentColor": "#eb5757",
-  "theme": "moonstone",
-  "enabledCssSnippets": [
-    "theme"
-  ],
-  "textFontFamily": "JetBrains Mono",
-  "cssTheme": "Docusaurus",
-  "interfaceFontFamily": "",
-  "monospaceFontFamily": "JetBrains Mono NL",
-  "baseFontSize": 17
+  "accentColor": ""
 }

@@ -1,14 +1,1 @@
-{
-  "useMarkdownLinks": true,
-  "newLinkFormat": "relative",
-  "vimMode": true,
-  "alwaysUpdateLinks": true,
-  "promptDelete": false,
-  "showUnsupportedFiles": true,
-  "showFrontmatter": true,
-  "foldHeading": true,
-  "foldIndent": true,
-  "showIndentGuide": false,
-  "attachmentFolderPath": "./assets",
-  "newFileLocation": "current"
-}
+{}

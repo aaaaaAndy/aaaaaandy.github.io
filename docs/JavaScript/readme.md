@@ -6,8 +6,6 @@ sidebar_position: 2
 
 #### 6.1 Promise(基本上要求可以手写Promise.all方法)
 
-
-
 #### 6.2 箭头函数和普通函数有什么区别
 
 ##### 6.2.1 箭头函数语法更加简洁清晰
@@ -128,8 +126,6 @@ http://bartaz.github.io/ieee754-visualization/
 
 ## 如何遍历对象，有何不同
 
-
-
 ## 原生实现insertAfter
 
 ## 实现一个EventEmitter
@@ -137,26 +133,12 @@ http://bartaz.github.io/ieee754-visualization/
 ## node怎么起一个服务
 
 ## node中body-parse有什么作用
+ 
+## web component
 
-
-
-
-
-
-
-
-
-
-
-
+## 怎么用原生js实现页面跳转
 
 ## 最近在看什么新技术
-
-
-
-
-
-
 
 ## TODO
 
